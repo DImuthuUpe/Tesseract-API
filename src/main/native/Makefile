@@ -31,6 +31,7 @@ JAVAH = $(JAVA_HOME)/bin/javah
 JAVAH_FLAGS += -classpath $(JAVAH_CLASSPATH)
 JAVAH_CMD = $(JAVAH) $(JAVAH_FLAGS) $(OUTPUT_OPTION)
 LDFLAGS = -shared
+LD_LIBS :=
 LINK.so = $(CC) $(LDFLAGS) $(LD_LIBS)
 
 ifdef DEBUG
@@ -54,7 +55,8 @@ else
 ifeq ($(UNAME),Darwin)
 LIB_PREFIX = lib
 LIB_EXTN = .dylib
-CPPFLAGS += -I/System/Library/Frameworks/JavaVM.framework/Headers -I ./includes/leptonica -I ./includes/tesseract
+CPPFLAGS += -I$(JAVA_HOME)/include/darwin -I ./includes/leptonica -I ./includes/tesseract
+LD_LIBS += -L ../resources/mac/libs -llepta -ltesseracta
 else
 f := $(error Platform $(UNAME) not supported)
 endif
