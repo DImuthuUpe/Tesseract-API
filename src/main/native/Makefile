@@ -54,7 +54,7 @@ else
 ifeq ($(UNAME),Darwin)
 LIB_PREFIX = lib
 LIB_EXTN = .dylib
-CPPFLAGS += -I/System/Library/Frameworks/JavaVM.framework/Headers
+CPPFLAGS += -I/System/Library/Frameworks/JavaVM.framework/Headers -I ./includes/leptonica -I ./includes/tesseract
 else
 f := $(error Platform $(UNAME) not supported)
 endif

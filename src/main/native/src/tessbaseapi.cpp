@@ -2,8 +2,8 @@
 #include <stdlib.h>
 //#include "android/bitmap.h"
 //#include "common.h"
-//#include "baseapi.h"
-//#include "allheaders.h"
+#include "baseapi.h"
+#include "allheaders.h"
 #include <iostream>
 #include <fstream> 
 #include "jni.h"

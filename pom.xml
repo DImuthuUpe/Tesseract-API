@@ -50,12 +50,6 @@
       <version>1.2</version>
     </dependency>
   </dependencies>
-  <distributionManagement>
-    <repository>
-      <id>mx-opensource</id>
-      <name>MX Telecom Opensource Release Repository</name>
-      <url>scpexe://opensource/sites/opensource/maven/repo</url>
-    </repository>
-  </distributionManagement>
+  
 
 </project>
