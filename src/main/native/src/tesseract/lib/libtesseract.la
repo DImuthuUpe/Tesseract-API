@@ -17,7 +17,7 @@ old_library='libtesseract.a'
 inherited_linker_flags=' '
 
 # Libraries that this one depends upon.
-dependency_libs=' -L/opt/local/lib -llept'
+dependency_libs=' -L/opt/local/lib -L/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/lib -lz -llepta -ljpeg -lpng -ltiff'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''
@@ -38,4 +38,4 @@ dlopen=''
 dlpreopen=''
 
 # Directory that this library needs to be installed in:
-libdir='/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/jni/tesseract/lib'
+libdir='/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/tesseract/lib'

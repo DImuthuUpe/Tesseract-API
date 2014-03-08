@@ -37,14 +37,30 @@ libversions.lo: libversions.c allheaders.h alltypes.h \
   environ.h array.h arrayaccess.h bbuffer.h bmf.h ccbord.h dewarp.h \
   gplot.h heap.h imageio.h jbclass.h list.h morph.h pix.h ptra.h queue.h \
   regutils.h sudoku.h stack.h watershed.h ../config_auto.h \
-  /usr/include/zlib.h /usr/include/zconf.h /usr/include/sys/types.h \
-  /usr/include/sys/_types/_blkcnt_t.h \
+  /opt/local/include/gif_lib.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.0/include/stdbool.h \
+  /opt/local/include/jpeglib.h /opt/local/include/jconfig.h \
+  /opt/local/include/jmorecfg.h /opt/local/include/jerror.h \
+  /opt/local/include/png.h /opt/local/include/pnglibconf.h \
+  /opt/local/include/pngconf.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.0/include/limits.h \
+  /usr/include/limits.h /usr/include/machine/limits.h \
+  /usr/include/i386/limits.h /usr/include/i386/_limits.h \
+  /usr/include/sys/syslimits.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.0/include/stddef.h \
+  /usr/include/setjmp.h /usr/include/time.h /usr/include/_structs.h \
+  /usr/include/sys/_structs.h /usr/include/sys/_types/_timespec.h \
+  /usr/include/sys/_types/_clock_t.h /usr/include/sys/_types/_time_t.h \
+  /opt/local/include/tiffio.h /opt/local/include/tiff.h \
+  /opt/local/include/tiffconf.h /opt/local/include/tiffvers.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.0/include/stdarg.h \
+  /opt/local/include/zlib.h /opt/local/include/zconf.h \
+  /usr/include/sys/types.h /usr/include/sys/_types/_blkcnt_t.h \
   /usr/include/sys/_types/_blksize_t.h /usr/include/sys/_types/_gid_t.h \
   /usr/include/sys/_types/_in_addr_t.h \
   /usr/include/sys/_types/_in_port_t.h /usr/include/sys/_types/_ino_t.h \
   /usr/include/sys/_types/_ino64_t.h /usr/include/sys/_types/_key_t.h \
-  /usr/include/sys/_types/_nlink_t.h /usr/include/sys/_types/_clock_t.h \
-  /usr/include/sys/_types/_time_t.h \
+  /usr/include/sys/_types/_nlink_t.h \
   /usr/include/sys/_types/_useconds_t.h \
   /usr/include/sys/_types/_suseconds_t.h \
   /usr/include/sys/_types/_rsize_t.h /usr/include/sys/_types/_errno_t.h \
@@ -66,8 +82,8 @@ libversions.lo: libversions.c allheaders.h alltypes.h \
   /usr/include/sys/_types/_fsfilcnt_t.h /usr/include/unistd.h \
   /usr/include/sys/unistd.h /usr/include/sys/_types/_posix_vdisable.h \
   /usr/include/sys/_types/_seek_set.h /usr/include/sys/select.h \
-  /usr/include/sys/_types/_timespec.h /usr/include/sys/_select.h \
-  /usr/include/sys/_types/_uuid_t.h /usr/include/gethostuuid.h
+  /usr/include/sys/_select.h /usr/include/sys/_types/_uuid_t.h \
+  /usr/include/gethostuuid.h
 
 allheaders.h:
 
@@ -241,9 +257,65 @@ watershed.h:
 
 ../config_auto.h:
 
-/usr/include/zlib.h:
+/opt/local/include/gif_lib.h:
 
-/usr/include/zconf.h:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.0/include/stdbool.h:
+
+/opt/local/include/jpeglib.h:
+
+/opt/local/include/jconfig.h:
+
+/opt/local/include/jmorecfg.h:
+
+/opt/local/include/jerror.h:
+
+/opt/local/include/png.h:
+
+/opt/local/include/pnglibconf.h:
+
+/opt/local/include/pngconf.h:
+
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.0/include/limits.h:
+
+/usr/include/limits.h:
+
+/usr/include/machine/limits.h:
+
+/usr/include/i386/limits.h:
+
+/usr/include/i386/_limits.h:
+
+/usr/include/sys/syslimits.h:
+
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.0/include/stddef.h:
+
+/usr/include/setjmp.h:
+
+/usr/include/time.h:
+
+/usr/include/_structs.h:
+
+/usr/include/sys/_structs.h:
+
+/usr/include/sys/_types/_timespec.h:
+
+/usr/include/sys/_types/_clock_t.h:
+
+/usr/include/sys/_types/_time_t.h:
+
+/opt/local/include/tiffio.h:
+
+/opt/local/include/tiff.h:
+
+/opt/local/include/tiffconf.h:
+
+/opt/local/include/tiffvers.h:
+
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.0/include/stdarg.h:
+
+/opt/local/include/zlib.h:
+
+/opt/local/include/zconf.h:
 
 /usr/include/sys/types.h:
 
@@ -264,10 +336,6 @@ watershed.h:
 /usr/include/sys/_types/_key_t.h:
 
 /usr/include/sys/_types/_nlink_t.h:
-
-/usr/include/sys/_types/_clock_t.h:
-
-/usr/include/sys/_types/_time_t.h:
 
 /usr/include/sys/_types/_useconds_t.h:
 
@@ -322,8 +390,6 @@ watershed.h:
 /usr/include/sys/_types/_seek_set.h:
 
 /usr/include/sys/select.h:
-
-/usr/include/sys/_types/_timespec.h:
 
 /usr/include/sys/_select.h:
 

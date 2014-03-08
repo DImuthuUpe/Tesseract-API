@@ -2279,6 +2279,9 @@ fi
 ## -------------------- ##
 
 ac_ext=c
+$as_echo "CPPFLAGS $CPPFLAGS"
+$as_echo "LIBS $LIBS"
+
 ac_cpp='$CPP $CPPFLAGS'
 ac_compile='$CC -c $CFLAGS $CPPFLAGS conftest.$ac_ext >&5'
 ac_link='$CC -o conftest$ac_exeext $CFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS >&5'
@@ -11408,7 +11411,7 @@ if test "${ac_cv_lib_png_png_read_png+set}" = set; then :
   $as_echo_n "(cached) " >&6
 else
   ac_check_lib_save_LIBS=$LIBS
-LIBS="-lpng  $LIBS"
+LIBS="-lpng  $LIBS -L/opt/local/lib"
 cat confdefs.h - <<_ACEOF >conftest.$ac_ext
 /* end confdefs.h.  */
 
@@ -11456,11 +11459,14 @@ fi
 if test "x$with_jpeg" != xno; then :
   { $as_echo "$as_me:${as_lineno-$LINENO}: checking for jpeg_read_scanlines in -ljpeg" >&5
 $as_echo_n "checking for jpeg_read_scanlines in -ljpeg... " >&6; }
+
+  
 if test "${ac_cv_lib_jpeg_jpeg_read_scanlines+set}" = set; then :
   $as_echo_n "(cached) " >&6
 else
   ac_check_lib_save_LIBS=$LIBS
-LIBS="-ljpeg  $LIBS"
+LIBS="-ljpeg  $LIBS -L/opt/local/lib"	
+
 cat confdefs.h - <<_ACEOF >conftest.$ac_ext
 /* end confdefs.h.  */
 
@@ -11488,6 +11494,7 @@ rm -f core conftest.err conftest.$ac_objext \
     conftest$ac_exeext conftest.$ac_ext
 LIBS=$ac_check_lib_save_LIBS
 fi
+
 { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_jpeg_jpeg_read_scanlines" >&5
 $as_echo "$ac_cv_lib_jpeg_jpeg_read_scanlines" >&6; }
 if test "x$ac_cv_lib_jpeg_jpeg_read_scanlines" = x""yes; then :
@@ -11512,7 +11519,7 @@ if test "${ac_cv_lib_gif_DGifOpenFileHandle+set}" = set; then :
   $as_echo_n "(cached) " >&6
 else
   ac_check_lib_save_LIBS=$LIBS
-LIBS="-lgif  $LIBS"
+LIBS="-lgif  $LIBS -L/opt/local/lib"
 cat confdefs.h - <<_ACEOF >conftest.$ac_ext
 /* end confdefs.h.  */
 
@@ -11564,7 +11571,7 @@ if test "${ac_cv_lib_tiff_TIFFOpen+set}" = set; then :
   $as_echo_n "(cached) " >&6
 else
   ac_check_lib_save_LIBS=$LIBS
-LIBS="-ltiff ${ZLIB_LIBS} ${JPEG_LIBS}
+LIBS="-ltiff -L/opt/local/lib ${ZLIB_LIBS} ${JPEG_LIBS}
    $LIBS"
 cat confdefs.h - <<_ACEOF >conftest.$ac_ext
 /* end confdefs.h.  */
@@ -11616,7 +11623,7 @@ if test "${ac_cv_lib_webp_WebPGetInfo+set}" = set; then :
   $as_echo_n "(cached) " >&6
 else
   ac_check_lib_save_LIBS=$LIBS
-LIBS="-lwebp  $LIBS"
+LIBS="-lwebp  $LIBS -L/opt/local/lib"
 cat confdefs.h - <<_ACEOF >conftest.$ac_ext
 /* end confdefs.h.  */
 

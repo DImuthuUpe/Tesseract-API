@@ -18,15 +18,13 @@ ltrresultiterator.lo: ltrresultiterator.cpp ltrresultiterator.h \
   ../ccutil/strngs.h ../ccutil/memry.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.0/include/stddef.h \
   ../ccutil/tesscallback.h ../ccutil/unichar.h /usr/include/memory.h \
-  ../ccutil/unicharmap.h \
-  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/jni/leptonica/include/leptonica/allheaders.h \
-  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/jni/leptonica/include/leptonica/alltypes.h \
-  /usr/include/stdlib.h /usr/include/sys/wait.h \
-  /usr/include/sys/_types/_pid_t.h /usr/include/sys/_types/_id_t.h \
-  /usr/include/sys/signal.h /usr/include/sys/appleapiopts.h \
-  /usr/include/machine/signal.h /usr/include/i386/signal.h \
-  /usr/include/machine/_mcontext.h /usr/include/i386/_mcontext.h \
-  /usr/include/mach/i386/_structs.h \
+  ../ccutil/unicharmap.h /usr/local/include/leptonica/allheaders.h \
+  /usr/local/include/leptonica/alltypes.h /usr/include/stdlib.h \
+  /usr/include/sys/wait.h /usr/include/sys/_types/_pid_t.h \
+  /usr/include/sys/_types/_id_t.h /usr/include/sys/signal.h \
+  /usr/include/sys/appleapiopts.h /usr/include/machine/signal.h \
+  /usr/include/i386/signal.h /usr/include/machine/_mcontext.h \
+  /usr/include/i386/_mcontext.h /usr/include/mach/i386/_structs.h \
   /usr/include/sys/_types/_sigaltstack.h \
   /usr/include/sys/_types/_ucontext.h \
   /usr/include/sys/_types/_pthread_attr_t.h \
@@ -47,38 +45,37 @@ ltrresultiterator.lo: ltrresultiterator.cpp ltrresultiterator.h \
   /usr/include/sys/_types/_wchar_t.h /usr/include/machine/types.h \
   /usr/include/i386/types.h /usr/include/sys/_types/___offsetof.h \
   /usr/include/sys/_types/_dev_t.h /usr/include/sys/_types/_mode_t.h \
-  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/jni/leptonica/include/leptonica/environ.h \
-  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/jni/leptonica/include/leptonica/array.h \
-  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/jni/leptonica/include/leptonica/arrayaccess.h \
-  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/jni/leptonica/include/leptonica/bbuffer.h \
-  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/jni/leptonica/include/leptonica/bmf.h \
-  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/jni/leptonica/include/leptonica/ccbord.h \
-  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/jni/leptonica/include/leptonica/dewarp.h \
-  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/jni/leptonica/include/leptonica/gplot.h \
-  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/jni/leptonica/include/leptonica/heap.h \
-  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/jni/leptonica/include/leptonica/imageio.h \
-  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/jni/leptonica/include/leptonica/jbclass.h \
-  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/jni/leptonica/include/leptonica/list.h \
-  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/jni/leptonica/include/leptonica/morph.h \
-  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/jni/leptonica/include/leptonica/pix.h \
-  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/jni/leptonica/include/leptonica/ptra.h \
-  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/jni/leptonica/include/leptonica/queue.h \
-  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/jni/leptonica/include/leptonica/regutils.h \
-  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/jni/leptonica/include/leptonica/sudoku.h \
-  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/jni/leptonica/include/leptonica/stack.h \
-  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/jni/leptonica/include/leptonica/watershed.h \
-  ../ccstruct/pageres.h ../ccstruct/blobs.h ../ccutil/clst.h \
-  ../ccutil/serialis.h ../ccutil/fileerr.h ../ccutil/lsterr.h \
-  ../ccstruct/rect.h /usr/include/math.h ../ccstruct/points.h \
-  ../ccutil/elst.h ../ccstruct/ipoints.h ../ccutil/ndminx.h \
-  ../viewer/scrollview.h ../ccutil/tprintf.h ../ccutil/params.h \
-  ../ccutil/genericvector.h ../ccstruct/vecfuncs.h ../ccstruct/boxword.h \
-  ../ccstruct/normalis.h ../ccstruct/ocrblock.h ../image/img.h \
-  ../ccstruct/ocrpara.h ../ccstruct/ocrrow.h ../ccstruct/quspline.h \
-  ../ccstruct/quadratc.h ../ccstruct/werd.h ../ccutil/bits16.h \
-  ../ccutil/elst2.h ../ccstruct/blckerr.h ../ccstruct/stepblob.h \
-  ../ccstruct/coutln.h ../ccstruct/crakedge.h ../ccstruct/mod128.h \
-  ../ccstruct/pdblock.h ../ccstruct/polyblk.h ../ccstruct/hpddef.h \
+  /usr/local/include/leptonica/environ.h \
+  /usr/local/include/leptonica/array.h \
+  /usr/local/include/leptonica/arrayaccess.h \
+  /usr/local/include/leptonica/bbuffer.h \
+  /usr/local/include/leptonica/bmf.h \
+  /usr/local/include/leptonica/ccbord.h \
+  /usr/local/include/leptonica/dewarp.h \
+  /usr/local/include/leptonica/gplot.h \
+  /usr/local/include/leptonica/heap.h \
+  /usr/local/include/leptonica/imageio.h \
+  /usr/local/include/leptonica/jbclass.h \
+  /usr/local/include/leptonica/list.h \
+  /usr/local/include/leptonica/morph.h \
+  /usr/local/include/leptonica/pix.h /usr/local/include/leptonica/ptra.h \
+  /usr/local/include/leptonica/queue.h \
+  /usr/local/include/leptonica/regutils.h \
+  /usr/local/include/leptonica/sudoku.h \
+  /usr/local/include/leptonica/stack.h \
+  /usr/local/include/leptonica/watershed.h ../ccstruct/pageres.h \
+  ../ccstruct/blobs.h ../ccutil/clst.h ../ccutil/serialis.h \
+  ../ccutil/fileerr.h ../ccutil/lsterr.h ../ccstruct/rect.h \
+  /usr/include/math.h ../ccstruct/points.h ../ccutil/elst.h \
+  ../ccstruct/ipoints.h ../ccutil/ndminx.h ../viewer/scrollview.h \
+  ../ccutil/tprintf.h ../ccutil/params.h ../ccutil/genericvector.h \
+  ../ccstruct/vecfuncs.h ../ccstruct/boxword.h ../ccstruct/normalis.h \
+  ../ccstruct/ocrblock.h ../image/img.h ../ccstruct/ocrpara.h \
+  ../ccstruct/ocrrow.h ../ccstruct/quspline.h ../ccstruct/quadratc.h \
+  ../ccstruct/werd.h ../ccutil/bits16.h ../ccutil/elst2.h \
+  ../ccstruct/blckerr.h ../ccstruct/stepblob.h ../ccstruct/coutln.h \
+  ../ccstruct/crakedge.h ../ccstruct/mod128.h ../ccstruct/pdblock.h \
+  ../ccstruct/polyblk.h ../ccstruct/hpddef.h \
   ../ccstruct/params_training_featdef.h ../ccstruct/ratngs.h \
   /usr/include/assert.h ../ccutil/notdll.h ../ccstruct/rejctmap.h \
   ../ccstruct/seam.h ../ccstruct/split.h ../cutil/oldlist.h \
@@ -213,9 +210,9 @@ pageiterator.h:
 
 ../ccutil/unicharmap.h:
 
-/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/jni/leptonica/include/leptonica/allheaders.h:
+/usr/local/include/leptonica/allheaders.h:
 
-/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/jni/leptonica/include/leptonica/alltypes.h:
+/usr/local/include/leptonica/alltypes.h:
 
 /usr/include/stdlib.h:
 
@@ -309,45 +306,45 @@ pageiterator.h:
 
 /usr/include/sys/_types/_mode_t.h:
 
-/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/jni/leptonica/include/leptonica/environ.h:
+/usr/local/include/leptonica/environ.h:
 
-/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/jni/leptonica/include/leptonica/array.h:
+/usr/local/include/leptonica/array.h:
 
-/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/jni/leptonica/include/leptonica/arrayaccess.h:
+/usr/local/include/leptonica/arrayaccess.h:
 
-/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/jni/leptonica/include/leptonica/bbuffer.h:
+/usr/local/include/leptonica/bbuffer.h:
 
-/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/jni/leptonica/include/leptonica/bmf.h:
+/usr/local/include/leptonica/bmf.h:
 
-/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/jni/leptonica/include/leptonica/ccbord.h:
+/usr/local/include/leptonica/ccbord.h:
 
-/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/jni/leptonica/include/leptonica/dewarp.h:
+/usr/local/include/leptonica/dewarp.h:
 
-/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/jni/leptonica/include/leptonica/gplot.h:
+/usr/local/include/leptonica/gplot.h:
 
-/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/jni/leptonica/include/leptonica/heap.h:
+/usr/local/include/leptonica/heap.h:
 
-/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/jni/leptonica/include/leptonica/imageio.h:
+/usr/local/include/leptonica/imageio.h:
 
-/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/jni/leptonica/include/leptonica/jbclass.h:
+/usr/local/include/leptonica/jbclass.h:
 
-/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/jni/leptonica/include/leptonica/list.h:
+/usr/local/include/leptonica/list.h:
 
-/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/jni/leptonica/include/leptonica/morph.h:
+/usr/local/include/leptonica/morph.h:
 
-/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/jni/leptonica/include/leptonica/pix.h:
+/usr/local/include/leptonica/pix.h:
 
-/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/jni/leptonica/include/leptonica/ptra.h:
+/usr/local/include/leptonica/ptra.h:
 
-/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/jni/leptonica/include/leptonica/queue.h:
+/usr/local/include/leptonica/queue.h:
 
-/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/jni/leptonica/include/leptonica/regutils.h:
+/usr/local/include/leptonica/regutils.h:
 
-/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/jni/leptonica/include/leptonica/sudoku.h:
+/usr/local/include/leptonica/sudoku.h:
 
-/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/jni/leptonica/include/leptonica/stack.h:
+/usr/local/include/leptonica/stack.h:
 
-/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/jni/leptonica/include/leptonica/watershed.h:
+/usr/local/include/leptonica/watershed.h:
 
 ../ccstruct/pageres.h:
 

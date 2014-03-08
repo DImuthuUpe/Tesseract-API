@@ -36,7 +36,11 @@ zlibmem.lo: zlibmem.c allheaders.h alltypes.h /usr/include/stdio.h \
   environ.h array.h arrayaccess.h bbuffer.h bmf.h ccbord.h dewarp.h \
   gplot.h heap.h imageio.h jbclass.h list.h morph.h pix.h ptra.h queue.h \
   regutils.h sudoku.h stack.h watershed.h ../config_auto.h \
-  /usr/include/zlib.h /usr/include/zconf.h /usr/include/sys/types.h \
+  /opt/local/include/zlib.h /opt/local/include/zconf.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.0/include/limits.h \
+  /usr/include/limits.h /usr/include/machine/limits.h \
+  /usr/include/i386/limits.h /usr/include/i386/_limits.h \
+  /usr/include/sys/syslimits.h /usr/include/sys/types.h \
   /usr/include/sys/_types/_blkcnt_t.h \
   /usr/include/sys/_types/_blksize_t.h /usr/include/sys/_types/_gid_t.h \
   /usr/include/sys/_types/_in_addr_t.h \
@@ -62,8 +66,10 @@ zlibmem.lo: zlibmem.c allheaders.h alltypes.h /usr/include/stdio.h \
   /usr/include/sys/_types/_pthread_t.h \
   /usr/include/sys/_types/_pthread_key_t.h \
   /usr/include/sys/_types/_fsblkcnt_t.h \
-  /usr/include/sys/_types/_fsfilcnt_t.h /usr/include/unistd.h \
-  /usr/include/sys/unistd.h /usr/include/sys/_types/_posix_vdisable.h \
+  /usr/include/sys/_types/_fsfilcnt_t.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.0/include/stdarg.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/_types/_posix_vdisable.h \
   /usr/include/sys/_types/_seek_set.h /usr/include/sys/select.h \
   /usr/include/sys/_types/_timespec.h /usr/include/sys/_select.h \
   /usr/include/sys/_types/_uuid_t.h /usr/include/gethostuuid.h
@@ -240,9 +246,21 @@ watershed.h:
 
 ../config_auto.h:
 
-/usr/include/zlib.h:
+/opt/local/include/zlib.h:
 
-/usr/include/zconf.h:
+/opt/local/include/zconf.h:
+
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.0/include/limits.h:
+
+/usr/include/limits.h:
+
+/usr/include/machine/limits.h:
+
+/usr/include/i386/limits.h:
+
+/usr/include/i386/_limits.h:
+
+/usr/include/sys/syslimits.h:
 
 /usr/include/sys/types.h:
 
@@ -311,6 +329,8 @@ watershed.h:
 /usr/include/sys/_types/_fsblkcnt_t.h:
 
 /usr/include/sys/_types/_fsfilcnt_t.h:
+
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.0/include/stdarg.h:
 
 /usr/include/unistd.h:
 

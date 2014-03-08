@@ -67,7 +67,8 @@ gifio.lo: gifio.c /usr/include/string.h /usr/include/_types.h \
   /usr/include/sys/_types/_wchar_t.h environ.h array.h arrayaccess.h \
   bbuffer.h bmf.h ccbord.h dewarp.h gplot.h heap.h imageio.h jbclass.h \
   list.h morph.h pix.h ptra.h queue.h regutils.h sudoku.h stack.h \
-  watershed.h ../config_auto.h
+  watershed.h ../config_auto.h /opt/local/include/gif_lib.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.0/include/stdbool.h
 
 /usr/include/string.h:
 
@@ -332,3 +333,7 @@ stack.h:
 watershed.h:
 
 ../config_auto.h:
+
+/opt/local/include/gif_lib.h:
+
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.0/include/stdbool.h:

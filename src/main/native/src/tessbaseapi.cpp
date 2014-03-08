@@ -43,7 +43,22 @@ void JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeFinalize
  */
 jboolean JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeInit
   (JNIEnv *, jobject, jstring, jstring){
-  return true;
+  tesseract::TessBaseAPI *api = new tesseract::TessBaseAPI();
+  char *outText;
+  jboolean res= api->Init("/opt/local/share/", "eng");
+  if(res){
+  	fprintf(stderr, "Could not initialize tesseract.\n");
+  }
+  Pix *image = pixRead("/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/resources/samples/image4.TIF");
+  api->SetImage(image);
+  outText = api->GetUTF8Text();
+  printf("OCR output:\n%s", outText);
+
+    // Destroy used object and release memory
+  api->End();
+  delete [] outText;
+  pixDestroy(&image);
+  return res;
   }
 
 /*

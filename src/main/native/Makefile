@@ -55,8 +55,9 @@ else
 ifeq ($(UNAME),Darwin)
 LIB_PREFIX = lib
 LIB_EXTN = .dylib
-CPPFLAGS += -I$(JAVA_HOME)/include/darwin -I ./includes/leptonica -I ./includes/tesseract
-LD_LIBS += -L ../resources/mac/libs -llepta -ltesseracta
+CPPFLAGS += -I$(JAVA_HOME)/include/darwin -I ./includes/tesseract -I ./includes/leptonica
+LD_LIBS += -L ../resources/mac/libs -L /opt/local/lib -llepta -ltesseracta -lz -lpng -ljpeg -ltiff -lgif -lwebp
+CC = g++ 
 else
 f := $(error Platform $(UNAME) not supported)
 endif

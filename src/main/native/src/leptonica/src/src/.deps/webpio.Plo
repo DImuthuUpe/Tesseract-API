@@ -35,7 +35,10 @@ webpio.lo: webpio.c /usr/include/math.h /usr/include/sys/cdefs.h \
   /usr/include/sys/_types/_dev_t.h /usr/include/sys/_types/_mode_t.h \
   environ.h array.h arrayaccess.h bbuffer.h bmf.h ccbord.h dewarp.h \
   gplot.h heap.h imageio.h jbclass.h list.h morph.h pix.h ptra.h queue.h \
-  regutils.h sudoku.h stack.h watershed.h ../config_auto.h
+  regutils.h sudoku.h stack.h watershed.h ../config_auto.h \
+  /opt/local/include/webp/decode.h /opt/local/include/webp/./types.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.0/include/stddef.h \
+  /usr/include/inttypes.h /opt/local/include/webp/encode.h
 
 /usr/include/math.h:
 
@@ -210,3 +213,13 @@ stack.h:
 watershed.h:
 
 ../config_auto.h:
+
+/opt/local/include/webp/decode.h:
+
+/opt/local/include/webp/./types.h:
+
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.0/include/stddef.h:
+
+/usr/include/inttypes.h:
+
+/opt/local/include/webp/encode.h:

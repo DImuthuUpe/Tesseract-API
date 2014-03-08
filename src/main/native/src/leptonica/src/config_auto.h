@@ -14,19 +14,19 @@
 #define HAVE_INTTYPES_H 1
 
 /* Define to 1 if you have giflib. */
-/* #undef HAVE_LIBGIF */
+#define HAVE_LIBGIF 1
 
 /* Define to 1 if you have jpeg. */
-/* #undef HAVE_LIBJPEG */
+#define HAVE_LIBJPEG 1
 
 /* Define to 1 if you have libpng. */
-/* #undef HAVE_LIBPNG */
+#define HAVE_LIBPNG 1
 
 /* Define to 1 if you have libtiff. */
-/* #undef HAVE_LIBTIFF */
+#define HAVE_LIBTIFF 1
 
 /* Define to 1 if you have libwebp. */
-/* #undef HAVE_LIBWEBP */
+#define HAVE_LIBWEBP 1
 
 /* Define to 1 if you have zlib. */
 #define HAVE_LIBZ 1

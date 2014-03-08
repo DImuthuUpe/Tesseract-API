@@ -1,25 +1,37 @@
 package com.apache.pdfbox.ocr.tesseract;
 
 import java.io.File;
+import com.wapmx.nativeutils.jniloader.NativeLoader;
 
 public class TessBaseAPI {
     
 
     static {
-        System.loadLibrary("leptapi");
+        //System.loadLibrary("tessbaseapi");
         //System.loadLibrary("tesseract");
 		//nativeClassInit();
+		try {
+            NativeLoader.loadLibrary("tessbaseapi");
+        } catch (Throwable e) {
+            e.printStackTrace();
+            System.exit(1);
+        }
     }
     
-    public static void main(String a[]){
-    	TessBaseAPI api = new TessBaseAPI();
-    	System.out.println(api.nativeInit("",""));
-    }
+    //public static void main(String a[]){
+    	//TessBaseAPI api = new TessBaseAPI();
+    //	System.out.println("jbkb");
+    //}
+
+	public boolean init(String dataPath,String lang){
+		boolean init =nativeInit("","");	
+		return init;
+	}
 
     // ******************
     // * Native methods *
     // ******************
-
+	
     /**
      * Initializes static native data. Must be called on object load.
      */
