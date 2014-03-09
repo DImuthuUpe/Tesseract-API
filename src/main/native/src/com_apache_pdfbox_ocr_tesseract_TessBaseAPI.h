@@ -65,6 +65,14 @@ JNIEXPORT void JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeSe
 
 /*
  * Class:     com_apache_pdfbox_ocr_tesseract_TessBaseAPI
+ * Method:    nativeSetImagePath
+ * Signature: (Ljava/lang/String;)V
+ */
+JNIEXPORT void JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeSetImagePath
+  (JNIEnv *, jobject, jstring);
+
+/*
+ * Class:     com_apache_pdfbox_ocr_tesseract_TessBaseAPI
  * Method:    nativeSetImagePix
  * Signature: (I)V
  */

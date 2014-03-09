@@ -4,7 +4,7 @@ import java.io.File;
 import com.wapmx.nativeutils.jniloader.NativeLoader;
 
 public class TessBaseAPI {
-    
+	private int mNativeData;
 
     static {
         //System.loadLibrary("tessbaseapi");
@@ -12,6 +12,7 @@ public class TessBaseAPI {
 		//nativeClassInit();
 		try {
             NativeLoader.loadLibrary("tessbaseapi");
+            nativeClassInit();
         } catch (Throwable e) {
             e.printStackTrace();
             System.exit(1);
@@ -22,10 +23,22 @@ public class TessBaseAPI {
     	//TessBaseAPI api = new TessBaseAPI();
     //	System.out.println("jbkb");
     //}
+    
+    public TessBaseAPI(){
+    	nativeConstruct();
+    }
 
 	public boolean init(String dataPath,String lang){
-		boolean init =nativeInit("","");	
+		boolean init =nativeInit(dataPath,lang);	
 		return init;
+	}
+	
+	public void setImagePath(String path){
+		nativeSetImagePath(path);
+	}
+	
+	public String getUTF8Text(){
+		return nativeGetUTF8Text();
 	}
 
     // ******************
@@ -55,6 +68,8 @@ public class TessBaseAPI {
 
     private native void nativeSetImageBytes(
             byte[] imagedata, int width, int height, int bpp, int bpl);
+    
+    private native void nativeSetImagePath(String path);
 
     private native void nativeSetImagePix(int nativePix);
 

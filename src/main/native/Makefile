@@ -21,7 +21,7 @@ TARGET		= $(JAVA_BUILD_DIR)/META-INF/lib/$(LIB_PREFIX)$(LIBNAME)$(LIB_EXTN)
 
 # find the jdk. if this doesn't work for you, define JAVA_HOME in your
 # environment or on the make command line
-JAVA_HOME ?= /usr/local/j2ee/jdk
+JAVA_HOME ?= /Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home
 
 # tools and options
 CFLAGS = -Wall -fpic

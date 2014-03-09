@@ -9,14 +9,27 @@
 #include "jni.h"
 #include "com_apache_pdfbox_ocr_tesseract_TessBaseAPI.h"
 
+static jfieldID field_mNativeData;
+
+struct native_data_t {
+	tesseract::TessBaseAPI *api;
+	native_data_t() {
+		api = new tesseract::TessBaseAPI();
+	}
+};
+
+static inline native_data_t * get_native_data(JNIEnv *env, jobject object) {
+	return (native_data_t *) (env->GetLongField(object, field_mNativeData)); //converted for 64 bit architecture
+}
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 void JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeClassInit
-  (JNIEnv *, jclass){
-  }
+(JNIEnv *env, jclass clazz) {
+	field_mNativeData = env->GetFieldID(clazz, "mNativeData", "I");
+}
 
 /*
  * Class:     com_apache_pdfbox_ocr_tesseract_TessBaseAPI
@@ -24,8 +37,17 @@ void JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeClassInit
  * Signature: ()V
  */
 void JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeConstruct
-  (JNIEnv *, jobject){
-  }
+(JNIEnv * env, jobject object) {
+
+	native_data_t *nat = new native_data_t;
+
+	if (nat == NULL) {
+		//LOGE("%s: out of memory!", __FUNCTION__);
+		return;
+	}
+
+	env->SetLongField(object, field_mNativeData, (jlong) nat); // converted to 64 bit architecture
+}
 
 /*
  * Class:     com_apache_pdfbox_ocr_tesseract_TessBaseAPI
@@ -33,33 +55,33 @@ void JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeConstruct
  * Signature: ()V
  */
 void JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeFinalize
-  (JNIEnv *, jobject){
-  }
+(JNIEnv *, jobject) {
+}
 
 /*
  * Class:     com_apache_pdfbox_ocr_tesseract_TessBaseAPI
  * Method:    nativeInit
  * Signature: (Ljava/lang/String;Ljava/lang/String;)Z
  */
-jboolean JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeInit
-  (JNIEnv *, jobject, jstring, jstring){
-  tesseract::TessBaseAPI *api = new tesseract::TessBaseAPI();
-  char *outText;
-  jboolean res= api->Init("/opt/local/share/", "eng");
-  if(res){
-  	fprintf(stderr, "Could not initialize tesseract.\n");
-  }
-  Pix *image = pixRead("/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/resources/samples/image4.TIF");
-  api->SetImage(image);
-  outText = api->GetUTF8Text();
-  printf("OCR output:\n%s", outText);
+jboolean JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeInit(
+		JNIEnv *env, jobject thiz, jstring dir, jstring lang) {
 
-    // Destroy used object and release memory
-  api->End();
-  delete [] outText;
-  pixDestroy(&image);
-  return res;
-  }
+	native_data_t *nat = get_native_data(env, thiz);
+
+	const char *c_dir = env->GetStringUTFChars(dir, NULL);
+	const char *c_lang = env->GetStringUTFChars(lang, NULL);
+	jboolean res = JNI_TRUE;
+
+	if (nat->api->Init(c_dir, c_lang)) {
+		res = JNI_FALSE;
+	} else {
+	}
+
+	env->ReleaseStringUTFChars(dir, c_dir);
+	env->ReleaseStringUTFChars(lang, c_lang);
+
+	return res;
+}
 
 /*
  * Class:     com_apache_pdfbox_ocr_tesseract_TessBaseAPI
@@ -67,8 +89,8 @@ jboolean JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeInit
  * Signature: ()V
  */
 void JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeClear
-  (JNIEnv *, jobject){
-  }
+(JNIEnv *, jobject) {
+}
 
 /*
  * Class:     com_apache_pdfbox_ocr_tesseract_TessBaseAPI
@@ -76,8 +98,8 @@ void JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeClear
  * Signature: ()V
  */
 void JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeEnd
-  (JNIEnv *, jobject){
-  }
+(JNIEnv *, jobject) {
+}
 
 /*
  * Class:     com_apache_pdfbox_ocr_tesseract_TessBaseAPI
@@ -85,8 +107,16 @@ void JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeEnd
  * Signature: ([BIIII)V
  */
 void JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeSetImageBytes
-  (JNIEnv *, jobject, jbyteArray, jint, jint, jint, jint){
-  }
+(JNIEnv *, jobject, jbyteArray, jint, jint, jint, jint) {
+}
+
+void JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeSetImagePath
+(JNIEnv *env, jobject thiz, jstring path) {
+	native_data_t *nat = get_native_data(env, thiz);
+	const char *c_path = env->GetStringUTFChars(path, NULL);
+	Pix *image =pixRead(c_path);
+	nat->api->SetImage(image);
+}
 
 /*
  * Class:     com_apache_pdfbox_ocr_tesseract_TessBaseAPI
@@ -94,8 +124,8 @@ void JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeSetImageByte
  * Signature: (I)V
  */
 void JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeSetImagePix
-  (JNIEnv *, jobject, jint){
-  }
+(JNIEnv *, jobject, jint) {
+}
 
 /*
  * Class:     com_apache_pdfbox_ocr_tesseract_TessBaseAPI
@@ -103,62 +133,70 @@ void JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeSetImagePix
  * Signature: (IIII)V
  */
 void JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeSetRectangle
-  (JNIEnv *, jobject, jint, jint, jint, jint){
-  }
+(JNIEnv *, jobject, jint, jint, jint, jint) {
+}
 
 /*
  * Class:     com_apache_pdfbox_ocr_tesseract_TessBaseAPI
  * Method:    nativeGetUTF8Text
  * Signature: ()Ljava/lang/String;
  */
-jstring JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeGetUTF8Text
-  (JNIEnv *, jobject){
-  }
+jstring JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeGetUTF8Text(
+		JNIEnv *env, jobject thiz) {
+	native_data_t *nat = get_native_data(env, thiz);
+	char *text = nat->api->GetUTF8Text();
+	jstring result = env->NewStringUTF(text);
+
+	free(text);
+	printf("OCR output:\n%s", text);
+
+	return result;
+}
 
 /*
  * Class:     com_apache_pdfbox_ocr_tesseract_TessBaseAPI
  * Method:    nativeGetRegions
  * Signature: ()I
  */
-jint JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeGetRegions
-  (JNIEnv *, jobject){
-  }
+jint JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeGetRegions(
+		JNIEnv *, jobject) {
+}
 
 /*
  * Class:     com_apache_pdfbox_ocr_tesseract_TessBaseAPI
  * Method:    nativeGetWords
  * Signature: ()I
  */
-jint JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeGetWords
-  (JNIEnv *, jobject){
-  }
+jint JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeGetWords(
+		JNIEnv *, jobject) {
+}
 
 /*
  * Class:     com_apache_pdfbox_ocr_tesseract_TessBaseAPI
  * Method:    nativeMeanConfidence
  * Signature: ()I
  */
-jint JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeMeanConfidence
-  (JNIEnv *, jobject){
-  }
+jint JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeMeanConfidence(
+		JNIEnv *, jobject) {
+}
 
 /*
  * Class:     com_apache_pdfbox_ocr_tesseract_TessBaseAPI
  * Method:    nativeWordConfidences
  * Signature: ()[I
  */
-jintArray JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeWordConfidences
-  (JNIEnv *, jobject){
-  }
+jintArray JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeWordConfidences(
+		JNIEnv *, jobject) {
+}
 
 /*
  * Class:     com_apache_pdfbox_ocr_tesseract_TessBaseAPI
  * Method:    nativeSetVariable
  * Signature: (Ljava/lang/String;Ljava/lang/String;)Z
  */
-jboolean JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeSetVariable
-  (JNIEnv *, jobject, jstring, jstring){
-  }
+jboolean JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeSetVariable(
+		JNIEnv *, jobject, jstring, jstring) {
+}
 
 /*
  * Class:     com_apache_pdfbox_ocr_tesseract_TessBaseAPI
@@ -166,8 +204,8 @@ jboolean JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeSetVaria
  * Signature: (Z)V
  */
 void JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeSetDebug
-  (JNIEnv *, jobject, jboolean){
-  }
+(JNIEnv *, jobject, jboolean) {
+}
 
 /*
  * Class:     com_apache_pdfbox_ocr_tesseract_TessBaseAPI
@@ -175,17 +213,17 @@ void JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeSetDebug
  * Signature: (I)V
  */
 void JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeSetPageSegMode
-  (JNIEnv *, jobject, jint){
-  }
+(JNIEnv *, jobject, jint) {
+}
 
 /*
  * Class:     com_apache_pdfbox_ocr_tesseract_TessBaseAPI
  * Method:    nativeGetResultIterator
  * Signature: ()I
  */
-jint JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeGetResultIterator
-  (JNIEnv *, jobject){
-  }
+jint JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeGetResultIterator(
+		JNIEnv *, jobject) {
+}
 
 #ifdef __cplusplus
 }
