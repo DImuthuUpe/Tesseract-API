@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 //#include "android/bitmap.h"
 //#include "common.h"
 #include "baseapi.h"
@@ -13,6 +14,7 @@ static jfieldID field_mNativeData;
 
 struct native_data_t {
 	tesseract::TessBaseAPI *api;
+	tesseract::ResultIterator* ri;
 	native_data_t() {
 		api = new tesseract::TessBaseAPI();
 	}
@@ -98,7 +100,9 @@ void JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeClear
  * Signature: ()V
  */
 void JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeEnd
-(JNIEnv *, jobject) {
+(JNIEnv *env, jobject thiz) {
+	native_data_t *nat = get_native_data(env, thiz);
+	nat->api->End();
 }
 
 /*
@@ -222,7 +226,88 @@ void JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeSetPageSegMo
  * Signature: ()I
  */
 jint JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeGetResultIterator(
-		JNIEnv *, jobject) {
+		JNIEnv *env, jobject thiz) {
+	native_data_t *nat = get_native_data(env, thiz);
+	nat->api->Recognize(0);
+	nat->ri = nat->api->GetIterator();
+
+}
+
+jboolean JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeResultIteratorNext(
+		JNIEnv *env, jobject thiz) {
+	native_data_t *nat = get_native_data(env, thiz);
+	tesseract::PageIteratorLevel level = tesseract::RIL_WORD;
+	if (nat->ri->Next(level)) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+jboolean JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeIsResultIteratorAvailable(
+		JNIEnv *env, jobject thiz) {
+	native_data_t *nat = get_native_data(env, thiz);
+	tesseract::PageIteratorLevel level = tesseract::RIL_WORD;
+	if (nat->ri != 0) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+jstring JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeGetWord(
+		JNIEnv *env, jobject thiz) {
+	native_data_t *nat = get_native_data(env, thiz);
+	tesseract::PageIteratorLevel level = tesseract::RIL_WORD;
+	if (nat->ri != 0) {
+		const char* word = nat->ri->GetUTF8Text(level);
+		jstring result = env->NewStringUTF(word);
+		//free(word);
+		return result;
+	}
+}
+
+jstring JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeGetBoundingBox(
+		JNIEnv *env, jobject thiz) {
+	native_data_t *nat = get_native_data(env, thiz);
+	tesseract::PageIteratorLevel level = tesseract::RIL_WORD;
+	if (nat->ri != 0) {
+		int x1, y1, x2, y2;
+		nat->ri->BoundingBox(level, &x1, &y1, &x2, &y2);
+
+		char stringBuffer[20];
+		char* cx1;
+		char* cy1;
+		char* cx2;
+		char* cy2;
+		char* seperator =",";
+
+		snprintf(stringBuffer, 20, "%d", x1);
+		cx1 = strdup(stringBuffer);
+
+		snprintf(stringBuffer, 20, "%d", y1);
+		cy1 = strdup(stringBuffer);
+
+		snprintf(stringBuffer, 20, "%d", x2);
+		cx2 = strdup(stringBuffer);
+
+		snprintf(stringBuffer, 20, "%d", y2);
+		cy2 = strdup(stringBuffer);
+
+		char str[40];
+		strcpy(str, cx1);
+		strcat(str, seperator);
+		strcat(str, cy1);
+		strcat(str, seperator);
+		strcat(str, cx2);
+		strcat(str, seperator);
+		strcat(str, cy2);
+
+		char* str2;
+		str2 = strdup(str);
+		jstring result = env->NewStringUTF(str2);
+		return result;
+	}
 }
 
 #ifdef __cplusplus
