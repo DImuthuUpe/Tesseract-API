@@ -111,7 +111,21 @@ void JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeEnd
  * Signature: ([BIIII)V
  */
 void JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeSetImageBytes
-(JNIEnv *, jobject, jbyteArray, jint, jint, jint, jint) {
+(JNIEnv *env, jobject thiz, jbyteArray data, jint width, jint height, jint bpp, jint bpl) {
+	jbyte *data_array = env->GetByteArrayElements(data, NULL);
+	int count = env->GetArrayLength(data);
+	unsigned char* imagedata = (unsigned char *) malloc(count * sizeof(unsigned char));
+
+	// This is painfully slow, but necessary because we don't know
+	// how many bits the JVM might be using to represent a byte
+	for (int i = 0; i < count; i++) {
+		imagedata[i] = (unsigned char) data_array[i];
+	}
+
+	env->ReleaseByteArrayElements(data, data_array, JNI_ABORT);
+
+	native_data_t *nat = get_native_data(env, thiz);
+	nat->api->SetImage(imagedata, (int) width, (int) height, (int) bpp, (int) bpl);
 }
 
 void JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeSetImagePath
@@ -152,7 +166,7 @@ jstring JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeGetUTF8Te
 	jstring result = env->NewStringUTF(text);
 
 	free(text);
-	printf("OCR output:\n%s", text);
+	//printf("OCR output:\n%s", text);
 
 	return result;
 }
@@ -280,7 +294,7 @@ jstring JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeGetBoundi
 		char* cy1;
 		char* cx2;
 		char* cy2;
-		char* seperator =",";
+		char* seperator = ",";
 
 		snprintf(stringBuffer, 20, "%d", x1);
 		cx1 = strdup(stringBuffer);

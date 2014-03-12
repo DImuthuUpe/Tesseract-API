@@ -1,6 +1,9 @@
 package com.apache.pdfbox.ocr.tesseract;
 
+import java.awt.Color;
+import java.awt.image.BufferedImage;
 import java.io.File;
+
 import com.wapmx.nativeutils.jniloader.NativeLoader;
 
 public class TessBaseAPI {
@@ -68,6 +71,33 @@ public class TessBaseAPI {
 		return nativeGetBoundingBox();
 	}
 
+	public void setImage(byte[] imagedata, int width, int height, int bpp, int bpl) {
+        nativeSetImageBytes(imagedata, width, height, bpp, bpl);
+    }
+	
+	public void setBufferedImage(BufferedImage image){
+		int width = image.getWidth();
+		int height = image.getHeight();
+		
+		byte[] data = new byte[width*height*3];
+		int bpp = 3;
+		int bpl = width*3;
+		
+		
+		for (int i = 0; i < height; i++) {
+			for (int j = 0; j < width; j++) {
+				Color c = new Color(image.getRGB(j,i));
+				int red = c.getRed();
+				int green = c.getGreen();
+				int blue = c.getBlue();
+				data[((width*i+j)*3)] = (byte)blue;
+				data[((width*i+j)*3)+1] = (byte)green;
+				data[((width*i+j)*3)+2] = (byte)red;
+			}
+		}
+		nativeSetImageBytes(data, width, height, bpp, bpl);
+		
+	}
 	// ******************
 	// * Native methods *
 	// ******************
