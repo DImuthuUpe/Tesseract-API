@@ -2,7 +2,6 @@ package com.apache.pdfbox.ocr.tesseract;
 
 import java.awt.Color;
 import java.awt.image.BufferedImage;
-import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 
@@ -44,9 +43,6 @@ public class TessByteSteamTest extends TestCase{
 				data[((width*i+j)*3)] = (byte)blue;
 				data[((width*i+j)*3)+1] = (byte)green;
 				data[((width*i+j)*3)+2] = (byte)red;
-				
-				
-				//System.out.println(red+" "+green+" "+blue);
 			}
 		}
 		return data;
