@@ -6,6 +6,9 @@ import java.awt.image.BufferedImage;
 import com.wapmx.nativeutils.jniloader.NativeLoader;
 
 public class TessBaseAPI {
+	public static final String DEFAULT_DATA_PATH= "src/main/resources/data";
+	public static final String DEFAULT_LANG = "eng";
+	
 	private long mNativeData;
 	private static TessBaseAPI api = null;
 	static {
