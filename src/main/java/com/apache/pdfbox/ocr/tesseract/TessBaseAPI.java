@@ -2,12 +2,11 @@ package com.apache.pdfbox.ocr.tesseract;
 
 import java.awt.Color;
 import java.awt.image.BufferedImage;
-import java.io.File;
 
 import com.wapmx.nativeutils.jniloader.NativeLoader;
 
 public class TessBaseAPI {
-	private int mNativeData;
+	private long mNativeData;
 	private static TessBaseAPI api = null;
 	static {
 		try {
@@ -21,16 +20,17 @@ public class TessBaseAPI {
 
 	// Singleton design pattern applied
 	// Creating several instances of TessBaseAPI leads to memory crash.
-	// Class can get access to NativeLoader.loadLibrary("tessbaseapi"); if there
-	// is another instance of TessBaseAPI
-	public static TessBaseAPI getInstance() {
-		if (api == null) {
-			api = new TessBaseAPI();
-		}
-		return api;
-	}
+	// // Class can get access to NativeLoader.loadLibrary("tessbaseapi"); if
+	// there
+	// // is another instance of TessBaseAPI
+	// public static TessBaseAPI getInstance() {
+	// if (api == null) {
+	// api = new TessBaseAPI();
+	// }
+	// return api;
+	// }
 
-	private TessBaseAPI() {
+	public TessBaseAPI() {
 		nativeConstruct();
 	}
 
@@ -53,6 +53,7 @@ public class TessBaseAPI {
 
 	public void end() {
 		nativeEnd();
+		// nativeFinalize();
 	}
 
 	public boolean resultIteratorNext() {
@@ -70,18 +71,43 @@ public class TessBaseAPI {
 	public String getBoundingBox() {
 		return nativeGetBoundingBox();
 	}
-	
-	
+
+	public byte[] getByteStream(BufferedImage image) {
+		int width = image.getWidth();
+		int height = image.getHeight();
+
+		byte[] data = new byte[width * height * 3];
+		for (int i = 0; i < height; i++) {
+			for (int j = 0; j < width; j++) {
+				Color c = new Color(image.getRGB(j, i));
+				int red = c.getRed();
+				int green = c.getGreen();
+				int blue = c.getBlue();
+				data[((width * i + j) * 3)] = (byte) blue;
+				data[((width * i + j) * 3) + 1] = (byte) green;
+				data[((width * i + j) * 3) + 2] = (byte) red;
+			}
+		}
+		return data;
+	}
+
+	public void setBufferedImage(BufferedImage image) {
+		byte[] data = getByteStream(image);
+		int width = image.getWidth();
+		int height = image.getHeight();
+		int bpp = 3;
+		int bpl = width * 3;
+		setImage(data, width, height, bpp, bpl);
+	}
+
 	/**
-	 * <<copied from Tesseract api documentation>>
-	 * Greyscale of 8 and color of 24 or 32 bits per pixel may be given.
-	 * Palette color images will not work properly and must be converted to
-	 * 24 bit.
-	 * Binary images of 1 bit per pixel may also be given but they must be
-	 * byte packed with the MSB of the first byte being the first pixel, and a
-	 * one pixel is WHITE. For binary images set bytes_per_pixel=0.
-	 * The recognized text is returned as a char* which is coded
-	 * as UTF8 and must be freed with the delete [] operator.
+	 * <<copied from Tesseract api documentation>> Greyscale of 8 and color of
+	 * 24 or 32 bits per pixel may be given. Palette color images will not work
+	 * properly and must be converted to 24 bit. Binary images of 1 bit per
+	 * pixel may also be given but they must be byte packed with the MSB of the
+	 * first byte being the first pixel, and a one pixel is WHITE. For binary
+	 * images set bytes_per_pixel=0. The recognized text is returned as a char*
+	 * which is coded as UTF8 and must be freed with the delete [] operator.
 	 */
 	public void setImage(byte[] imagedata, int width, int height, int bpp,
 			int bpl) {
