@@ -80,6 +80,24 @@ RANLIB =	ranlib
 #   Libraries are built into a binary tree.  By default, the root
 #   is in the parent directory.
 ROOT_DIR =	..
+RESOUECE_DIR = ../../../../../resources
+
+# os-dependent resource paths
+UNAME := $(shell uname)
+
+ifeq ($(UNAME),Linux)
+RESOUECE_DIR = ../../../../../resources/linux
+else
+ifeq ($(findstring CYGWIN,$(UNAME)),CYGWIN)
+RESOUECE_DIR = ../../../../../resources/cygwin
+else
+ifeq ($(UNAME),Darwin)
+RESOUECE_DIR = ../../../../../resources/mac
+else
+
+endif
+endif
+endif
 
 BASE_OBJ =	$(ROOT_DIR)/obj
 OBJ_NODEBUG =	$(ROOT_DIR)/obj/nodebug
@@ -87,9 +105,11 @@ OBJ_DEBUG =	$(ROOT_DIR)/obj/debug
 OBJ_SHARED =	$(ROOT_DIR)/obj/shared
 
 BASE_LIB =	$(ROOT_DIR)/lib
-LIB_NODEBUG =	$(ROOT_DIR)/lib/nodebug
+LIB_NODEBUG =	$(RESOUECE_DIR)/libs
 LIB_DEBUG =	$(ROOT_DIR)/lib/debug
 LIB_SHARED =	$(ROOT_DIR)/lib/shared
+
+
 
 
 #   Include files
@@ -153,8 +173,8 @@ MINOR_REV = 69
 
 # Libraries
 
-LEPTLIB =		liblept.a
-LEPTLIB_SHARED =	liblept.so
+LEPTLIB =		liblepta.a
+LEPTLIB_SHARED =	liblepta.so
 
 #########################################################
 

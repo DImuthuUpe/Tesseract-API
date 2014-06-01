@@ -64,13 +64,14 @@ cube_search_object.lo: cube_search_object.cpp cube_search_object.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/cwctype \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/cctype \
   /usr/include/wctype.h /usr/include/_types/_wctrans_t.h \
-  /usr/local/include/leptonica/allheaders.h \
-  /usr/local/include/leptonica/alltypes.h /usr/include/stdlib.h \
-  /usr/include/sys/wait.h /usr/include/sys/_types/_pid_t.h \
-  /usr/include/sys/_types/_id_t.h /usr/include/sys/signal.h \
-  /usr/include/sys/appleapiopts.h /usr/include/machine/signal.h \
-  /usr/include/i386/signal.h /usr/include/machine/_mcontext.h \
-  /usr/include/i386/_mcontext.h /usr/include/mach/i386/_structs.h \
+  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./allheaders.h \
+  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./alltypes.h \
+  /usr/include/stdlib.h /usr/include/sys/wait.h \
+  /usr/include/sys/_types/_pid_t.h /usr/include/sys/_types/_id_t.h \
+  /usr/include/sys/signal.h /usr/include/sys/appleapiopts.h \
+  /usr/include/machine/signal.h /usr/include/i386/signal.h \
+  /usr/include/machine/_mcontext.h /usr/include/i386/_mcontext.h \
+  /usr/include/mach/i386/_structs.h \
   /usr/include/sys/_types/_sigaltstack.h \
   /usr/include/sys/_types/_ucontext.h \
   /usr/include/sys/_types/_pthread_attr_t.h \
@@ -82,33 +83,35 @@ cube_search_object.lo: cube_search_object.cpp cube_search_object.h \
   /usr/include/machine/types.h /usr/include/i386/types.h \
   /usr/include/sys/_types/___offsetof.h /usr/include/sys/_types/_dev_t.h \
   /usr/include/sys/_types/_mode_t.h \
-  /usr/local/include/leptonica/environ.h \
-  /usr/local/include/leptonica/array.h \
-  /usr/local/include/leptonica/arrayaccess.h \
-  /usr/local/include/leptonica/bbuffer.h \
-  /usr/local/include/leptonica/bmf.h \
-  /usr/local/include/leptonica/ccbord.h \
-  /usr/local/include/leptonica/dewarp.h \
-  /usr/local/include/leptonica/gplot.h \
-  /usr/local/include/leptonica/heap.h \
-  /usr/local/include/leptonica/imageio.h \
-  /usr/local/include/leptonica/jbclass.h \
-  /usr/local/include/leptonica/list.h \
-  /usr/local/include/leptonica/morph.h \
-  /usr/local/include/leptonica/pix.h /usr/local/include/leptonica/ptra.h \
-  /usr/local/include/leptonica/queue.h \
-  /usr/local/include/leptonica/regutils.h \
-  /usr/local/include/leptonica/sudoku.h \
-  /usr/local/include/leptonica/stack.h \
-  /usr/local/include/leptonica/watershed.h ../cutil/const.h char_set.h \
-  string_32.h ../ccutil/tessdatamanager.h ../ccutil/host.h \
-  ../ccutil/platform.h ../ccutil/tprintf.h ../ccutil/params.h \
-  ../ccutil/genericvector.h ../ccutil/tesscallback.h ../ccutil/errcode.h \
-  ../ccutil/helpers.h ../ccutil/ndminx.h ../ccutil/strngs.h \
-  ../ccutil/memry.h ../ccutil/unicharset.h ../ccutil/unichar.h \
-  /usr/include/memory.h ../ccutil/unicharmap.h cube_const.h char_samp.h \
-  bmp_8.h con_comp.h cached_file.h ../image/img.h \
-  ../ccmain/cube_reco_context.h ../neural_networks/runtime/neural_net.h \
+  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./environ.h \
+  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./array.h \
+  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./arrayaccess.h \
+  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./bbuffer.h \
+  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./bmf.h \
+  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./ccbord.h \
+  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./dewarp.h \
+  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./gplot.h \
+  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./heap.h \
+  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./imageio.h \
+  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./jbclass.h \
+  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./list.h \
+  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./morph.h \
+  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./pix.h \
+  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./ptra.h \
+  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./queue.h \
+  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./regutils.h \
+  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./sudoku.h \
+  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./stack.h \
+  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./watershed.h \
+  ../cutil/const.h char_set.h string_32.h ../ccutil/tessdatamanager.h \
+  ../ccutil/host.h ../ccutil/platform.h ../ccutil/tprintf.h \
+  ../ccutil/params.h ../ccutil/genericvector.h ../ccutil/tesscallback.h \
+  ../ccutil/errcode.h ../ccutil/helpers.h ../ccutil/ndminx.h \
+  ../ccutil/strngs.h ../ccutil/memry.h ../ccutil/unicharset.h \
+  ../ccutil/unichar.h /usr/include/memory.h ../ccutil/unicharmap.h \
+  cube_const.h char_samp.h bmp_8.h con_comp.h cached_file.h \
+  ../image/img.h ../ccmain/cube_reco_context.h \
+  ../neural_networks/runtime/neural_net.h \
   ../neural_networks/runtime/neuron.h \
   ../neural_networks/runtime/input_file_buffer.h lang_model.h \
   lang_mod_edge.h cube_tuning_params.h tuning_params.h classifier_base.h \
@@ -307,9 +310,9 @@ cube_utils.h:
 
 /usr/include/_types/_wctrans_t.h:
 
-/usr/local/include/leptonica/allheaders.h:
+/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./allheaders.h:
 
-/usr/local/include/leptonica/alltypes.h:
+/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./alltypes.h:
 
 /usr/include/stdlib.h:
 
@@ -369,45 +372,45 @@ cube_utils.h:
 
 /usr/include/sys/_types/_mode_t.h:
 
-/usr/local/include/leptonica/environ.h:
+/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./environ.h:
 
-/usr/local/include/leptonica/array.h:
+/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./array.h:
 
-/usr/local/include/leptonica/arrayaccess.h:
+/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./arrayaccess.h:
 
-/usr/local/include/leptonica/bbuffer.h:
+/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./bbuffer.h:
 
-/usr/local/include/leptonica/bmf.h:
+/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./bmf.h:
 
-/usr/local/include/leptonica/ccbord.h:
+/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./ccbord.h:
 
-/usr/local/include/leptonica/dewarp.h:
+/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./dewarp.h:
 
-/usr/local/include/leptonica/gplot.h:
+/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./gplot.h:
 
-/usr/local/include/leptonica/heap.h:
+/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./heap.h:
 
-/usr/local/include/leptonica/imageio.h:
+/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./imageio.h:
 
-/usr/local/include/leptonica/jbclass.h:
+/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./jbclass.h:
 
-/usr/local/include/leptonica/list.h:
+/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./list.h:
 
-/usr/local/include/leptonica/morph.h:
+/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./morph.h:
 
-/usr/local/include/leptonica/pix.h:
+/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./pix.h:
 
-/usr/local/include/leptonica/ptra.h:
+/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./ptra.h:
 
-/usr/local/include/leptonica/queue.h:
+/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./queue.h:
 
-/usr/local/include/leptonica/regutils.h:
+/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./regutils.h:
 
-/usr/local/include/leptonica/sudoku.h:
+/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./sudoku.h:
 
-/usr/local/include/leptonica/stack.h:
+/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./stack.h:
 
-/usr/local/include/leptonica/watershed.h:
+/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./watershed.h:
 
 ../cutil/const.h:
 

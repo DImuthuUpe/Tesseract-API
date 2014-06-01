@@ -27,6 +27,8 @@
 						</goals>
 						<configuration>
 							<tasks>
+								<exec dir="src/main/native/src/leptonica/src/src" executable="make" failonerror="true">
+								</exec>
 								<exec dir="src/main/native" executable="make" failonerror="true">
 								</exec>
 							</tasks>

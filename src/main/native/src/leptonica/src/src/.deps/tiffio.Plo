@@ -6,8 +6,7 @@ tiffio.lo: tiffio.c /usr/include/string.h /usr/include/_types.h \
   /usr/include/AvailabilityInternal.h /usr/include/sys/_types/_size_t.h \
   /usr/include/sys/_types/_null.h /usr/include/sys/_types/_rsize_t.h \
   /usr/include/sys/_types/_errno_t.h /usr/include/sys/_types/_ssize_t.h \
-  /usr/include/strings.h /usr/include/secure/_string.h \
-  /usr/include/secure/_common.h /usr/include/sys/types.h \
+  /usr/include/strings.h /usr/include/sys/types.h \
   /usr/include/sys/appleapiopts.h /usr/include/machine/types.h \
   /usr/include/i386/types.h /usr/include/sys/_types/_int8_t.h \
   /usr/include/sys/_types/_int16_t.h /usr/include/sys/_types/_int32_t.h \
@@ -54,11 +53,11 @@ tiffio.lo: tiffio.c /usr/include/string.h /usr/include/_types.h \
   /usr/include/sys/_types/_o_sync.h /usr/include/sys/_types/_o_dsync.h \
   /usr/include/sys/_types/_s_ifmt.h /usr/include/sys/_types/_filesec_t.h \
   allheaders.h alltypes.h /usr/include/stdio.h \
-  /usr/include/sys/_types/_va_list.h /usr/include/secure/_stdio.h \
-  /usr/include/stdlib.h /usr/include/sys/wait.h \
-  /usr/include/sys/signal.h /usr/include/machine/signal.h \
-  /usr/include/i386/signal.h /usr/include/machine/_mcontext.h \
-  /usr/include/i386/_mcontext.h /usr/include/mach/i386/_structs.h \
+  /usr/include/sys/_types/_va_list.h /usr/include/stdlib.h \
+  /usr/include/sys/wait.h /usr/include/sys/signal.h \
+  /usr/include/machine/signal.h /usr/include/i386/signal.h \
+  /usr/include/machine/_mcontext.h /usr/include/i386/_mcontext.h \
+  /usr/include/mach/i386/_structs.h \
   /usr/include/sys/_types/_sigaltstack.h \
   /usr/include/sys/_types/_ucontext.h /usr/include/sys/resource.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.0/include/stdint.h \
@@ -70,10 +69,7 @@ tiffio.lo: tiffio.c /usr/include/string.h /usr/include/_types.h \
   /usr/include/sys/_types/_wchar_t.h environ.h array.h arrayaccess.h \
   bbuffer.h bmf.h ccbord.h dewarp.h gplot.h heap.h imageio.h jbclass.h \
   list.h morph.h pix.h ptra.h queue.h regutils.h sudoku.h stack.h \
-  watershed.h ../config_auto.h /opt/local/include/tiff.h \
-  /opt/local/include/tiffconf.h /opt/local/include/tiffio.h \
-  /opt/local/include/tiffvers.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.0/include/stdarg.h
+  watershed.h ../config_auto.h
 
 /usr/include/string.h:
 
@@ -106,10 +102,6 @@ tiffio.lo: tiffio.c /usr/include/string.h /usr/include/_types.h \
 /usr/include/sys/_types/_ssize_t.h:
 
 /usr/include/strings.h:
-
-/usr/include/secure/_string.h:
-
-/usr/include/secure/_common.h:
 
 /usr/include/sys/types.h:
 
@@ -261,8 +253,6 @@ alltypes.h:
 
 /usr/include/sys/_types/_va_list.h:
 
-/usr/include/secure/_stdio.h:
-
 /usr/include/stdlib.h:
 
 /usr/include/sys/wait.h:
@@ -350,13 +340,3 @@ stack.h:
 watershed.h:
 
 ../config_auto.h:
-
-/opt/local/include/tiff.h:
-
-/opt/local/include/tiffconf.h:
-
-/opt/local/include/tiffio.h:
-
-/opt/local/include/tiffvers.h:
-
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.0/include/stdarg.h:

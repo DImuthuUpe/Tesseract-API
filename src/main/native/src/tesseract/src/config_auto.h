@@ -38,7 +38,7 @@
 #define HAVE_INTTYPES_H 1
 
 /* Define to 1 if you have the `lept' library (-llept). */
-#define HAVE_LIBLEPT 1
+/* #undef HAVE_LIBLEPT */
 
 /* Define to 1 if you have the <limits.h> header file. */
 #define HAVE_LIMITS_H 1
