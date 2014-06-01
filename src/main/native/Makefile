@@ -45,7 +45,9 @@ UNAME := $(shell uname)
 ifeq ($(UNAME),Linux)
 LIB_PREFIX = lib
 LIB_EXTN = .so
-CPPFLAGS += -I$(JAVA_HOME)/include/linux
+CPPFLAGS += -I$(JAVA_HOME)/include/linux -I ./includes/tesseract -I ./includes/leptonica
+LD_LIBS += -L ../resources/mac/libs -L /opt/local/lib -llepta -ltesseracta -lz -lpng -ljpeg -ltiff -lgif -lwebp
+CC = g++
 else
 ifeq ($(findstring CYGWIN,$(UNAME)),CYGWIN)
 LIB_PREFIX =

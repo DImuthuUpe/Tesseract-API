@@ -47,7 +47,7 @@
 #define HAVE_LONG_LONG_INT 1
 
 /* Define to 1 if you have the <malloc.h> header file. */
-/* #undef HAVE_MALLOC_H */
+#define HAVE_MALLOC_H 1
 
 /* Define to 1 if the system has the type `mbstate_t'. */
 #define HAVE_MBSTATE_T 1

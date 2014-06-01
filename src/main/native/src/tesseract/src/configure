@@ -2589,12 +2589,12 @@ fi
 ## -------------------- ##
 ## Main body of script. ##
 ## -------------------- ##
-LDFLAGS="-L/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/resources/mac/libs"
-LIBS='-lz -llepta -ljpeg -lpng -ltiff'
-includedir="'$ac_pwd'/tesseract/include"
-libdir="'$ac_pwd'/tesseract/libs"
-datarootdir="'$ac_pwd'/tesseract/share"
-bindir="'$ac_pwd'/tesseract/bin"
+LDFLAGS="-L/home/dimuthu/Tesseract-API/src/main/resources/linux/libs"
+LIBS='-llepta'
+includedir="$ac_pwd/tesseract/include"
+libdir="$ac_pwd/tesseract/libs"
+datarootdir="$ac_pwd/tesseract/share"
+bindir="$ac_pwd/tesseract/bin"
 ROOT_DIR=$(realpath $(lastword $(MAKEFILE_LIST)))
 echo "Root dir '$ac_pwd'"
 ac_ext=c
@@ -17266,7 +17266,7 @@ $as_echo_n "checking for leptonica... " >&6; }
 
 have_lept=no
 if test "$LIBLEPT_HEADERSDIR" = "" ; then
-  LIBLEPT_HEADERSDIR="/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica"
+  LIBLEPT_HEADERSDIR="/home/dimuthu/Tesseract-API/src/main/native/src/leptonica/include/leptonica"
 fi
 for incd in $LIBLEPT_HEADERSDIR
 do
