@@ -1,111 +1,140 @@
 tessedit.lo: tessedit.cpp ../ccutil/mfcpch.h tfacep.h \
- ../ccutil/hosthplb.h ../ccutil/host.h ../ccutil/platform.h \
- /usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.5.2/include-fixed/limits.h \
- /usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.5.2/include-fixed/syslimits.h \
- /usr/include/limits.h /usr/include/features.h \
- /usr/include/bits/predefs.h /usr/include/sys/cdefs.h \
- /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
- /usr/include/gnu/stubs-64.h /usr/include/bits/posix1_lim.h \
- /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
- /usr/include/bits/posix2_lim.h /usr/include/bits/xopen_lim.h \
- /usr/include/bits/stdio_lim.h ../ccstruct/blobs.h ../ccutil/clst.h \
- /usr/include/stdio.h \
- /usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.5.2/include/stddef.h \
- /usr/include/bits/types.h /usr/include/bits/typesizes.h \
- /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
- /usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.5.2/include/stdarg.h \
- /usr/include/bits/sys_errlist.h /usr/include/bits/stdio.h \
- /usr/include/bits/stdio2.h ../ccutil/serialis.h /usr/include/stdlib.h \
- /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
- /usr/include/endian.h /usr/include/bits/endian.h \
- /usr/include/bits/byteswap.h /usr/include/xlocale.h \
- /usr/include/sys/types.h /usr/include/time.h /usr/include/sys/select.h \
- /usr/include/bits/select.h /usr/include/bits/sigset.h \
- /usr/include/bits/time.h /usr/include/sys/sysmacros.h \
- /usr/include/bits/pthreadtypes.h /usr/include/alloca.h \
- /usr/include/bits/stdlib.h /usr/include/string.h \
- /usr/include/bits/string3.h ../ccutil/memry.h ../ccutil/errcode.h \
- ../ccutil/fileerr.h ../ccutil/lsterr.h ../ccstruct/rect.h \
- /usr/include/math.h /usr/include/bits/huge_val.h \
- /usr/include/bits/huge_valf.h /usr/include/bits/huge_vall.h \
- /usr/include/bits/inf.h /usr/include/bits/nan.h \
- /usr/include/bits/mathdef.h /usr/include/bits/mathcalls.h \
- /usr/include/bits/mathinline.h ../ccstruct/points.h ../ccutil/elst.h \
- ../ccstruct/ipoints.h ../ccutil/ndminx.h ../viewer/scrollview.h \
- ../ccutil/tprintf.h ../ccutil/params.h ../ccutil/genericvector.h \
- ../ccutil/tesscallback.h ../ccutil/helpers.h ../ccutil/ndminx.h \
- ../ccutil/strngs.h ../ccstruct/vecfuncs.h ../ccstruct/blobs.h \
- ../cutil/tessarray.h ../ccutil/notdll.h ../cutil/oldlist.h \
- ../cutil/cutil.h ../ccutil/host.h ../cutil/cutil_class.h \
- ../ccutil/ccutil.h ../ccutil/ambigs.h ../ccutil/elst.h \
- ../ccutil/tprintf.h ../ccutil/unichar.h /usr/include/memory.h \
- ../ccutil/unicharset.h ../ccutil/unicharmap.h \
- ../ccutil/tessdatamanager.h /usr/include/pthread.h /usr/include/sched.h \
- /usr/include/bits/sched.h /usr/include/bits/setjmp.h \
- /usr/include/semaphore.h /usr/include/bits/semaphore.h ../cutil/const.h \
- ../ccutil/strngs.h ../ccutil/tesscallback.h ../dict/permute.h \
- ../ccstruct/ratngs.h /usr/include/assert.h ../ccutil/genericvector.h \
- ../ccutil/unichar.h ../ccutil/unicharset.h ../ccstruct/werd.h \
- ../ccutil/params.h ../ccutil/bits16.h ../ccutil/elst2.h \
- ../ccstruct/blckerr.h ../ccutil/errcode.h ../ccstruct/stepblob.h \
- ../ccstruct/coutln.h ../ccstruct/crakedge.h ../ccstruct/mod128.h \
- ../ccstruct/ocrrow.h ../ccstruct/quspline.h ../ccstruct/quadratc.h \
- ../ccutil/serialis.h ../ccutil/memry.h ../classify/blobclass.h \
- ../classify/featdefs.h ../classify/ocrfeatures.h ../dict/stopper.h \
- ../dict/states.h ../wordrec/associate.h ../ccstruct/matrix.h \
- ../ccstruct/ratngs.h ../ccstruct/seam.h ../ccstruct/split.h \
- ../ccstruct/split.h ../dict/states.h ../wordrec/chop.h \
- ../cutil/oldheap.h ../cutil/structures.h ../cutil/oldlist.h \
- ../cutil/freelist.h ../cutil/danerror.h ../ccutil/stderr.h \
- ../ccutil/basedir.h tessvars.h ../image/img.h control.h \
- ../ccstruct/ocrblock.h ../ccstruct/ocrpara.h ../ccstruct/publictypes.h \
- ../ccstruct/pdblock.h ../ccstruct/polyblk.h ../ccstruct/hpddef.h \
- ../ccstruct/statistc.h ../ccstruct/pageres.h ../ccstruct/boxword.h \
- ../ccstruct/normalis.h ../ccstruct/ocrblock.h \
- ../ccstruct/params_training_featdef.h ../ccstruct/rejctmap.h \
- ../ccstruct/seam.h ../image/imgs.h ../image/img.h reject.h \
- ../ccutil/nwmain.h ../ccutil/notdll.h pgedit.h ../ccstruct/ocrrow.h \
- ../ccstruct/werd.h ../ccstruct/rect.h tesseractclass.h \
- /home/dimuthu/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./allheaders.h \
- /home/dimuthu/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./alltypes.h \
- /home/dimuthu/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./environ.h \
- /usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.5.2/include/stdint.h \
- /usr/include/stdint.h /usr/include/bits/wchar.h \
- /home/dimuthu/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./array.h \
- /home/dimuthu/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./arrayaccess.h \
- /home/dimuthu/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./bbuffer.h \
- /home/dimuthu/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./bmf.h \
- /home/dimuthu/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./ccbord.h \
- /home/dimuthu/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./dewarp.h \
- /home/dimuthu/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./gplot.h \
- /home/dimuthu/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./heap.h \
- /home/dimuthu/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./imageio.h \
- /home/dimuthu/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./jbclass.h \
- /home/dimuthu/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./list.h \
- /home/dimuthu/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./morph.h \
- /home/dimuthu/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./pix.h \
- /home/dimuthu/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./ptra.h \
- /home/dimuthu/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./queue.h \
- /home/dimuthu/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./regutils.h \
- /home/dimuthu/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./sudoku.h \
- /home/dimuthu/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./stack.h \
- /home/dimuthu/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./watershed.h \
- docqual.h ../textord/devanagari_processing.h ../ccutil/ocrclass.h \
- /usr/include/sys/time.h ../textord/textord.h ../ccstruct/ccstruct.h \
- ../cutil/cutil.h ../image/image.h ../ccstruct/blobbox.h \
- ../ccstruct/statistc.h ../textord/gap_map.h ../ccstruct/publictypes.h \
- ../wordrec/wordrec.h ../wordrec/associate.h ../classify/classify.h \
- ../classify/adaptive.h ../classify/intproto.h ../dict/matchdefs.h \
- ../classify/mfoutline.h ../classify/fpoint.h ../classify/baseline.h \
- ../classify/protos.h ../cutil/bitvec.h ../ccutil/unicity_table.h \
- ../classify/classify.h ../dict/dict.h ../ccutil/ambigs.h ../dict/dawg.h \
- ../dict/stopper.h ../dict/trie.h ../dict/permute.h \
- ../ccstruct/fontinfo.h ../classify/intfx.h ../ccstruct/normalis.h \
- ../classify/intmatcher.h ../classify/cutoffs.h \
- ../wordrec/language_model.h ../dict/dawg.h ../classify/intproto.h \
- ../wordrec/matchtab.h ../wordrec/gradechop.h ../wordrec/findseam.h \
- ../wordrec/chop.h ../cutil/callcpp.h tessedit.h ../classify/intmatcher.h \
- ../cutil/efio.h ../cutil/danerror.h ../cutil/globals.h
+  ../ccutil/hosthplb.h ../ccutil/host.h ../ccutil/platform.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.0/include/limits.h \
+  /usr/include/limits.h /usr/include/sys/cdefs.h \
+  /usr/include/sys/_symbol_aliasing.h \
+  /usr/include/sys/_posix_availability.h /usr/include/machine/limits.h \
+  /usr/include/i386/limits.h /usr/include/i386/_limits.h \
+  /usr/include/sys/syslimits.h ../ccstruct/blobs.h ../ccutil/clst.h \
+  /usr/include/stdio.h /usr/include/Availability.h \
+  /usr/include/AvailabilityInternal.h /usr/include/_types.h \
+  /usr/include/sys/_types.h /usr/include/machine/_types.h \
+  /usr/include/i386/_types.h /usr/include/sys/_types/_va_list.h \
+  /usr/include/sys/_types/_size_t.h /usr/include/sys/_types/_null.h \
+  /usr/include/sys/_types/_off_t.h /usr/include/sys/_types/_ssize_t.h \
+  ../ccutil/serialis.h /usr/include/stdlib.h /usr/include/sys/wait.h \
+  /usr/include/sys/_types/_pid_t.h /usr/include/sys/_types/_id_t.h \
+  /usr/include/sys/signal.h /usr/include/sys/appleapiopts.h \
+  /usr/include/machine/signal.h /usr/include/i386/signal.h \
+  /usr/include/machine/_mcontext.h /usr/include/i386/_mcontext.h \
+  /usr/include/mach/i386/_structs.h \
+  /usr/include/sys/_types/_sigaltstack.h \
+  /usr/include/sys/_types/_ucontext.h \
+  /usr/include/sys/_types/_pthread_attr_t.h \
+  /usr/include/sys/_types/_sigset_t.h /usr/include/sys/_types/_uid_t.h \
+  /usr/include/sys/resource.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.0/include/stdint.h \
+  /usr/include/stdint.h /usr/include/sys/_types/_int8_t.h \
+  /usr/include/sys/_types/_int16_t.h /usr/include/sys/_types/_int32_t.h \
+  /usr/include/sys/_types/_int64_t.h /usr/include/_types/_uint8_t.h \
+  /usr/include/_types/_uint16_t.h /usr/include/_types/_uint32_t.h \
+  /usr/include/_types/_uint64_t.h /usr/include/sys/_types/_intptr_t.h \
+  /usr/include/sys/_types/_uintptr_t.h /usr/include/_types/_intmax_t.h \
+  /usr/include/_types/_uintmax_t.h /usr/include/sys/_types/_timeval.h \
+  /usr/include/machine/endian.h /usr/include/i386/endian.h \
+  /usr/include/sys/_endian.h /usr/include/libkern/_OSByteOrder.h \
+  /usr/include/libkern/i386/_OSByteOrder.h /usr/include/alloca.h \
+  /usr/include/sys/_types/_ct_rune_t.h /usr/include/sys/_types/_rune_t.h \
+  /usr/include/sys/_types/_wchar_t.h /usr/include/machine/types.h \
+  /usr/include/i386/types.h /usr/include/sys/_types/___offsetof.h \
+  /usr/include/sys/_types/_dev_t.h /usr/include/sys/_types/_mode_t.h \
+  /usr/include/string.h /usr/include/sys/_types/_rsize_t.h \
+  /usr/include/sys/_types/_errno_t.h /usr/include/strings.h \
+  ../ccutil/memry.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.0/include/stddef.h \
+  ../ccutil/errcode.h ../ccutil/fileerr.h ../ccutil/lsterr.h \
+  ../ccstruct/rect.h /usr/include/math.h ../ccstruct/points.h \
+  ../ccutil/elst.h ../ccstruct/ipoints.h ../ccutil/ndminx.h \
+  ../viewer/scrollview.h ../ccutil/tprintf.h ../ccutil/params.h \
+  ../ccutil/genericvector.h ../ccutil/tesscallback.h ../ccutil/helpers.h \
+  ../ccutil/strngs.h ../ccstruct/vecfuncs.h ../cutil/tessarray.h \
+  ../ccutil/notdll.h ../cutil/oldlist.h ../cutil/cutil.h \
+  ../cutil/cutil_class.h ../ccutil/ccutil.h ../ccutil/ambigs.h \
+  ../ccutil/unichar.h /usr/include/memory.h ../ccutil/unicharset.h \
+  ../ccutil/unicharmap.h ../ccutil/tessdatamanager.h \
+  /usr/include/pthread.h /usr/include/pthread_impl.h \
+  /usr/include/sched.h /usr/include/time.h /usr/include/_structs.h \
+  /usr/include/sys/_structs.h /usr/include/sys/_types/_timespec.h \
+  /usr/include/sys/_types/_clock_t.h /usr/include/sys/_types/_time_t.h \
+  /usr/include/sys/_types/_pthread_cond_t.h \
+  /usr/include/sys/_types/_pthread_condattr_t.h \
+  /usr/include/sys/_types/_pthread_key_t.h \
+  /usr/include/sys/_types/_pthread_mutex_t.h \
+  /usr/include/sys/_types/_pthread_mutexattr_t.h \
+  /usr/include/sys/_types/_pthread_once_t.h \
+  /usr/include/sys/_types/_pthread_rwlock_t.h \
+  /usr/include/sys/_types/_pthread_rwlockattr_t.h \
+  /usr/include/sys/_types/_pthread_t.h \
+  /usr/include/sys/_types/_mach_port_t.h /usr/include/semaphore.h \
+  /usr/include/sys/types.h /usr/include/sys/_types/_blkcnt_t.h \
+  /usr/include/sys/_types/_blksize_t.h /usr/include/sys/_types/_gid_t.h \
+  /usr/include/sys/_types/_in_addr_t.h \
+  /usr/include/sys/_types/_in_port_t.h /usr/include/sys/_types/_ino_t.h \
+  /usr/include/sys/_types/_ino64_t.h /usr/include/sys/_types/_key_t.h \
+  /usr/include/sys/_types/_nlink_t.h \
+  /usr/include/sys/_types/_useconds_t.h \
+  /usr/include/sys/_types/_suseconds_t.h \
+  /usr/include/sys/_types/_fd_def.h \
+  /usr/include/sys/_types/_fd_setsize.h \
+  /usr/include/sys/_types/_fd_set.h /usr/include/sys/_types/_fd_clr.h \
+  /usr/include/sys/_types/_fd_zero.h /usr/include/sys/_types/_fd_isset.h \
+  /usr/include/sys/_types/_fd_copy.h \
+  /usr/include/sys/_types/_fsblkcnt_t.h \
+  /usr/include/sys/_types/_fsfilcnt_t.h /usr/include/sys/fcntl.h \
+  /usr/include/sys/_types/_o_sync.h /usr/include/sys/_types/_o_dsync.h \
+  /usr/include/sys/_types/_seek_set.h /usr/include/sys/_types/_s_ifmt.h \
+  /usr/include/sys/_types/_filesec_t.h /usr/include/sys/semaphore.h \
+  ../cutil/const.h ../dict/permute.h ../ccstruct/ratngs.h \
+  /usr/include/assert.h ../ccstruct/werd.h ../ccutil/bits16.h \
+  ../ccutil/elst2.h ../ccstruct/blckerr.h ../ccstruct/stepblob.h \
+  ../ccstruct/coutln.h ../ccstruct/crakedge.h ../ccstruct/mod128.h \
+  ../ccstruct/ocrrow.h ../ccstruct/quspline.h ../ccstruct/quadratc.h \
+  ../classify/blobclass.h ../classify/featdefs.h \
+  ../classify/ocrfeatures.h ../dict/stopper.h ../dict/states.h \
+  ../wordrec/associate.h ../ccstruct/matrix.h ../ccstruct/seam.h \
+  ../ccstruct/split.h ../wordrec/chop.h ../cutil/oldheap.h \
+  ../cutil/structures.h ../cutil/freelist.h ../cutil/danerror.h \
+  ../ccutil/stderr.h ../ccutil/basedir.h tessvars.h ../image/img.h \
+  control.h ../ccstruct/ocrblock.h ../ccstruct/ocrpara.h \
+  ../ccstruct/publictypes.h ../ccstruct/pdblock.h ../ccstruct/polyblk.h \
+  ../ccstruct/hpddef.h ../ccstruct/statistc.h ../ccstruct/pageres.h \
+  ../ccstruct/boxword.h ../ccstruct/normalis.h \
+  ../ccstruct/params_training_featdef.h ../ccstruct/rejctmap.h \
+  ../image/imgs.h reject.h ../ccutil/nwmain.h pgedit.h tesseractclass.h \
+  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./allheaders.h \
+  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./alltypes.h \
+  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./environ.h \
+  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./array.h \
+  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./arrayaccess.h \
+  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./bbuffer.h \
+  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./bmf.h \
+  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./ccbord.h \
+  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./dewarp.h \
+  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./gplot.h \
+  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./heap.h \
+  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./imageio.h \
+  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./jbclass.h \
+  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./list.h \
+  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./morph.h \
+  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./pix.h \
+  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./ptra.h \
+  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./queue.h \
+  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./regutils.h \
+  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./sudoku.h \
+  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./stack.h \
+  /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./watershed.h \
+  docqual.h ../textord/devanagari_processing.h ../ccutil/ocrclass.h \
+  /usr/include/sys/time.h /usr/include/sys/_select.h \
+  ../textord/textord.h ../ccstruct/ccstruct.h ../image/image.h \
+  ../ccstruct/blobbox.h ../textord/gap_map.h ../wordrec/wordrec.h \
+  ../classify/classify.h ../classify/adaptive.h ../classify/intproto.h \
+  ../dict/matchdefs.h ../classify/mfoutline.h ../classify/fpoint.h \
+  ../classify/baseline.h ../classify/protos.h ../cutil/bitvec.h \
+  ../ccutil/unicity_table.h ../dict/dict.h ../dict/dawg.h ../dict/trie.h \
+  ../ccstruct/fontinfo.h ../classify/intfx.h ../classify/intmatcher.h \
+  ../classify/cutoffs.h ../wordrec/language_model.h \
+  ../wordrec/matchtab.h ../wordrec/gradechop.h ../wordrec/findseam.h \
+  ../cutil/callcpp.h tessedit.h ../cutil/efio.h ../cutil/globals.h
 
 ../ccutil/mfcpch.h:
 
@@ -117,35 +146,23 @@ tfacep.h:
 
 ../ccutil/platform.h:
 
-/usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.5.2/include-fixed/limits.h:
-
-/usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.5.2/include-fixed/syslimits.h:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.0/include/limits.h:
 
 /usr/include/limits.h:
 
-/usr/include/features.h:
-
-/usr/include/bits/predefs.h:
-
 /usr/include/sys/cdefs.h:
 
-/usr/include/bits/wordsize.h:
+/usr/include/sys/_symbol_aliasing.h:
 
-/usr/include/gnu/stubs.h:
+/usr/include/sys/_posix_availability.h:
 
-/usr/include/gnu/stubs-64.h:
+/usr/include/machine/limits.h:
 
-/usr/include/bits/posix1_lim.h:
+/usr/include/i386/limits.h:
 
-/usr/include/bits/local_lim.h:
+/usr/include/i386/_limits.h:
 
-/usr/include/linux/limits.h:
-
-/usr/include/bits/posix2_lim.h:
-
-/usr/include/bits/xopen_lim.h:
-
-/usr/include/bits/stdio_lim.h:
+/usr/include/sys/syslimits.h:
 
 ../ccstruct/blobs.h:
 
@@ -153,67 +170,133 @@ tfacep.h:
 
 /usr/include/stdio.h:
 
-/usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.5.2/include/stddef.h:
+/usr/include/Availability.h:
 
-/usr/include/bits/types.h:
+/usr/include/AvailabilityInternal.h:
 
-/usr/include/bits/typesizes.h:
+/usr/include/_types.h:
 
-/usr/include/libio.h:
+/usr/include/sys/_types.h:
 
-/usr/include/_G_config.h:
+/usr/include/machine/_types.h:
 
-/usr/include/wchar.h:
+/usr/include/i386/_types.h:
 
-/usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.5.2/include/stdarg.h:
+/usr/include/sys/_types/_va_list.h:
 
-/usr/include/bits/sys_errlist.h:
+/usr/include/sys/_types/_size_t.h:
 
-/usr/include/bits/stdio.h:
+/usr/include/sys/_types/_null.h:
 
-/usr/include/bits/stdio2.h:
+/usr/include/sys/_types/_off_t.h:
+
+/usr/include/sys/_types/_ssize_t.h:
 
 ../ccutil/serialis.h:
 
 /usr/include/stdlib.h:
 
-/usr/include/bits/waitflags.h:
+/usr/include/sys/wait.h:
 
-/usr/include/bits/waitstatus.h:
+/usr/include/sys/_types/_pid_t.h:
 
-/usr/include/endian.h:
+/usr/include/sys/_types/_id_t.h:
 
-/usr/include/bits/endian.h:
+/usr/include/sys/signal.h:
 
-/usr/include/bits/byteswap.h:
+/usr/include/sys/appleapiopts.h:
 
-/usr/include/xlocale.h:
+/usr/include/machine/signal.h:
 
-/usr/include/sys/types.h:
+/usr/include/i386/signal.h:
 
-/usr/include/time.h:
+/usr/include/machine/_mcontext.h:
 
-/usr/include/sys/select.h:
+/usr/include/i386/_mcontext.h:
 
-/usr/include/bits/select.h:
+/usr/include/mach/i386/_structs.h:
 
-/usr/include/bits/sigset.h:
+/usr/include/sys/_types/_sigaltstack.h:
 
-/usr/include/bits/time.h:
+/usr/include/sys/_types/_ucontext.h:
 
-/usr/include/sys/sysmacros.h:
+/usr/include/sys/_types/_pthread_attr_t.h:
 
-/usr/include/bits/pthreadtypes.h:
+/usr/include/sys/_types/_sigset_t.h:
+
+/usr/include/sys/_types/_uid_t.h:
+
+/usr/include/sys/resource.h:
+
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.0/include/stdint.h:
+
+/usr/include/stdint.h:
+
+/usr/include/sys/_types/_int8_t.h:
+
+/usr/include/sys/_types/_int16_t.h:
+
+/usr/include/sys/_types/_int32_t.h:
+
+/usr/include/sys/_types/_int64_t.h:
+
+/usr/include/_types/_uint8_t.h:
+
+/usr/include/_types/_uint16_t.h:
+
+/usr/include/_types/_uint32_t.h:
+
+/usr/include/_types/_uint64_t.h:
+
+/usr/include/sys/_types/_intptr_t.h:
+
+/usr/include/sys/_types/_uintptr_t.h:
+
+/usr/include/_types/_intmax_t.h:
+
+/usr/include/_types/_uintmax_t.h:
+
+/usr/include/sys/_types/_timeval.h:
+
+/usr/include/machine/endian.h:
+
+/usr/include/i386/endian.h:
+
+/usr/include/sys/_endian.h:
+
+/usr/include/libkern/_OSByteOrder.h:
+
+/usr/include/libkern/i386/_OSByteOrder.h:
 
 /usr/include/alloca.h:
 
-/usr/include/bits/stdlib.h:
+/usr/include/sys/_types/_ct_rune_t.h:
+
+/usr/include/sys/_types/_rune_t.h:
+
+/usr/include/sys/_types/_wchar_t.h:
+
+/usr/include/machine/types.h:
+
+/usr/include/i386/types.h:
+
+/usr/include/sys/_types/___offsetof.h:
+
+/usr/include/sys/_types/_dev_t.h:
+
+/usr/include/sys/_types/_mode_t.h:
 
 /usr/include/string.h:
 
-/usr/include/bits/string3.h:
+/usr/include/sys/_types/_rsize_t.h:
+
+/usr/include/sys/_types/_errno_t.h:
+
+/usr/include/strings.h:
 
 ../ccutil/memry.h:
+
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.0/include/stddef.h:
 
 ../ccutil/errcode.h:
 
@@ -224,22 +307,6 @@ tfacep.h:
 ../ccstruct/rect.h:
 
 /usr/include/math.h:
-
-/usr/include/bits/huge_val.h:
-
-/usr/include/bits/huge_valf.h:
-
-/usr/include/bits/huge_vall.h:
-
-/usr/include/bits/inf.h:
-
-/usr/include/bits/nan.h:
-
-/usr/include/bits/mathdef.h:
-
-/usr/include/bits/mathcalls.h:
-
-/usr/include/bits/mathinline.h:
 
 ../ccstruct/points.h:
 
@@ -261,13 +328,9 @@ tfacep.h:
 
 ../ccutil/helpers.h:
 
-../ccutil/ndminx.h:
-
 ../ccutil/strngs.h:
 
 ../ccstruct/vecfuncs.h:
-
-../ccstruct/blobs.h:
 
 ../cutil/tessarray.h:
 
@@ -277,17 +340,11 @@ tfacep.h:
 
 ../cutil/cutil.h:
 
-../ccutil/host.h:
-
 ../cutil/cutil_class.h:
 
 ../ccutil/ccutil.h:
 
 ../ccutil/ambigs.h:
-
-../ccutil/elst.h:
-
-../ccutil/tprintf.h:
 
 ../ccutil/unichar.h:
 
@@ -301,21 +358,101 @@ tfacep.h:
 
 /usr/include/pthread.h:
 
+/usr/include/pthread_impl.h:
+
 /usr/include/sched.h:
 
-/usr/include/bits/sched.h:
+/usr/include/time.h:
 
-/usr/include/bits/setjmp.h:
+/usr/include/_structs.h:
+
+/usr/include/sys/_structs.h:
+
+/usr/include/sys/_types/_timespec.h:
+
+/usr/include/sys/_types/_clock_t.h:
+
+/usr/include/sys/_types/_time_t.h:
+
+/usr/include/sys/_types/_pthread_cond_t.h:
+
+/usr/include/sys/_types/_pthread_condattr_t.h:
+
+/usr/include/sys/_types/_pthread_key_t.h:
+
+/usr/include/sys/_types/_pthread_mutex_t.h:
+
+/usr/include/sys/_types/_pthread_mutexattr_t.h:
+
+/usr/include/sys/_types/_pthread_once_t.h:
+
+/usr/include/sys/_types/_pthread_rwlock_t.h:
+
+/usr/include/sys/_types/_pthread_rwlockattr_t.h:
+
+/usr/include/sys/_types/_pthread_t.h:
+
+/usr/include/sys/_types/_mach_port_t.h:
 
 /usr/include/semaphore.h:
 
-/usr/include/bits/semaphore.h:
+/usr/include/sys/types.h:
+
+/usr/include/sys/_types/_blkcnt_t.h:
+
+/usr/include/sys/_types/_blksize_t.h:
+
+/usr/include/sys/_types/_gid_t.h:
+
+/usr/include/sys/_types/_in_addr_t.h:
+
+/usr/include/sys/_types/_in_port_t.h:
+
+/usr/include/sys/_types/_ino_t.h:
+
+/usr/include/sys/_types/_ino64_t.h:
+
+/usr/include/sys/_types/_key_t.h:
+
+/usr/include/sys/_types/_nlink_t.h:
+
+/usr/include/sys/_types/_useconds_t.h:
+
+/usr/include/sys/_types/_suseconds_t.h:
+
+/usr/include/sys/_types/_fd_def.h:
+
+/usr/include/sys/_types/_fd_setsize.h:
+
+/usr/include/sys/_types/_fd_set.h:
+
+/usr/include/sys/_types/_fd_clr.h:
+
+/usr/include/sys/_types/_fd_zero.h:
+
+/usr/include/sys/_types/_fd_isset.h:
+
+/usr/include/sys/_types/_fd_copy.h:
+
+/usr/include/sys/_types/_fsblkcnt_t.h:
+
+/usr/include/sys/_types/_fsfilcnt_t.h:
+
+/usr/include/sys/fcntl.h:
+
+/usr/include/sys/_types/_o_sync.h:
+
+/usr/include/sys/_types/_o_dsync.h:
+
+/usr/include/sys/_types/_seek_set.h:
+
+/usr/include/sys/_types/_s_ifmt.h:
+
+/usr/include/sys/_types/_filesec_t.h:
+
+/usr/include/sys/semaphore.h:
 
 ../cutil/const.h:
-
-../ccutil/strngs.h:
-
-../ccutil/tesscallback.h:
 
 ../dict/permute.h:
 
@@ -323,23 +460,13 @@ tfacep.h:
 
 /usr/include/assert.h:
 
-../ccutil/genericvector.h:
-
-../ccutil/unichar.h:
-
-../ccutil/unicharset.h:
-
 ../ccstruct/werd.h:
-
-../ccutil/params.h:
 
 ../ccutil/bits16.h:
 
 ../ccutil/elst2.h:
 
 ../ccstruct/blckerr.h:
-
-../ccutil/errcode.h:
 
 ../ccstruct/stepblob.h:
 
@@ -355,10 +482,6 @@ tfacep.h:
 
 ../ccstruct/quadratc.h:
 
-../ccutil/serialis.h:
-
-../ccutil/memry.h:
-
 ../classify/blobclass.h:
 
 ../classify/featdefs.h:
@@ -373,23 +496,15 @@ tfacep.h:
 
 ../ccstruct/matrix.h:
 
-../ccstruct/ratngs.h:
-
 ../ccstruct/seam.h:
 
 ../ccstruct/split.h:
-
-../ccstruct/split.h:
-
-../dict/states.h:
 
 ../wordrec/chop.h:
 
 ../cutil/oldheap.h:
 
 ../cutil/structures.h:
-
-../cutil/oldlist.h:
 
 ../cutil/freelist.h:
 
@@ -425,83 +540,63 @@ control.h:
 
 ../ccstruct/normalis.h:
 
-../ccstruct/ocrblock.h:
-
 ../ccstruct/params_training_featdef.h:
 
 ../ccstruct/rejctmap.h:
 
-../ccstruct/seam.h:
-
 ../image/imgs.h:
-
-../image/img.h:
 
 reject.h:
 
 ../ccutil/nwmain.h:
 
-../ccutil/notdll.h:
-
 pgedit.h:
-
-../ccstruct/ocrrow.h:
-
-../ccstruct/werd.h:
-
-../ccstruct/rect.h:
 
 tesseractclass.h:
 
-/home/dimuthu/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./allheaders.h:
+/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./allheaders.h:
 
-/home/dimuthu/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./alltypes.h:
+/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./alltypes.h:
 
-/home/dimuthu/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./environ.h:
+/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./environ.h:
 
-/usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.5.2/include/stdint.h:
+/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./array.h:
 
-/usr/include/stdint.h:
+/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./arrayaccess.h:
 
-/usr/include/bits/wchar.h:
+/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./bbuffer.h:
 
-/home/dimuthu/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./array.h:
+/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./bmf.h:
 
-/home/dimuthu/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./arrayaccess.h:
+/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./ccbord.h:
 
-/home/dimuthu/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./bbuffer.h:
+/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./dewarp.h:
 
-/home/dimuthu/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./bmf.h:
+/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./gplot.h:
 
-/home/dimuthu/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./ccbord.h:
+/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./heap.h:
 
-/home/dimuthu/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./dewarp.h:
+/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./imageio.h:
 
-/home/dimuthu/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./gplot.h:
+/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./jbclass.h:
 
-/home/dimuthu/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./heap.h:
+/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./list.h:
 
-/home/dimuthu/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./imageio.h:
+/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./morph.h:
 
-/home/dimuthu/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./jbclass.h:
+/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./pix.h:
 
-/home/dimuthu/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./list.h:
+/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./ptra.h:
 
-/home/dimuthu/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./morph.h:
+/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./queue.h:
 
-/home/dimuthu/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./pix.h:
+/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./regutils.h:
 
-/home/dimuthu/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./ptra.h:
+/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./sudoku.h:
 
-/home/dimuthu/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./queue.h:
+/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./stack.h:
 
-/home/dimuthu/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./regutils.h:
-
-/home/dimuthu/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./sudoku.h:
-
-/home/dimuthu/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./stack.h:
-
-/home/dimuthu/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./watershed.h:
+/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica/./watershed.h:
 
 docqual.h:
 
@@ -511,25 +606,19 @@ docqual.h:
 
 /usr/include/sys/time.h:
 
+/usr/include/sys/_select.h:
+
 ../textord/textord.h:
 
 ../ccstruct/ccstruct.h:
-
-../cutil/cutil.h:
 
 ../image/image.h:
 
 ../ccstruct/blobbox.h:
 
-../ccstruct/statistc.h:
-
 ../textord/gap_map.h:
 
-../ccstruct/publictypes.h:
-
 ../wordrec/wordrec.h:
-
-../wordrec/associate.h:
 
 ../classify/classify.h:
 
@@ -551,25 +640,15 @@ docqual.h:
 
 ../ccutil/unicity_table.h:
 
-../classify/classify.h:
-
 ../dict/dict.h:
-
-../ccutil/ambigs.h:
 
 ../dict/dawg.h:
 
-../dict/stopper.h:
-
 ../dict/trie.h:
-
-../dict/permute.h:
 
 ../ccstruct/fontinfo.h:
 
 ../classify/intfx.h:
-
-../ccstruct/normalis.h:
 
 ../classify/intmatcher.h:
 
@@ -577,26 +656,16 @@ docqual.h:
 
 ../wordrec/language_model.h:
 
-../dict/dawg.h:
-
-../classify/intproto.h:
-
 ../wordrec/matchtab.h:
 
 ../wordrec/gradechop.h:
 
 ../wordrec/findseam.h:
 
-../wordrec/chop.h:
-
 ../cutil/callcpp.h:
 
 tessedit.h:
 
-../classify/intmatcher.h:
-
 ../cutil/efio.h:
-
-../cutil/danerror.h:
 
 ../cutil/globals.h:

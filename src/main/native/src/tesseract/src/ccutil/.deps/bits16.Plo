@@ -1,13 +1,10 @@
 bits16.lo: bits16.cpp mfcpch.h bits16.h host.h platform.h \
- /usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.5.2/include-fixed/limits.h \
- /usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.5.2/include-fixed/syslimits.h \
- /usr/include/limits.h /usr/include/features.h \
- /usr/include/bits/predefs.h /usr/include/sys/cdefs.h \
- /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
- /usr/include/gnu/stubs-64.h /usr/include/bits/posix1_lim.h \
- /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
- /usr/include/bits/posix2_lim.h /usr/include/bits/xopen_lim.h \
- /usr/include/bits/stdio_lim.h
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.0/include/limits.h \
+  /usr/include/limits.h /usr/include/sys/cdefs.h \
+  /usr/include/sys/_symbol_aliasing.h \
+  /usr/include/sys/_posix_availability.h /usr/include/machine/limits.h \
+  /usr/include/i386/limits.h /usr/include/i386/_limits.h \
+  /usr/include/sys/syslimits.h
 
 mfcpch.h:
 
@@ -17,32 +14,20 @@ host.h:
 
 platform.h:
 
-/usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.5.2/include-fixed/limits.h:
-
-/usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.5.2/include-fixed/syslimits.h:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.0/include/limits.h:
 
 /usr/include/limits.h:
 
-/usr/include/features.h:
-
-/usr/include/bits/predefs.h:
-
 /usr/include/sys/cdefs.h:
 
-/usr/include/bits/wordsize.h:
+/usr/include/sys/_symbol_aliasing.h:
 
-/usr/include/gnu/stubs.h:
+/usr/include/sys/_posix_availability.h:
 
-/usr/include/gnu/stubs-64.h:
+/usr/include/machine/limits.h:
 
-/usr/include/bits/posix1_lim.h:
+/usr/include/i386/limits.h:
 
-/usr/include/bits/local_lim.h:
+/usr/include/i386/_limits.h:
 
-/usr/include/linux/limits.h:
-
-/usr/include/bits/posix2_lim.h:
-
-/usr/include/bits/xopen_lim.h:
-
-/usr/include/bits/stdio_lim.h:
+/usr/include/sys/syslimits.h:

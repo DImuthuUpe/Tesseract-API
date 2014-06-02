@@ -31,7 +31,7 @@ extern "C" {
 void JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeClassInit
 (JNIEnv *env, jclass clazz) {
 
-	printf("------------Native Class Init----------------\n");
+	//printf("------------Native Class Init----------------\n");
 	field_mNativeData = env->GetFieldID(clazz, "mNativeData", "J");
 }
 
@@ -42,16 +42,16 @@ void JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeClassInit
  */
 void JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeConstruct
 (JNIEnv * env, jobject object) {
-	printf("------------Construct----------------\n");
+	//printf("------------Construct----------------\n");
 	native_data_t *nat = new native_data_t;
 
 	if (nat == NULL) {
 		//LOGE("%s: out of memory!", __FUNCTION__);
-		printf("-----------Out of memory--------%s",__FUNCTION__);
+		//printf("-----------Out of memory--------%s",__FUNCTION__);
 		return;
 	}
 
-	printf("pointer %d",nat);
+	//printf("pointer %d",nat);
 	jlong pt = (jlong)(unsigned long long)nat;
 	env->SetLongField(object, field_mNativeData, pt); // converted to 64 bit architecture
 }
@@ -79,7 +79,7 @@ void JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeFinalize
 jboolean JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeInit(
 		JNIEnv *env, jobject thiz, jstring dir, jstring lang) {
 
-	printf("------------Init----------------\n");
+	//printf("------------Init----------------\n");
 	native_data_t *nat = get_native_data(env, thiz);
 
 	const char *c_dir = env->GetStringUTFChars(dir, NULL);

@@ -79,8 +79,8 @@ public class TessBaseAPI {
 		int width = image.getWidth();
 		int height = image.getHeight();
 		
-		System.out.println("Image width "+width);
-		System.out.println("Image height "+height);
+		//System.out.println("Image width "+width);
+		//System.out.println("Image height "+height);
 
 		byte[] data = new byte[width * height * 3];
 		for (int i = 0; i < height; i++) {
