@@ -16,7 +16,7 @@ To build platform dependant Leptonica and Tesseract static libs
 
 3. make
 
-4. Go to /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/tesseract/src
+4. Go to {path to root folder}/src/main/native/src/tesseract/src
 
 5. Open configure file
 
