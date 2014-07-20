@@ -25,9 +25,12 @@ import com.wapmx.nativeutils.jniloader.NativeLoader;
 public class TessBaseAPI {
 	public static final String DEFAULT_DATA_PATH= "src/main/resources/data";
 	public static final String DEFAULT_LANG = "eng";
+    public static final int REL_WORD = 1;
+    public static final int REL_SYMBOL =0;
 	
 	private long mNativeData;
 	private static TessBaseAPI api = null;
+    private int seperationMode=1;
 	static {
 		try {
 			NativeLoader.loadLibrary("tessbaseapi");
@@ -77,19 +80,19 @@ public class TessBaseAPI {
 	}
 
 	public boolean resultIteratorNext() {
-		return nativeResultIteratorNext();
+		return nativeResultIteratorNext(seperationMode);
 	}
 
 	public boolean isResultIteratorAvailable() {
-		return nativeIsResultIteratorAvailable();
+		return nativeIsResultIteratorAvailable(seperationMode);
 	}
 
 	public String getWord() {
-		return nativeGetWord();
+		return nativeGetWord(seperationMode);
 	}
 
 	public String getBoundingBox() {
-		return nativeGetBoundingBox();
+		return nativeGetBoundingBox(seperationMode);
 	}
 
 	public byte[] getByteStream(BufferedImage image) {
@@ -122,6 +125,10 @@ public class TessBaseAPI {
 		int bpl = width * 3;
 		setImage(data, width, height, bpp, bpl);
 	}
+
+    public void setSeperationMode(int mode){
+        this.seperationMode=mode;
+    }
 
 	/**
 	 * <<copied from Tesseract api documentation>> Greyscale of 8 and color of
@@ -190,12 +197,12 @@ public class TessBaseAPI {
 
 	private native int nativeGetResultIterator();
 
-	private native boolean nativeResultIteratorNext();
+	private native boolean nativeResultIteratorNext(int mode);
 
-	private native boolean nativeIsResultIteratorAvailable();
+	private native boolean nativeIsResultIteratorAvailable(int mode);
 
-	private native String nativeGetWord();
+	private native String nativeGetWord(int mode);
 
-	private native String nativeGetBoundingBox();
+	private native String nativeGetBoundingBox(int mode);
 
 }

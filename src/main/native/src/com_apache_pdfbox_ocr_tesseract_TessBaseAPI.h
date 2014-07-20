@@ -7,6 +7,10 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
+#undef com_apache_pdfbox_ocr_tesseract_TessBaseAPI_REL_WORD
+#define com_apache_pdfbox_ocr_tesseract_TessBaseAPI_REL_WORD 1L
+#undef com_apache_pdfbox_ocr_tesseract_TessBaseAPI_REL_SYMBOL
+#define com_apache_pdfbox_ocr_tesseract_TessBaseAPI_REL_SYMBOL 0L
 /*
  * Class:     com_apache_pdfbox_ocr_tesseract_TessBaseAPI
  * Method:    nativeClassInit
@@ -162,34 +166,34 @@ JNIEXPORT jint JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeGe
 /*
  * Class:     com_apache_pdfbox_ocr_tesseract_TessBaseAPI
  * Method:    nativeResultIteratorNext
- * Signature: ()Z
+ * Signature: (I)Z
  */
 JNIEXPORT jboolean JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeResultIteratorNext
-  (JNIEnv *, jobject);
+  (JNIEnv *, jobject, jint);
 
 /*
  * Class:     com_apache_pdfbox_ocr_tesseract_TessBaseAPI
  * Method:    nativeIsResultIteratorAvailable
- * Signature: ()Z
+ * Signature: (I)Z
  */
 JNIEXPORT jboolean JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeIsResultIteratorAvailable
-  (JNIEnv *, jobject);
+  (JNIEnv *, jobject, jint);
 
 /*
  * Class:     com_apache_pdfbox_ocr_tesseract_TessBaseAPI
  * Method:    nativeGetWord
- * Signature: ()Ljava/lang/String;
+ * Signature: (I)Ljava/lang/String;
  */
 JNIEXPORT jstring JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeGetWord
-  (JNIEnv *, jobject);
+  (JNIEnv *, jobject, jint);
 
 /*
  * Class:     com_apache_pdfbox_ocr_tesseract_TessBaseAPI
  * Method:    nativeGetBoundingBox
- * Signature: ()Ljava/lang/String;
+ * Signature: (I)Ljava/lang/String;
  */
 JNIEXPORT jstring JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeGetBoundingBox
-  (JNIEnv *, jobject);
+  (JNIEnv *, jobject, jint);
 
 #ifdef __cplusplus
 }

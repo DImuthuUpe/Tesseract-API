@@ -1,4 +1,5 @@
 /target
+/tmplib
 *.o
 *.lo
 .idea/*
@@ -6,3 +7,5 @@ src/main/native/src/leptonica/src/src/.deps/*
 *.la
 */deps
 *.Plo
+Tesseract-JNI-Wrapper.iml
+.project

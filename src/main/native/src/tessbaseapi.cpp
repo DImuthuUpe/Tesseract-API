@@ -260,9 +260,14 @@ jint JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeGetResultIte
 }
 
 jboolean JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeResultIteratorNext(
-		JNIEnv *env, jobject thiz) {
+		JNIEnv *env, jobject thiz, jint mode) {
 	native_data_t *nat = get_native_data(env, thiz);
-	tesseract::PageIteratorLevel level = tesseract::RIL_WORD;
+	tesseract::PageIteratorLevel level;
+	if(mode==0){
+	   level = tesseract::RIL_SYMBOL;//RIL_WORD,RIL_TEXTLINE,RIL_PARA,RIL_BLOCK
+	}else if(mode ==1){
+	    level = tesseract::RIL_WORD;
+	}
 	if (nat->ri->Next(level)) {
 		return true;
 	} else {
@@ -271,9 +276,14 @@ jboolean JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeResultIt
 }
 
 jboolean JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeIsResultIteratorAvailable(
-		JNIEnv *env, jobject thiz) {
+		JNIEnv *env, jobject thiz, jint mode) {
 	native_data_t *nat = get_native_data(env, thiz);
-	tesseract::PageIteratorLevel level = tesseract::RIL_WORD;
+	tesseract::PageIteratorLevel level;
+    if(mode==0){
+        level = tesseract::RIL_SYMBOL;
+    }else if(mode ==1){
+        level = tesseract::RIL_WORD;
+    }
 	if (nat->ri != 0) {
 		return true;
 	} else {
@@ -282,9 +292,14 @@ jboolean JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeIsResult
 }
 
 jstring JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeGetWord(
-		JNIEnv *env, jobject thiz) {
+		JNIEnv *env, jobject thiz, jint mode) {
 	native_data_t *nat = get_native_data(env, thiz);
-	tesseract::PageIteratorLevel level = tesseract::RIL_WORD;
+	tesseract::PageIteratorLevel level;
+    if(mode==0){
+        level = tesseract::RIL_SYMBOL;
+    }else if(mode ==1){
+        level = tesseract::RIL_WORD;
+    }
 	if (nat->ri != 0) {
 		const char* word = nat->ri->GetUTF8Text(level);
 		jstring result = env->NewStringUTF(word);
@@ -294,9 +309,14 @@ jstring JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeGetWord(
 }
 
 jstring JNICALL Java_com_apache_pdfbox_ocr_tesseract_TessBaseAPI_nativeGetBoundingBox(
-		JNIEnv *env, jobject thiz) {
+		JNIEnv *env, jobject thiz, jint mode) {
 	native_data_t *nat = get_native_data(env, thiz);
-	tesseract::PageIteratorLevel level = tesseract::RIL_WORD;
+	tesseract::PageIteratorLevel level;
+    if(mode==0){
+        level = tesseract::RIL_SYMBOL;
+    }else if(mode ==1){
+        level = tesseract::RIL_WORD;
+    }
 	if (nat->ri != 0) {
 		int x1, y1, x2, y2;
 		nat->ri->BoundingBox(level, &x1, &y1, &x2, &y2);
