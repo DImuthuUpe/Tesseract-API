@@ -45,6 +45,8 @@
 						</goals>
 						<configuration>
 							<tasks>
+                                <exec executable="src/main/native/autobuild.sh" failonerror="true">
+                                </exec>
 								<exec dir="src/main/native" executable="make" failonerror="true">
 								</exec>
 							</tasks>

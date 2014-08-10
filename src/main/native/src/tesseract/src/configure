@@ -2589,14 +2589,28 @@ fi
 ## -------------------- ##
 ## Main body of script. ##
 ## -------------------- ##
-LDFLAGS="-L/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/resources/mac/libs"
+LDFLAGS="-L${ac_pwd%%native/src/tesseract/src}resources/libs"
 LIBS='-llepta'
 includedir="$ac_pwd/tesseract/include"
 libdir="$ac_pwd/tesseract/libs"
 datarootdir="$ac_pwd/tesseract/share"
 bindir="$ac_pwd/tesseract/bin"
-ROOT_DIR=$(realpath $(lastword $(MAKEFILE_LIST)))
-echo "Root dir '$ac_pwd'"
+
+# os-dependent resource paths
+#if [[ $OSTYPE == *darwin* ]]
+#then
+#  LDFLAGS="-L${ac_pwd%%native/src/tesseract/src}resources/mac/libs"
+#  libdir="-L${ac_pwd%%native/src/tesseract/src}resources/mac/libs"
+#else if [[ $OSTYPE == *linux* ]]
+#then
+#  LDFLAGS="-L${ac_pwd%%native/src/tesseract/src}resources/linux/libs"
+#  libdir="-L${ac_pwd%%native/src/tesseract/src}resources/linux/libs"
+#fi
+#fi
+
+#ROOT_DIR=$(realpath $(lastword $(MAKEFILE_LIST)))
+#script_dir= 'echo "${#ac_pwd}"'
+echo "Lib dir $libdir"
 ac_ext=c
 ac_cpp='$CPP $CPPFLAGS'
 ac_compile='$CC -c $CFLAGS $CPPFLAGS conftest.$ac_ext >&5'
@@ -17266,7 +17280,7 @@ $as_echo_n "checking for leptonica... " >&6; }
 
 have_lept=no
 if test "$LIBLEPT_HEADERSDIR" = "" ; then
-  LIBLEPT_HEADERSDIR="/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/leptonica/include/leptonica"
+  LIBLEPT_HEADERSDIR="${ac_pwd%%native/src/tesseract/src}native/src/leptonica/include/leptonica"
 fi
 for incd in $LIBLEPT_HEADERSDIR
 do

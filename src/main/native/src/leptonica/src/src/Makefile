@@ -86,13 +86,13 @@ RESOUECE_DIR = ../../../../../resources
 UNAME := $(shell uname)
 
 ifeq ($(UNAME),Linux)
-RESOUECE_DIR = ../../../../../resources/linux
+RESOUECE_DIR = ../../../../../resources
 else
 ifeq ($(findstring CYGWIN,$(UNAME)),CYGWIN)
-RESOUECE_DIR = ../../../../../resources/cygwin
+RESOUECE_DIR = ../../../../../resources
 else
 ifeq ($(UNAME),Darwin)
-RESOUECE_DIR = ../../../../../resources/mac
+RESOUECE_DIR = ../../../../../resources
 else
 
 endif

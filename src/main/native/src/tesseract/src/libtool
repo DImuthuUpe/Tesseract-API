@@ -75,7 +75,7 @@ build=x86_64-apple-darwin13.1.0
 build_os=darwin13.1.0
 
 # A sed program that does not truncate output.
-SED="/usr/bin/sed"
+SED="/opt/local/bin/gsed"
 
 # Sed that helps us avoid accidentally triggering echo(1) options like -n.
 Xsed="$SED -e 1s/^X//"
@@ -90,7 +90,7 @@ EGREP="/usr/bin/grep -E"
 FGREP="/usr/bin/grep -F"
 
 # A BSD- or MS-compatible name lister.
-NM="/usr/bin/nm"
+NM="/opt/local/bin/nm"
 
 # Whether we need soft or hard links.
 LN_S="ln -s"
@@ -161,7 +161,7 @@ old_postuninstall_cmds=""
 lock_old_archive_extraction=yes
 
 # A C compiler.
-LTCC="g++"
+LTCC="gcc"
 
 # LTCC compiler flags.
 LTCFLAGS="-g -O2"
@@ -302,7 +302,7 @@ reload_cmds="\$LTCC \$LTCFLAGS -nostdlib \${wl}-r -o \$output\$reload_objs"
 old_archive_cmds="\$AR \$AR_FLAGS \$oldlib\$oldobjs~\$RANLIB \$tool_oldlib"
 
 # A language specific compiler.
-CC="g++"
+CC="gcc"
 
 # Is the compiler the GNU compiler?
 with_gcc=yes

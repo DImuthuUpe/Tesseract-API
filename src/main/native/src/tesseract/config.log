@@ -29,13 +29,15 @@ Kernel configured for up to 4 processors.
 4 processors are logically available.
 Processor type: i486 (Intel 80486)
 Processors active: 0 1 2 3
-Primary memory available: 4.00 gigabytes
-Default processor set: 192 tasks, 1054 threads, 4 processors
-Load average: 0.88, Mach factor: 3.11
+Primary memory available: 10.00 gigabytes
+Default processor set: 226 tasks, 1197 threads, 4 processors
+Load average: 1.90, Mach factor: 2.09
 /bin/machine           = unknown
 /usr/bin/oslevel       = unknown
 /bin/universe          = unknown
 
+PATH: /Library/Frameworks/Python.framework/Versions/3.4/bin
+PATH: /Library/Frameworks/Python.framework/Versions/2.7/bin
 PATH: /Users/dimuthuupeksha/Documents/Academic/internship/WSO2/svn/dimuthuu/Axis2/addressing.mar
 PATH: /opt/local/bin
 PATH: /opt/local/sbin
@@ -49,8 +51,10 @@ PATH: /Applications/Xcode.app/Contents/Developer/usr/bin
 PATH: /opt/X11/bin
 PATH: /Users/dimuthuupeksha/.rvm/bin
 PATH: /usr/local/mysql/bin
+PATH: /Users/dimuthuupeksha/Documents/Academic/pdfbox_new/trunk/pdfbox/target/pdfbox-2.0.0-SNAPSHOT.jar
 PATH: /usr/local/apache-ant/bin
 PATH: /usr/local/apache-maven-3.0.4/bin
+PATH: /Users/dimuthuupeksha/Downloads/levigo-jbig2-imageio-1.6.1.jar
 PATH: /Users/dimuthuupeksha/Documents/Academic/internship/axis2-1.6.2/lib/XmlSchema-1.4.7.jar
 PATH: /Users/dimuthuupeksha/Documents/Academic/internship/axis2-1.6.2/lib/activation-1.1.jar
 PATH: /Users/dimuthuupeksha/Documents/Academic/internship/axis2-1.6.2/lib/antlr-2.7.7.jar
@@ -119,864 +123,249 @@ PATH: /Users/dimuthuupeksha/Documents/Academic/internship/axis2-1.6.2/lib/xalan-
 PATH: /Users/dimuthuupeksha/Documents/Academic/internship/axis2-1.6.2/lib/xml-resolver-1.2.jar
 PATH: /Users/dimuthuupeksha/Documents/Academic/internship/axis2-1.6.2/lib/xmlbeans-2.3.0.jar
 PATH: /Users/dimuthuupeksha/Documents/Academic/buck/buck/bin
+PATH: /Users/dimuthuupeksha/Documents/Academic/FYP/neo4j/lib/neo4j-kernel-2.1.2.jar
+PATH: /Users/dimuthuupeksha/Documents/Academic/FYP/neo4j/lib/neo4j-lucene-index-2.1.2.jar
 
 
 ## ----------- ##
 ## Core tests. ##
 ## ----------- ##
 
-configure:2721: checking build system type
-configure:2735: result: x86_64-apple-darwin13.1.0
-configure:2755: checking host system type
-configure:2768: result: x86_64-apple-darwin13.1.0
-configure:2837: checking --enable-graphics argument
-configure:2846: result: yes
-configure:2863: checking --enable-embedded argument
-configure:2872: result: no
-configure:2890: checking --enable-visibility argument
-configure:2899: result: no
-configure:2911: checking --enable-multiple-libraries argument
-configure:2920: result: no
-configure:2932: checking whether to use tessdata-prefix
-configure:2941: result: yes
-configure:2953: checking whether to enable debugging
-configure:2962: result: no
-configure:3076: checking for cl.exe
-configure:3106: result: no
-configure:3076: checking for g++
-configure:3092: found /usr/bin/g++
-configure:3103: result: g++
-configure:3130: checking for C++ compiler version
-configure:3139: g++ --version >&5
+configure:2722: checking build system type
+configure:2736: result: x86_64-apple-darwin13.1.0
+configure:2756: checking host system type
+configure:2769: result: x86_64-apple-darwin13.1.0
+configure:2838: checking --enable-graphics argument
+configure:2847: result: yes
+configure:2864: checking --enable-embedded argument
+configure:2873: result: no
+configure:2891: checking --enable-visibility argument
+configure:2900: result: no
+configure:2912: checking --enable-multiple-libraries argument
+configure:2921: result: no
+configure:2933: checking whether to use tessdata-prefix
+configure:2942: result: yes
+configure:2954: checking whether to enable debugging
+configure:2963: result: no
+configure:3077: checking for cl.exe
+configure:3107: result: no
+configure:3077: checking for g++
+configure:3093: found /usr/bin/g++
+configure:3104: result: g++
+configure:3131: checking for C++ compiler version
+configure:3140: g++ --version >&5
 Apple LLVM version 5.0 (clang-500.2.79) (based on LLVM 3.3svn)
 Target: x86_64-apple-darwin13.1.0
 Thread model: posix
 Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
-configure:3150: $? = 0
-configure:3139: g++ -v >&5
+configure:3151: $? = 0
+configure:3140: g++ -v >&5
 Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
 Apple LLVM version 5.0 (clang-500.2.79) (based on LLVM 3.3svn)
 Target: x86_64-apple-darwin13.1.0
 Thread model: posix
-configure:3150: $? = 0
-configure:3139: g++ -V >&5
+configure:3151: $? = 0
+configure:3140: g++ -V >&5
 clang: error: argument to '-V' is missing (expected 1 value)
 clang: error: no input files
-configure:3150: $? = 1
-configure:3139: g++ -qversion >&5
+configure:3151: $? = 1
+configure:3140: g++ -qversion >&5
 clang: error: no input files
-configure:3150: $? = 1
-configure:3170: checking whether the C++ compiler works
-configure:3192: g++   -I/opt/local/include -L/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/resources/mac/libs -L/opt/local/lib conftest.cpp -lz -llepta -ljpeg -lpng -ltiff >&5
-configure:3196: $? = 0
-configure:3244: result: yes
-configure:3247: checking for C++ compiler default output file name
-configure:3249: result: a.out
-configure:3255: checking for suffix of executables
-configure:3262: g++ -o conftest   -I/opt/local/include -L/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/resources/mac/libs -L/opt/local/lib conftest.cpp -lz -llepta -ljpeg -lpng -ltiff >&5
-configure:3266: $? = 0
-configure:3288: result: 
-configure:3310: checking whether we are cross compiling
-configure:3318: g++ -o conftest   -I/opt/local/include -L/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/resources/mac/libs -L/opt/local/lib conftest.cpp -lz -llepta -ljpeg -lpng -ltiff >&5
-configure:3322: $? = 0
-configure:3329: ./conftest
-configure:3333: $? = 0
-configure:3348: result: no
-configure:3353: checking for suffix of object files
-configure:3375: g++ -c   -I/opt/local/include conftest.cpp >&5
-configure:3379: $? = 0
-configure:3400: result: o
-configure:3404: checking whether we are using the GNU C++ compiler
-configure:3423: g++ -c   -I/opt/local/include conftest.cpp >&5
-configure:3423: $? = 0
-configure:3432: result: yes
-configure:3441: checking whether g++ accepts -g
-configure:3461: g++ -c -g  -I/opt/local/include conftest.cpp >&5
-configure:3461: $? = 0
-configure:3502: result: yes
-configure:3574: checking how to print strings
-configure:3601: result: printf
-configure:3673: checking for gcc
-configure:3700: result: g++
-configure:3929: checking for C compiler version
-configure:3938: g++ --version >&5
+configure:3151: $? = 1
+configure:3171: checking whether the C++ compiler works
+configure:3193: g++   -I/opt/local/include -L/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/resources/mac/libs -L/opt/local/lib conftest.cpp -llepta >&5
+configure:3197: $? = 0
+configure:3245: result: yes
+configure:3248: checking for C++ compiler default output file name
+configure:3250: result: a.out
+configure:3256: checking for suffix of executables
+configure:3263: g++ -o conftest   -I/opt/local/include -L/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/resources/mac/libs -L/opt/local/lib conftest.cpp -llepta >&5
+configure:3267: $? = 0
+configure:3289: result: 
+configure:3311: checking whether we are cross compiling
+configure:3319: g++ -o conftest   -I/opt/local/include -L/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/resources/mac/libs -L/opt/local/lib conftest.cpp -llepta >&5
+configure:3323: $? = 0
+configure:3330: ./conftest
+configure:3334: $? = 0
+configure:3349: result: no
+configure:3354: checking for suffix of object files
+configure:3376: g++ -c   -I/opt/local/include conftest.cpp >&5
+configure:3380: $? = 0
+configure:3401: result: o
+configure:3405: checking whether we are using the GNU C++ compiler
+configure:3424: g++ -c   -I/opt/local/include conftest.cpp >&5
+configure:3424: $? = 0
+configure:3433: result: yes
+configure:3442: checking whether g++ accepts -g
+configure:3462: g++ -c -g  -I/opt/local/include conftest.cpp >&5
+configure:3462: $? = 0
+configure:3503: result: yes
+configure:3575: checking how to print strings
+configure:3602: result: printf
+configure:3674: checking for gcc
+configure:3690: found /usr/bin/gcc
+configure:3701: result: gcc
+configure:3930: checking for C compiler version
+configure:3939: gcc --version >&5
 Apple LLVM version 5.0 (clang-500.2.79) (based on LLVM 3.3svn)
 Target: x86_64-apple-darwin13.1.0
 Thread model: posix
 Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
-configure:3949: $? = 0
-configure:3938: g++ -v >&5
+configure:3950: $? = 0
+configure:3939: gcc -v >&5
 Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
 Apple LLVM version 5.0 (clang-500.2.79) (based on LLVM 3.3svn)
 Target: x86_64-apple-darwin13.1.0
 Thread model: posix
-configure:3949: $? = 0
-configure:3938: g++ -V >&5
+configure:3950: $? = 0
+configure:3939: gcc -V >&5
 clang: error: argument to '-V' is missing (expected 1 value)
 clang: error: no input files
-configure:3949: $? = 1
-configure:3938: g++ -qversion >&5
+configure:3950: $? = 1
+configure:3939: gcc -qversion >&5
 clang: error: no input files
-configure:3949: $? = 1
-configure:3953: checking whether we are using the GNU C compiler
-configure:3972: g++ -c   -I/opt/local/include conftest.c >&5
-clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
-configure:3972: $? = 0
-configure:3981: result: yes
-configure:3990: checking whether g++ accepts -g
-configure:4010: g++ -c -g  -I/opt/local/include conftest.c >&5
-clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
-configure:4010: $? = 0
-configure: failed program was:
-| /* confdefs.h */
-| #define PACKAGE_NAME "tesseract"
-| #define PACKAGE_TARNAME "tesseract"
-| #define PACKAGE_VERSION "3.02.02"
-| #define PACKAGE_STRING "tesseract 3.02.02"
-| #define PACKAGE_BUGREPORT "http://code.google.com/p/tesseract-ocr/issues/list"
-| #define PACKAGE_URL ""
-| #define PACKAGE_NAME "tesseract"
-| #define PACKAGE_VERSION "3.02.02"
-| #define PACKAGE_YEAR "2012"
-| #define PACKAGE_DATE "10/23"
-| /* end confdefs.h.  */
-| 
-| int
-| main ()
-| {
-| 
-|   ;
-|   return 0;
-| }
-configure:4025: g++ -c   -I/opt/local/include conftest.c >&5
-clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
-configure:4025: $? = 0
-configure: failed program was:
-| /* confdefs.h */
-| #define PACKAGE_NAME "tesseract"
-| #define PACKAGE_TARNAME "tesseract"
-| #define PACKAGE_VERSION "3.02.02"
-| #define PACKAGE_STRING "tesseract 3.02.02"
-| #define PACKAGE_BUGREPORT "http://code.google.com/p/tesseract-ocr/issues/list"
-| #define PACKAGE_URL ""
-| #define PACKAGE_NAME "tesseract"
-| #define PACKAGE_VERSION "3.02.02"
-| #define PACKAGE_YEAR "2012"
-| #define PACKAGE_DATE "10/23"
-| /* end confdefs.h.  */
-| 
-| int
-| main ()
-| {
-| 
-|   ;
-|   return 0;
-| }
-configure:4041: g++ -c -g  -I/opt/local/include conftest.c >&5
-clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
-configure:4041: $? = 0
-configure:4051: result: yes
-configure:4068: checking for g++ option to accept ISO C89
-configure:4131: g++  -c -g -O2  -I/opt/local/include conftest.c >&5
-clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
-conftest.c:19:17: error: C++ requires a type specifier for all declarations
-static char *e (p, i)
-                ^
-conftest.c:19:20: error: unknown type name 'i'
-static char *e (p, i)
-                   ^
-conftest.c:19:22: error: expected ';' after top level declarator
-static char *e (p, i)
-                     ^
-                     ;
-conftest.c:22:1: error: expected unqualified-id
-{
-^
-4 errors generated.
-configure:4131: $? = 1
-configure: failed program was:
-| /* confdefs.h */
-| #define PACKAGE_NAME "tesseract"
-| #define PACKAGE_TARNAME "tesseract"
-| #define PACKAGE_VERSION "3.02.02"
-| #define PACKAGE_STRING "tesseract 3.02.02"
-| #define PACKAGE_BUGREPORT "http://code.google.com/p/tesseract-ocr/issues/list"
-| #define PACKAGE_URL ""
-| #define PACKAGE_NAME "tesseract"
-| #define PACKAGE_VERSION "3.02.02"
-| #define PACKAGE_YEAR "2012"
-| #define PACKAGE_DATE "10/23"
-| /* end confdefs.h.  */
-| #include <stdarg.h>
-| #include <stdio.h>
-| struct stat;
-| /* Most of the following tests are stolen from RCS 5.7's src/conf.sh.  */
-| struct buf { int x; };
-| FILE * (*rcsopen) (struct buf *, struct stat *, int);
-| static char *e (p, i)
-|      char **p;
-|      int i;
-| {
-|   return p[i];
-| }
-| static char *f (char * (*g) (char **, int), char **p, ...)
-| {
-|   char *s;
-|   va_list v;
-|   va_start (v,p);
-|   s = g (p, va_arg (v,int));
-|   va_end (v);
-|   return s;
-| }
-| 
-| /* OSF 4.0 Compaq cc is some sort of almost-ANSI by default.  It has
-|    function prototypes and stuff, but not '\xHH' hex character constants.
-|    These don't provoke an error unfortunately, instead are silently treated
-|    as 'x'.  The following induces an error, until -std is added to get
-|    proper ANSI mode.  Curiously '\x00'!='x' always comes out true, for an
-|    array size at least.  It's necessary to write '\x00'==0 to get something
-|    that's true only with -std.  */
-| int osf4_cc_array ['\x00' == 0 ? 1 : -1];
-| 
-| /* IBM C 6 for AIX is almost-ANSI by default, but it replaces macro parameters
-|    inside strings and character constants.  */
-| #define FOO(x) 'x'
-| int xlc6_cc_array[FOO(a) == 'x' ? 1 : -1];
-| 
-| int test (int i, double x);
-| struct s1 {int (*f) (int a);};
-| struct s2 {int (*f) (double a);};
-| int pairnames (int, char **, FILE *(*)(struct buf *, struct stat *, int), int, int);
-| int argc;
-| char **argv;
-| int
-| main ()
-| {
-| return f (e, argv, 0) != argv[0]  ||  f (e, argv, 1) != argv[1];
-|   ;
-|   return 0;
-| }
-configure:4131: g++ -qlanglvl=extc89 -c -g -O2  -I/opt/local/include conftest.c >&5
-clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
-clang: warning: argument unused during compilation: '-qlanglvl=extc89'
-conftest.c:19:17: error: C++ requires a type specifier for all declarations
-static char *e (p, i)
-                ^
-conftest.c:19:20: error: unknown type name 'i'
-static char *e (p, i)
-                   ^
-conftest.c:19:22: error: expected ';' after top level declarator
-static char *e (p, i)
-                     ^
-                     ;
-conftest.c:22:1: error: expected unqualified-id
-{
-^
-4 errors generated.
-configure:4131: $? = 1
-configure: failed program was:
-| /* confdefs.h */
-| #define PACKAGE_NAME "tesseract"
-| #define PACKAGE_TARNAME "tesseract"
-| #define PACKAGE_VERSION "3.02.02"
-| #define PACKAGE_STRING "tesseract 3.02.02"
-| #define PACKAGE_BUGREPORT "http://code.google.com/p/tesseract-ocr/issues/list"
-| #define PACKAGE_URL ""
-| #define PACKAGE_NAME "tesseract"
-| #define PACKAGE_VERSION "3.02.02"
-| #define PACKAGE_YEAR "2012"
-| #define PACKAGE_DATE "10/23"
-| /* end confdefs.h.  */
-| #include <stdarg.h>
-| #include <stdio.h>
-| struct stat;
-| /* Most of the following tests are stolen from RCS 5.7's src/conf.sh.  */
-| struct buf { int x; };
-| FILE * (*rcsopen) (struct buf *, struct stat *, int);
-| static char *e (p, i)
-|      char **p;
-|      int i;
-| {
-|   return p[i];
-| }
-| static char *f (char * (*g) (char **, int), char **p, ...)
-| {
-|   char *s;
-|   va_list v;
-|   va_start (v,p);
-|   s = g (p, va_arg (v,int));
-|   va_end (v);
-|   return s;
-| }
-| 
-| /* OSF 4.0 Compaq cc is some sort of almost-ANSI by default.  It has
-|    function prototypes and stuff, but not '\xHH' hex character constants.
-|    These don't provoke an error unfortunately, instead are silently treated
-|    as 'x'.  The following induces an error, until -std is added to get
-|    proper ANSI mode.  Curiously '\x00'!='x' always comes out true, for an
-|    array size at least.  It's necessary to write '\x00'==0 to get something
-|    that's true only with -std.  */
-| int osf4_cc_array ['\x00' == 0 ? 1 : -1];
-| 
-| /* IBM C 6 for AIX is almost-ANSI by default, but it replaces macro parameters
-|    inside strings and character constants.  */
-| #define FOO(x) 'x'
-| int xlc6_cc_array[FOO(a) == 'x' ? 1 : -1];
-| 
-| int test (int i, double x);
-| struct s1 {int (*f) (int a);};
-| struct s2 {int (*f) (double a);};
-| int pairnames (int, char **, FILE *(*)(struct buf *, struct stat *, int), int, int);
-| int argc;
-| char **argv;
-| int
-| main ()
-| {
-| return f (e, argv, 0) != argv[0]  ||  f (e, argv, 1) != argv[1];
-|   ;
-|   return 0;
-| }
-configure:4131: g++ -qlanglvl=ansi -c -g -O2  -I/opt/local/include conftest.c >&5
-clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
-clang: warning: argument unused during compilation: '-qlanglvl=ansi'
-conftest.c:19:17: error: C++ requires a type specifier for all declarations
-static char *e (p, i)
-                ^
-conftest.c:19:20: error: unknown type name 'i'
-static char *e (p, i)
-                   ^
-conftest.c:19:22: error: expected ';' after top level declarator
-static char *e (p, i)
-                     ^
-                     ;
-conftest.c:22:1: error: expected unqualified-id
-{
-^
-4 errors generated.
-configure:4131: $? = 1
-configure: failed program was:
-| /* confdefs.h */
-| #define PACKAGE_NAME "tesseract"
-| #define PACKAGE_TARNAME "tesseract"
-| #define PACKAGE_VERSION "3.02.02"
-| #define PACKAGE_STRING "tesseract 3.02.02"
-| #define PACKAGE_BUGREPORT "http://code.google.com/p/tesseract-ocr/issues/list"
-| #define PACKAGE_URL ""
-| #define PACKAGE_NAME "tesseract"
-| #define PACKAGE_VERSION "3.02.02"
-| #define PACKAGE_YEAR "2012"
-| #define PACKAGE_DATE "10/23"
-| /* end confdefs.h.  */
-| #include <stdarg.h>
-| #include <stdio.h>
-| struct stat;
-| /* Most of the following tests are stolen from RCS 5.7's src/conf.sh.  */
-| struct buf { int x; };
-| FILE * (*rcsopen) (struct buf *, struct stat *, int);
-| static char *e (p, i)
-|      char **p;
-|      int i;
-| {
-|   return p[i];
-| }
-| static char *f (char * (*g) (char **, int), char **p, ...)
-| {
-|   char *s;
-|   va_list v;
-|   va_start (v,p);
-|   s = g (p, va_arg (v,int));
-|   va_end (v);
-|   return s;
-| }
-| 
-| /* OSF 4.0 Compaq cc is some sort of almost-ANSI by default.  It has
-|    function prototypes and stuff, but not '\xHH' hex character constants.
-|    These don't provoke an error unfortunately, instead are silently treated
-|    as 'x'.  The following induces an error, until -std is added to get
-|    proper ANSI mode.  Curiously '\x00'!='x' always comes out true, for an
-|    array size at least.  It's necessary to write '\x00'==0 to get something
-|    that's true only with -std.  */
-| int osf4_cc_array ['\x00' == 0 ? 1 : -1];
-| 
-| /* IBM C 6 for AIX is almost-ANSI by default, but it replaces macro parameters
-|    inside strings and character constants.  */
-| #define FOO(x) 'x'
-| int xlc6_cc_array[FOO(a) == 'x' ? 1 : -1];
-| 
-| int test (int i, double x);
-| struct s1 {int (*f) (int a);};
-| struct s2 {int (*f) (double a);};
-| int pairnames (int, char **, FILE *(*)(struct buf *, struct stat *, int), int, int);
-| int argc;
-| char **argv;
-| int
-| main ()
-| {
-| return f (e, argv, 0) != argv[0]  ||  f (e, argv, 1) != argv[1];
-|   ;
-|   return 0;
-| }
-configure:4131: g++ -std -c -g -O2  -I/opt/local/include conftest.c >&5
-clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
-clang: warning: argument unused during compilation: '-std'
-conftest.c:19:17: error: C++ requires a type specifier for all declarations
-static char *e (p, i)
-                ^
-conftest.c:19:20: error: unknown type name 'i'
-static char *e (p, i)
-                   ^
-conftest.c:19:22: error: expected ';' after top level declarator
-static char *e (p, i)
-                     ^
-                     ;
-conftest.c:22:1: error: expected unqualified-id
-{
-^
-4 errors generated.
-configure:4131: $? = 1
-configure: failed program was:
-| /* confdefs.h */
-| #define PACKAGE_NAME "tesseract"
-| #define PACKAGE_TARNAME "tesseract"
-| #define PACKAGE_VERSION "3.02.02"
-| #define PACKAGE_STRING "tesseract 3.02.02"
-| #define PACKAGE_BUGREPORT "http://code.google.com/p/tesseract-ocr/issues/list"
-| #define PACKAGE_URL ""
-| #define PACKAGE_NAME "tesseract"
-| #define PACKAGE_VERSION "3.02.02"
-| #define PACKAGE_YEAR "2012"
-| #define PACKAGE_DATE "10/23"
-| /* end confdefs.h.  */
-| #include <stdarg.h>
-| #include <stdio.h>
-| struct stat;
-| /* Most of the following tests are stolen from RCS 5.7's src/conf.sh.  */
-| struct buf { int x; };
-| FILE * (*rcsopen) (struct buf *, struct stat *, int);
-| static char *e (p, i)
-|      char **p;
-|      int i;
-| {
-|   return p[i];
-| }
-| static char *f (char * (*g) (char **, int), char **p, ...)
-| {
-|   char *s;
-|   va_list v;
-|   va_start (v,p);
-|   s = g (p, va_arg (v,int));
-|   va_end (v);
-|   return s;
-| }
-| 
-| /* OSF 4.0 Compaq cc is some sort of almost-ANSI by default.  It has
-|    function prototypes and stuff, but not '\xHH' hex character constants.
-|    These don't provoke an error unfortunately, instead are silently treated
-|    as 'x'.  The following induces an error, until -std is added to get
-|    proper ANSI mode.  Curiously '\x00'!='x' always comes out true, for an
-|    array size at least.  It's necessary to write '\x00'==0 to get something
-|    that's true only with -std.  */
-| int osf4_cc_array ['\x00' == 0 ? 1 : -1];
-| 
-| /* IBM C 6 for AIX is almost-ANSI by default, but it replaces macro parameters
-|    inside strings and character constants.  */
-| #define FOO(x) 'x'
-| int xlc6_cc_array[FOO(a) == 'x' ? 1 : -1];
-| 
-| int test (int i, double x);
-| struct s1 {int (*f) (int a);};
-| struct s2 {int (*f) (double a);};
-| int pairnames (int, char **, FILE *(*)(struct buf *, struct stat *, int), int, int);
-| int argc;
-| char **argv;
-| int
-| main ()
-| {
-| return f (e, argv, 0) != argv[0]  ||  f (e, argv, 1) != argv[1];
-|   ;
-|   return 0;
-| }
-configure:4131: g++ -Ae -c -g -O2  -I/opt/local/include conftest.c >&5
-clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
-clang: warning: argument unused during compilation: '-A e'
-conftest.c:19:17: error: C++ requires a type specifier for all declarations
-static char *e (p, i)
-                ^
-conftest.c:19:20: error: unknown type name 'i'
-static char *e (p, i)
-                   ^
-conftest.c:19:22: error: expected ';' after top level declarator
-static char *e (p, i)
-                     ^
-                     ;
-conftest.c:22:1: error: expected unqualified-id
-{
-^
-4 errors generated.
-configure:4131: $? = 1
-configure: failed program was:
-| /* confdefs.h */
-| #define PACKAGE_NAME "tesseract"
-| #define PACKAGE_TARNAME "tesseract"
-| #define PACKAGE_VERSION "3.02.02"
-| #define PACKAGE_STRING "tesseract 3.02.02"
-| #define PACKAGE_BUGREPORT "http://code.google.com/p/tesseract-ocr/issues/list"
-| #define PACKAGE_URL ""
-| #define PACKAGE_NAME "tesseract"
-| #define PACKAGE_VERSION "3.02.02"
-| #define PACKAGE_YEAR "2012"
-| #define PACKAGE_DATE "10/23"
-| /* end confdefs.h.  */
-| #include <stdarg.h>
-| #include <stdio.h>
-| struct stat;
-| /* Most of the following tests are stolen from RCS 5.7's src/conf.sh.  */
-| struct buf { int x; };
-| FILE * (*rcsopen) (struct buf *, struct stat *, int);
-| static char *e (p, i)
-|      char **p;
-|      int i;
-| {
-|   return p[i];
-| }
-| static char *f (char * (*g) (char **, int), char **p, ...)
-| {
-|   char *s;
-|   va_list v;
-|   va_start (v,p);
-|   s = g (p, va_arg (v,int));
-|   va_end (v);
-|   return s;
-| }
-| 
-| /* OSF 4.0 Compaq cc is some sort of almost-ANSI by default.  It has
-|    function prototypes and stuff, but not '\xHH' hex character constants.
-|    These don't provoke an error unfortunately, instead are silently treated
-|    as 'x'.  The following induces an error, until -std is added to get
-|    proper ANSI mode.  Curiously '\x00'!='x' always comes out true, for an
-|    array size at least.  It's necessary to write '\x00'==0 to get something
-|    that's true only with -std.  */
-| int osf4_cc_array ['\x00' == 0 ? 1 : -1];
-| 
-| /* IBM C 6 for AIX is almost-ANSI by default, but it replaces macro parameters
-|    inside strings and character constants.  */
-| #define FOO(x) 'x'
-| int xlc6_cc_array[FOO(a) == 'x' ? 1 : -1];
-| 
-| int test (int i, double x);
-| struct s1 {int (*f) (int a);};
-| struct s2 {int (*f) (double a);};
-| int pairnames (int, char **, FILE *(*)(struct buf *, struct stat *, int), int, int);
-| int argc;
-| char **argv;
-| int
-| main ()
-| {
-| return f (e, argv, 0) != argv[0]  ||  f (e, argv, 1) != argv[1];
-|   ;
-|   return 0;
-| }
-configure:4131: g++ -Aa -D_HPUX_SOURCE -c -g -O2  -I/opt/local/include conftest.c >&5
-clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
-clang: warning: argument unused during compilation: '-A a'
-conftest.c:19:17: error: C++ requires a type specifier for all declarations
-static char *e (p, i)
-                ^
-conftest.c:19:20: error: unknown type name 'i'
-static char *e (p, i)
-                   ^
-conftest.c:19:22: error: expected ';' after top level declarator
-static char *e (p, i)
-                     ^
-                     ;
-conftest.c:22:1: error: expected unqualified-id
-{
-^
-4 errors generated.
-configure:4131: $? = 1
-configure: failed program was:
-| /* confdefs.h */
-| #define PACKAGE_NAME "tesseract"
-| #define PACKAGE_TARNAME "tesseract"
-| #define PACKAGE_VERSION "3.02.02"
-| #define PACKAGE_STRING "tesseract 3.02.02"
-| #define PACKAGE_BUGREPORT "http://code.google.com/p/tesseract-ocr/issues/list"
-| #define PACKAGE_URL ""
-| #define PACKAGE_NAME "tesseract"
-| #define PACKAGE_VERSION "3.02.02"
-| #define PACKAGE_YEAR "2012"
-| #define PACKAGE_DATE "10/23"
-| /* end confdefs.h.  */
-| #include <stdarg.h>
-| #include <stdio.h>
-| struct stat;
-| /* Most of the following tests are stolen from RCS 5.7's src/conf.sh.  */
-| struct buf { int x; };
-| FILE * (*rcsopen) (struct buf *, struct stat *, int);
-| static char *e (p, i)
-|      char **p;
-|      int i;
-| {
-|   return p[i];
-| }
-| static char *f (char * (*g) (char **, int), char **p, ...)
-| {
-|   char *s;
-|   va_list v;
-|   va_start (v,p);
-|   s = g (p, va_arg (v,int));
-|   va_end (v);
-|   return s;
-| }
-| 
-| /* OSF 4.0 Compaq cc is some sort of almost-ANSI by default.  It has
-|    function prototypes and stuff, but not '\xHH' hex character constants.
-|    These don't provoke an error unfortunately, instead are silently treated
-|    as 'x'.  The following induces an error, until -std is added to get
-|    proper ANSI mode.  Curiously '\x00'!='x' always comes out true, for an
-|    array size at least.  It's necessary to write '\x00'==0 to get something
-|    that's true only with -std.  */
-| int osf4_cc_array ['\x00' == 0 ? 1 : -1];
-| 
-| /* IBM C 6 for AIX is almost-ANSI by default, but it replaces macro parameters
-|    inside strings and character constants.  */
-| #define FOO(x) 'x'
-| int xlc6_cc_array[FOO(a) == 'x' ? 1 : -1];
-| 
-| int test (int i, double x);
-| struct s1 {int (*f) (int a);};
-| struct s2 {int (*f) (double a);};
-| int pairnames (int, char **, FILE *(*)(struct buf *, struct stat *, int), int, int);
-| int argc;
-| char **argv;
-| int
-| main ()
-| {
-| return f (e, argv, 0) != argv[0]  ||  f (e, argv, 1) != argv[1];
-|   ;
-|   return 0;
-| }
-configure:4131: g++ -Xc -D__EXTENSIONS__ -c -g -O2  -I/opt/local/include conftest.c >&5
-clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
-clang: warning: argument unused during compilation: '-Xc'
-conftest.c:19:17: error: C++ requires a type specifier for all declarations
-static char *e (p, i)
-                ^
-conftest.c:19:20: error: unknown type name 'i'
-static char *e (p, i)
-                   ^
-conftest.c:19:22: error: expected ';' after top level declarator
-static char *e (p, i)
-                     ^
-                     ;
-conftest.c:22:1: error: expected unqualified-id
-{
-^
-4 errors generated.
-configure:4131: $? = 1
-configure: failed program was:
-| /* confdefs.h */
-| #define PACKAGE_NAME "tesseract"
-| #define PACKAGE_TARNAME "tesseract"
-| #define PACKAGE_VERSION "3.02.02"
-| #define PACKAGE_STRING "tesseract 3.02.02"
-| #define PACKAGE_BUGREPORT "http://code.google.com/p/tesseract-ocr/issues/list"
-| #define PACKAGE_URL ""
-| #define PACKAGE_NAME "tesseract"
-| #define PACKAGE_VERSION "3.02.02"
-| #define PACKAGE_YEAR "2012"
-| #define PACKAGE_DATE "10/23"
-| /* end confdefs.h.  */
-| #include <stdarg.h>
-| #include <stdio.h>
-| struct stat;
-| /* Most of the following tests are stolen from RCS 5.7's src/conf.sh.  */
-| struct buf { int x; };
-| FILE * (*rcsopen) (struct buf *, struct stat *, int);
-| static char *e (p, i)
-|      char **p;
-|      int i;
-| {
-|   return p[i];
-| }
-| static char *f (char * (*g) (char **, int), char **p, ...)
-| {
-|   char *s;
-|   va_list v;
-|   va_start (v,p);
-|   s = g (p, va_arg (v,int));
-|   va_end (v);
-|   return s;
-| }
-| 
-| /* OSF 4.0 Compaq cc is some sort of almost-ANSI by default.  It has
-|    function prototypes and stuff, but not '\xHH' hex character constants.
-|    These don't provoke an error unfortunately, instead are silently treated
-|    as 'x'.  The following induces an error, until -std is added to get
-|    proper ANSI mode.  Curiously '\x00'!='x' always comes out true, for an
-|    array size at least.  It's necessary to write '\x00'==0 to get something
-|    that's true only with -std.  */
-| int osf4_cc_array ['\x00' == 0 ? 1 : -1];
-| 
-| /* IBM C 6 for AIX is almost-ANSI by default, but it replaces macro parameters
-|    inside strings and character constants.  */
-| #define FOO(x) 'x'
-| int xlc6_cc_array[FOO(a) == 'x' ? 1 : -1];
-| 
-| int test (int i, double x);
-| struct s1 {int (*f) (int a);};
-| struct s2 {int (*f) (double a);};
-| int pairnames (int, char **, FILE *(*)(struct buf *, struct stat *, int), int, int);
-| int argc;
-| char **argv;
-| int
-| main ()
-| {
-| return f (e, argv, 0) != argv[0]  ||  f (e, argv, 1) != argv[1];
-|   ;
-|   return 0;
-| }
-configure:4147: result: unsupported
-configure:4169: checking whether g++ understands -c and -o together
-configure:4191: g++ -c conftest.c -o conftest2.o
-clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
-configure:4194: $? = 0
-configure:4191: g++ -c conftest.c -o conftest2.o
-clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
-configure:4194: $? = 0
-configure:4206: result: yes
-configure:4223: checking for a sed that does not truncate output
-configure:4287: result: /usr/bin/sed
-configure:4305: checking for grep that handles long lines and -e
-configure:4363: result: /usr/bin/grep
-configure:4368: checking for egrep
-configure:4430: result: /usr/bin/grep -E
-configure:4435: checking for fgrep
-configure:4497: result: /usr/bin/grep -F
-configure:4532: checking for ld used by g++
-configure:4599: result: /Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.8.xctoolchain/usr/bin/ld
-configure:4606: checking if the linker (/Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.8.xctoolchain/usr/bin/ld) is GNU ld
-configure:4621: result: no
-configure:4633: checking for BSD- or MS-compatible name lister (nm)
-configure:4682: result: /usr/bin/nm
-configure:4812: checking the name lister (/usr/bin/nm) interface
-configure:4819: g++ -c -g -O2  -I/opt/local/include conftest.c >&5
-clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
-configure:4822: /usr/bin/nm "conftest.o"
-configure:4825: output
+configure:3950: $? = 1
+configure:3954: checking whether we are using the GNU C compiler
+configure:3973: gcc -c   -I/opt/local/include conftest.c >&5
+configure:3973: $? = 0
+configure:3982: result: yes
+configure:3991: checking whether gcc accepts -g
+configure:4011: gcc -c -g  -I/opt/local/include conftest.c >&5
+configure:4011: $? = 0
+configure:4052: result: yes
+configure:4069: checking for gcc option to accept ISO C89
+configure:4132: gcc  -c -g -O2  -I/opt/local/include conftest.c >&5
+configure:4132: $? = 0
+configure:4145: result: none needed
+configure:4170: checking whether gcc understands -c and -o together
+configure:4192: gcc -c conftest.c -o conftest2.o
+configure:4195: $? = 0
+configure:4192: gcc -c conftest.c -o conftest2.o
+configure:4195: $? = 0
+configure:4207: result: yes
+configure:4224: checking for a sed that does not truncate output
+configure:4288: result: /opt/local/bin/gsed
+configure:4306: checking for grep that handles long lines and -e
+configure:4364: result: /usr/bin/grep
+configure:4369: checking for egrep
+configure:4431: result: /usr/bin/grep -E
+configure:4436: checking for fgrep
+configure:4498: result: /usr/bin/grep -F
+configure:4533: checking for ld used by gcc
+configure:4600: result: /Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.8.xctoolchain/usr/bin/ld
+configure:4607: checking if the linker (/Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.8.xctoolchain/usr/bin/ld) is GNU ld
+configure:4622: result: no
+configure:4634: checking for BSD- or MS-compatible name lister (nm)
+configure:4683: result: /opt/local/bin/nm
+configure:4813: checking the name lister (/opt/local/bin/nm) interface
+configure:4820: gcc -c -g -O2  -I/opt/local/include conftest.c >&5
+configure:4823: /opt/local/bin/nm "conftest.o"
+configure:4826: output
 000000000000023c S _some_variable
-configure:4832: result: BSD nm
-configure:4835: checking whether ln -s works
-configure:4839: result: yes
-configure:4847: checking the maximum length of command line arguments
-configure:4977: result: 196608
-configure:4994: checking whether the shell understands some XSI constructs
-configure:5004: result: yes
-configure:5008: checking whether the shell understands "+="
-configure:5014: result: yes
-configure:5049: checking how to convert x86_64-apple-darwin13.1.0 file names to x86_64-apple-darwin13.1.0 format
-configure:5089: result: func_convert_file_noop
-configure:5096: checking how to convert x86_64-apple-darwin13.1.0 file names to toolchain format
-configure:5116: result: func_convert_file_noop
-configure:5123: checking for /Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.8.xctoolchain/usr/bin/ld option to reload object files
-configure:5130: result: -r
-configure:5204: checking for objdump
-configure:5234: result: no
-configure:5263: checking how to recognize dependent libraries
-configure:5465: result: pass_all
-configure:5550: checking for dlltool
-configure:5580: result: no
-configure:5610: checking how to associate runtime and link libraries
-configure:5637: result: printf %s\n
-configure:5698: checking for ar
-configure:5714: found /usr/bin/ar
-configure:5725: result: ar
-configure:5762: checking for archiver @FILE support
-configure:5779: g++ -c -g -O2  -I/opt/local/include conftest.c >&5
-clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
-configure:5779: $? = 0
-configure:5782: ar cru libconftest.a @conftest.lst >&5
+configure:4833: result: BSD nm
+configure:4836: checking whether ln -s works
+configure:4840: result: yes
+configure:4848: checking the maximum length of command line arguments
+configure:4978: result: 196608
+configure:4995: checking whether the shell understands some XSI constructs
+configure:5005: result: yes
+configure:5009: checking whether the shell understands "+="
+configure:5015: result: yes
+configure:5050: checking how to convert x86_64-apple-darwin13.1.0 file names to x86_64-apple-darwin13.1.0 format
+configure:5090: result: func_convert_file_noop
+configure:5097: checking how to convert x86_64-apple-darwin13.1.0 file names to toolchain format
+configure:5117: result: func_convert_file_noop
+configure:5124: checking for /Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.8.xctoolchain/usr/bin/ld option to reload object files
+configure:5131: result: -r
+configure:5205: checking for objdump
+configure:5235: result: no
+configure:5264: checking how to recognize dependent libraries
+configure:5466: result: pass_all
+configure:5551: checking for dlltool
+configure:5581: result: no
+configure:5611: checking how to associate runtime and link libraries
+configure:5638: result: printf %s\n
+configure:5699: checking for ar
+configure:5715: found /opt/local/bin/ar
+configure:5726: result: ar
+configure:5763: checking for archiver @FILE support
+configure:5780: gcc -c -g -O2  -I/opt/local/include conftest.c >&5
+configure:5780: $? = 0
+configure:5783: ar cru libconftest.a @conftest.lst >&5
 ar: @conftest.lst: No such file or directory
-configure:5785: $? = 1
-configure:5805: result: no
-configure:5863: checking for strip
-configure:5879: found /usr/bin/strip
-configure:5890: result: strip
-configure:5962: checking for ranlib
-configure:5978: found /usr/bin/ranlib
-configure:5989: result: ranlib
-configure:6066: checking for gawk
-configure:6096: result: no
-configure:6066: checking for mawk
-configure:6096: result: no
-configure:6066: checking for nawk
-configure:6096: result: no
-configure:6066: checking for awk
-configure:6082: found /usr/bin/awk
-configure:6093: result: awk
-configure:6133: checking command to parse /usr/bin/nm output from g++ object
-configure:6253: g++ -c -g -O2  -I/opt/local/include conftest.c >&5
-clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
-configure:6256: $? = 0
-configure:6260: /usr/bin/nm conftest.o \| sed -n -e 's/^.*[ ]\([BCDEGRST][BCDEGRST]*\)[ ][ ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | sed '/ __gnu_lto/d' \> conftest.nm
-configure:6263: $? = 0
+configure:5786: $? = 1
+configure:5806: result: no
+configure:5864: checking for strip
+configure:5880: found /opt/local/bin/strip
+configure:5891: result: strip
+configure:5963: checking for ranlib
+configure:5979: found /opt/local/bin/ranlib
+configure:5990: result: ranlib
+configure:6067: checking for gawk
+configure:6097: result: no
+configure:6067: checking for mawk
+configure:6097: result: no
+configure:6067: checking for nawk
+configure:6097: result: no
+configure:6067: checking for awk
+configure:6083: found /usr/bin/awk
+configure:6094: result: awk
+configure:6134: checking command to parse /opt/local/bin/nm output from gcc object
+configure:6254: gcc -c -g -O2  -I/opt/local/include conftest.c >&5
+configure:6257: $? = 0
+configure:6261: /opt/local/bin/nm conftest.o \| sed -n -e 's/^.*[ ]\([BCDEGRST][BCDEGRST]*\)[ ][ ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | sed '/ __gnu_lto/d' \> conftest.nm
+configure:6264: $? = 0
 cannot find nm_test_var in conftest.nm
-configure:6253: g++ -c -g -O2  -I/opt/local/include conftest.c >&5
-clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
-configure:6256: $? = 0
-configure:6260: /usr/bin/nm conftest.o \| sed -n -e 's/^.*[ ]\([BCDEGRST][BCDEGRST]*\)[ ][ ]*_\([_A-Za-z][_A-Za-z0-9]*\)$/\1 _\2 \2/p' | sed '/ __gnu_lto/d' \> conftest.nm
-configure:6263: $? = 0
-configure:6329: g++ -o conftest -g -O2  -I/opt/local/include -L/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/resources/mac/libs -L/opt/local/lib conftest.c conftstm.o >&5
-clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
-configure:6332: $? = 0
-configure:6370: result: ok
-configure:6407: checking for sysroot
-configure:6437: result: no
-configure:6693: checking for mt
-configure:6723: result: no
-configure:6743: checking if : is a manifest tool
-configure:6749: : '-?'
-configure:6757: result: no
-configure:6813: checking for dsymutil
-configure:6829: found /usr/bin/dsymutil
-configure:6840: result: dsymutil
-configure:6905: checking for nmedit
-configure:6921: found /usr/bin/nmedit
-configure:6932: result: nmedit
-configure:6997: checking for lipo
-configure:7013: found /usr/bin/lipo
-configure:7024: result: lipo
-configure:7089: checking for otool
-configure:7105: found /usr/bin/otool
-configure:7116: result: otool
-configure:7181: checking for otool64
-configure:7211: result: no
-configure:7256: checking for -single_module linker flag
-g++ -g -O2 -L/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/resources/mac/libs -L/opt/local/lib -o libconftest.dylib -dynamiclib -Wl,-single_module conftest.c
-configure:7289: result: yes
-configure:7292: checking for -exported_symbols_list linker flag
-configure:7312: g++ -o conftest -g -O2  -I/opt/local/include -L/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/resources/mac/libs -L/opt/local/lib -Wl,-exported_symbols_list,conftest.sym conftest.c -lz -llepta -ljpeg -lpng -ltiff >&5
-clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
-configure:7312: $? = 0
-configure:7322: result: yes
-configure:7325: checking for -force_load linker flag
-g++ -g -O2 -c -o conftest.o conftest.c
-clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
+configure:6254: gcc -c -g -O2  -I/opt/local/include conftest.c >&5
+configure:6257: $? = 0
+configure:6261: /opt/local/bin/nm conftest.o \| sed -n -e 's/^.*[ ]\([BCDEGRST][BCDEGRST]*\)[ ][ ]*_\([_A-Za-z][_A-Za-z0-9]*\)$/\1 _\2 \2/p' | sed '/ __gnu_lto/d' \> conftest.nm
+configure:6264: $? = 0
+configure:6330: gcc -o conftest -g -O2  -I/opt/local/include -L/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/resources/mac/libs -L/opt/local/lib conftest.c conftstm.o >&5
+configure:6333: $? = 0
+configure:6371: result: ok
+configure:6408: checking for sysroot
+configure:6438: result: no
+configure:6694: checking for mt
+configure:6724: result: no
+configure:6744: checking if : is a manifest tool
+configure:6750: : '-?'
+configure:6758: result: no
+configure:6814: checking for dsymutil
+configure:6830: found /usr/bin/dsymutil
+configure:6841: result: dsymutil
+configure:6906: checking for nmedit
+configure:6922: found /opt/local/bin/nmedit
+configure:6933: result: nmedit
+configure:6998: checking for lipo
+configure:7014: found /opt/local/bin/lipo
+configure:7025: result: lipo
+configure:7090: checking for otool
+configure:7106: found /opt/local/bin/otool
+configure:7117: result: otool
+configure:7182: checking for otool64
+configure:7212: result: no
+configure:7257: checking for -single_module linker flag
+gcc -g -O2 -L/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/resources/mac/libs -L/opt/local/lib -o libconftest.dylib -dynamiclib -Wl,-single_module conftest.c
+configure:7290: result: yes
+configure:7293: checking for -exported_symbols_list linker flag
+configure:7313: gcc -o conftest -g -O2  -I/opt/local/include -L/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/resources/mac/libs -L/opt/local/lib -Wl,-exported_symbols_list,conftest.sym conftest.c -llepta >&5
+configure:7313: $? = 0
+configure:7323: result: yes
+configure:7326: checking for -force_load linker flag
+gcc -g -O2 -c -o conftest.o conftest.c
 ar cru libconftest.a conftest.o
 ranlib libconftest.a
-g++ -g -O2 -L/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/resources/mac/libs -L/opt/local/lib -o conftest conftest.c -Wl,-force_load,./libconftest.a
-configure:7357: result: yes
-configure:7399: checking how to run the C preprocessor
-configure:7430: g++ -E  -I/opt/local/include conftest.c
-clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
-configure:7430: $? = 0
-configure:7444: g++ -E  -I/opt/local/include conftest.c
-clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
+gcc -g -O2 -L/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/resources/mac/libs -L/opt/local/lib -o conftest conftest.c -Wl,-force_load,./libconftest.a
+configure:7358: result: yes
+configure:7400: checking how to run the C preprocessor
+configure:7431: gcc -E  -I/opt/local/include conftest.c
+configure:7431: $? = 0
+configure:7445: gcc -E  -I/opt/local/include conftest.c
 conftest.c:13:10: fatal error: 'ac_nonexistent.h' file not found
 #include <ac_nonexistent.h>
          ^
 1 error generated.
-configure:7444: $? = 1
+configure:7445: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "tesseract"
@@ -991,17 +380,15 @@ configure: failed program was:
 | #define PACKAGE_DATE "10/23"
 | /* end confdefs.h.  */
 | #include <ac_nonexistent.h>
-configure:7469: result: g++ -E
-configure:7489: g++ -E  -I/opt/local/include conftest.c
-clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
-configure:7489: $? = 0
-configure:7503: g++ -E  -I/opt/local/include conftest.c
-clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
+configure:7470: result: gcc -E
+configure:7490: gcc -E  -I/opt/local/include conftest.c
+configure:7490: $? = 0
+configure:7504: gcc -E  -I/opt/local/include conftest.c
 conftest.c:13:10: fatal error: 'ac_nonexistent.h' file not found
 #include <ac_nonexistent.h>
          ^
 1 error generated.
-configure:7503: $? = 1
+configure:7504: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "tesseract"
@@ -1016,114 +403,97 @@ configure: failed program was:
 | #define PACKAGE_DATE "10/23"
 | /* end confdefs.h.  */
 | #include <ac_nonexistent.h>
-configure:7532: checking for ANSI C header files
-configure:7552: g++ -c -g -O2  -I/opt/local/include conftest.c >&5
-clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
-configure:7552: $? = 0
-clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
-clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
-configure:7625: g++ -o conftest -g -O2  -I/opt/local/include -L/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/resources/mac/libs -L/opt/local/lib conftest.c -lz -llepta -ljpeg -lpng -ltiff >&5
-clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
-configure:7625: $? = 0
-configure:7625: ./conftest
-configure:7625: $? = 0
-configure:7636: result: yes
-configure:7649: checking for sys/types.h
-configure:7649: g++ -c -g -O2  -I/opt/local/include conftest.c >&5
-clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
-configure:7649: $? = 0
-configure:7649: result: yes
-configure:7649: checking for sys/stat.h
-configure:7649: g++ -c -g -O2  -I/opt/local/include conftest.c >&5
-clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
-configure:7649: $? = 0
-configure:7649: result: yes
-configure:7649: checking for stdlib.h
-configure:7649: g++ -c -g -O2  -I/opt/local/include conftest.c >&5
-clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
-configure:7649: $? = 0
-configure:7649: result: yes
-configure:7649: checking for string.h
-configure:7649: g++ -c -g -O2  -I/opt/local/include conftest.c >&5
-clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
-configure:7649: $? = 0
-configure:7649: result: yes
-configure:7649: checking for memory.h
-configure:7649: g++ -c -g -O2  -I/opt/local/include conftest.c >&5
-clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
-configure:7649: $? = 0
-configure:7649: result: yes
-configure:7649: checking for strings.h
-configure:7649: g++ -c -g -O2  -I/opt/local/include conftest.c >&5
-clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
-configure:7649: $? = 0
-configure:7649: result: yes
-configure:7649: checking for inttypes.h
-configure:7649: g++ -c -g -O2  -I/opt/local/include conftest.c >&5
-clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
-configure:7649: $? = 0
-configure:7649: result: yes
-configure:7649: checking for stdint.h
-configure:7649: g++ -c -g -O2  -I/opt/local/include conftest.c >&5
-clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
-configure:7649: $? = 0
-configure:7649: result: yes
-configure:7649: checking for unistd.h
-configure:7649: g++ -c -g -O2  -I/opt/local/include conftest.c >&5
-clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
-configure:7649: $? = 0
-configure:7649: result: yes
-configure:7663: checking for dlfcn.h
-configure:7663: g++ -c -g -O2  -I/opt/local/include conftest.c >&5
-clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
-configure:7663: $? = 0
-configure:7663: result: yes
-configure:7880: checking for objdir
-configure:7895: result: .libs
-configure:8166: checking if g++ supports -fno-rtti -fno-exceptions
-configure:8184: g++ -c -g -O2  -I/opt/local/include -fno-rtti -fno-exceptions conftest.c >&5
-clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
-configure:8188: $? = 0
-configure:8201: result: yes
-configure:8528: checking for g++ option to produce PIC
-configure:8535: result: -fno-common -DPIC
-configure:8543: checking if g++ PIC flag -fno-common -DPIC works
-configure:8561: g++ -c -g -O2  -I/opt/local/include -fno-common -DPIC -DPIC conftest.c >&5
-clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
-configure:8565: $? = 0
-configure:8578: result: yes
-configure:8607: checking if g++ static flag -static works
-configure:8635: result: no
-configure:8650: checking if g++ supports -c -o file.o
-configure:8671: g++ -c -g -O2  -I/opt/local/include -o out/conftest2.o conftest.c >&5
-clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
-configure:8675: $? = 0
-configure:8697: result: yes
-configure:8705: checking if g++ supports -c -o file.o
-configure:8752: result: yes
-configure:8785: checking whether the g++ linker (/Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.8.xctoolchain/usr/bin/ld) supports shared libraries
-configure:9938: result: yes
-configure:10178: checking dynamic linker characteristics
-configure:10911: result: darwin13.1.0 dyld
-configure:11018: checking how to hardcode library paths into programs
-configure:11043: result: immediate
-configure:11583: checking whether stripping libraries is possible
-configure:11597: result: yes
-configure:11623: checking if libtool supports shared libraries
-configure:11625: result: yes
-configure:11628: checking whether to build shared libraries
-configure:11649: result: yes
-configure:11652: checking whether to build static libraries
-configure:11656: result: yes
-configure:11679: checking how to run the C++ preprocessor
-configure:11706: g++ -E  -I/opt/local/include conftest.cpp
-configure:11706: $? = 0
-configure:11720: g++ -E  -I/opt/local/include conftest.cpp
+configure:7533: checking for ANSI C header files
+configure:7553: gcc -c -g -O2  -I/opt/local/include conftest.c >&5
+configure:7553: $? = 0
+configure:7626: gcc -o conftest -g -O2  -I/opt/local/include -L/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/resources/mac/libs -L/opt/local/lib conftest.c -llepta >&5
+configure:7626: $? = 0
+configure:7626: ./conftest
+configure:7626: $? = 0
+configure:7637: result: yes
+configure:7650: checking for sys/types.h
+configure:7650: gcc -c -g -O2  -I/opt/local/include conftest.c >&5
+configure:7650: $? = 0
+configure:7650: result: yes
+configure:7650: checking for sys/stat.h
+configure:7650: gcc -c -g -O2  -I/opt/local/include conftest.c >&5
+configure:7650: $? = 0
+configure:7650: result: yes
+configure:7650: checking for stdlib.h
+configure:7650: gcc -c -g -O2  -I/opt/local/include conftest.c >&5
+configure:7650: $? = 0
+configure:7650: result: yes
+configure:7650: checking for string.h
+configure:7650: gcc -c -g -O2  -I/opt/local/include conftest.c >&5
+configure:7650: $? = 0
+configure:7650: result: yes
+configure:7650: checking for memory.h
+configure:7650: gcc -c -g -O2  -I/opt/local/include conftest.c >&5
+configure:7650: $? = 0
+configure:7650: result: yes
+configure:7650: checking for strings.h
+configure:7650: gcc -c -g -O2  -I/opt/local/include conftest.c >&5
+configure:7650: $? = 0
+configure:7650: result: yes
+configure:7650: checking for inttypes.h
+configure:7650: gcc -c -g -O2  -I/opt/local/include conftest.c >&5
+configure:7650: $? = 0
+configure:7650: result: yes
+configure:7650: checking for stdint.h
+configure:7650: gcc -c -g -O2  -I/opt/local/include conftest.c >&5
+configure:7650: $? = 0
+configure:7650: result: yes
+configure:7650: checking for unistd.h
+configure:7650: gcc -c -g -O2  -I/opt/local/include conftest.c >&5
+configure:7650: $? = 0
+configure:7650: result: yes
+configure:7664: checking for dlfcn.h
+configure:7664: gcc -c -g -O2  -I/opt/local/include conftest.c >&5
+configure:7664: $? = 0
+configure:7664: result: yes
+configure:7881: checking for objdir
+configure:7896: result: .libs
+configure:8167: checking if gcc supports -fno-rtti -fno-exceptions
+configure:8185: gcc -c -g -O2  -I/opt/local/include -fno-rtti -fno-exceptions conftest.c >&5
+configure:8189: $? = 0
+configure:8202: result: yes
+configure:8529: checking for gcc option to produce PIC
+configure:8536: result: -fno-common -DPIC
+configure:8544: checking if gcc PIC flag -fno-common -DPIC works
+configure:8562: gcc -c -g -O2  -I/opt/local/include -fno-common -DPIC -DPIC conftest.c >&5
+configure:8566: $? = 0
+configure:8579: result: yes
+configure:8608: checking if gcc static flag -static works
+configure:8636: result: no
+configure:8651: checking if gcc supports -c -o file.o
+configure:8672: gcc -c -g -O2  -I/opt/local/include -o out/conftest2.o conftest.c >&5
+configure:8676: $? = 0
+configure:8698: result: yes
+configure:8706: checking if gcc supports -c -o file.o
+configure:8753: result: yes
+configure:8786: checking whether the gcc linker (/Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.8.xctoolchain/usr/bin/ld) supports shared libraries
+configure:9939: result: yes
+configure:10179: checking dynamic linker characteristics
+configure:10912: result: darwin13.1.0 dyld
+configure:11019: checking how to hardcode library paths into programs
+configure:11044: result: immediate
+configure:11584: checking whether stripping libraries is possible
+configure:11598: result: yes
+configure:11624: checking if libtool supports shared libraries
+configure:11626: result: yes
+configure:11629: checking whether to build shared libraries
+configure:11650: result: yes
+configure:11653: checking whether to build static libraries
+configure:11657: result: yes
+configure:11680: checking how to run the C++ preprocessor
+configure:11707: g++ -E  -I/opt/local/include conftest.cpp
+configure:11707: $? = 0
+configure:11721: g++ -E  -I/opt/local/include conftest.cpp
 conftest.cpp:25:10: fatal error: 'ac_nonexistent.h' file not found
 #include <ac_nonexistent.h>
          ^
 1 error generated.
-configure:11720: $? = 1
+configure:11721: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "tesseract"
@@ -1150,15 +520,15 @@ configure: failed program was:
 | #define LT_OBJDIR ".libs/"
 | /* end confdefs.h.  */
 | #include <ac_nonexistent.h>
-configure:11745: result: g++ -E
-configure:11765: g++ -E  -I/opt/local/include conftest.cpp
-configure:11765: $? = 0
-configure:11779: g++ -E  -I/opt/local/include conftest.cpp
+configure:11746: result: g++ -E
+configure:11766: g++ -E  -I/opt/local/include conftest.cpp
+configure:11766: $? = 0
+configure:11780: g++ -E  -I/opt/local/include conftest.cpp
 conftest.cpp:25:10: fatal error: 'ac_nonexistent.h' file not found
 #include <ac_nonexistent.h>
          ^
 1 error generated.
-configure:11779: $? = 1
+configure:11780: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "tesseract"
@@ -1185,48 +555,48 @@ configure: failed program was:
 | #define LT_OBJDIR ".libs/"
 | /* end confdefs.h.  */
 | #include <ac_nonexistent.h>
-configure:11948: checking for ld used by g++
-configure:12015: result: /Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.8.xctoolchain/usr/bin/ld
-configure:12022: checking if the linker (/Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.8.xctoolchain/usr/bin/ld) is GNU ld
-configure:12037: result: no
-configure:12092: checking whether the g++ linker (/Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.8.xctoolchain/usr/bin/ld) supports shared libraries
-configure:13097: result: yes
-configure:13133: g++ -c -g -O2  -I/opt/local/include conftest.cpp >&5
-configure:13136: $? = 0
-configure:13656: checking for g++ option to produce PIC
-configure:13663: result: -fno-common -DPIC
-configure:13671: checking if g++ PIC flag -fno-common -DPIC works
-configure:13689: g++ -c -g -O2  -I/opt/local/include -fno-common -DPIC -DPIC conftest.cpp >&5
-configure:13693: $? = 0
-configure:13706: result: yes
-configure:13729: checking if g++ static flag -static works
-configure:13757: result: no
-configure:13769: checking if g++ supports -c -o file.o
-configure:13790: g++ -c -g -O2  -I/opt/local/include -o out/conftest2.o conftest.cpp >&5
-configure:13794: $? = 0
-configure:13816: result: yes
-configure:13821: checking if g++ supports -c -o file.o
-configure:13868: result: yes
-configure:13898: checking whether the g++ linker (/Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.8.xctoolchain/usr/bin/ld) supports shared libraries
-configure:13934: result: yes
-configure:14075: checking dynamic linker characteristics
-configure:14742: result: darwin13.1.0 dyld
-configure:14795: checking how to hardcode library paths into programs
-configure:14820: result: immediate
-configure:14906: checking for a BSD-compatible install
-configure:14974: result: /usr/bin/install -c
-configure:14985: checking whether build environment is sane
-configure:15040: result: yes
-configure:15075: WARNING: 'missing' script is too old or missing
-configure:15188: checking for a thread-safe mkdir -p
-configure:15227: result: ./src/config/install-sh -c -d
-configure:15230: checking whether make sets $(MAKE)
-configure:15252: result: yes
-configure:15282: checking for style of include used by make
-configure:15310: result: GNU
-configure:15344: checking whether make supports nested variables
-configure:15361: result: yes
-configure:15378: error: source directory already configured; run "make distclean" there first
+configure:11949: checking for ld used by g++
+configure:12016: result: /Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.8.xctoolchain/usr/bin/ld
+configure:12023: checking if the linker (/Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.8.xctoolchain/usr/bin/ld) is GNU ld
+configure:12038: result: no
+configure:12093: checking whether the g++ linker (/Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.8.xctoolchain/usr/bin/ld) supports shared libraries
+configure:13098: result: yes
+configure:13134: g++ -c -g -O2  -I/opt/local/include conftest.cpp >&5
+configure:13137: $? = 0
+configure:13657: checking for g++ option to produce PIC
+configure:13664: result: -fno-common -DPIC
+configure:13672: checking if g++ PIC flag -fno-common -DPIC works
+configure:13690: g++ -c -g -O2  -I/opt/local/include -fno-common -DPIC -DPIC conftest.cpp >&5
+configure:13694: $? = 0
+configure:13707: result: yes
+configure:13730: checking if g++ static flag -static works
+configure:13758: result: no
+configure:13770: checking if g++ supports -c -o file.o
+configure:13791: g++ -c -g -O2  -I/opt/local/include -o out/conftest2.o conftest.cpp >&5
+configure:13795: $? = 0
+configure:13817: result: yes
+configure:13822: checking if g++ supports -c -o file.o
+configure:13869: result: yes
+configure:13899: checking whether the g++ linker (/Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.8.xctoolchain/usr/bin/ld) supports shared libraries
+configure:13935: result: yes
+configure:14076: checking dynamic linker characteristics
+configure:14743: result: darwin13.1.0 dyld
+configure:14796: checking how to hardcode library paths into programs
+configure:14821: result: immediate
+configure:14907: checking for a BSD-compatible install
+configure:14975: result: /usr/bin/install -c
+configure:14986: checking whether build environment is sane
+configure:15041: result: yes
+configure:15076: WARNING: 'missing' script is too old or missing
+configure:15189: checking for a thread-safe mkdir -p
+configure:15228: result: ./src/config/install-sh -c -d
+configure:15231: checking whether make sets $(MAKE)
+configure:15253: result: yes
+configure:15283: checking for style of include used by make
+configure:15311: result: GNU
+configure:15345: checking whether make supports nested variables
+configure:15362: result: yes
+configure:15379: error: source directory already configured; run "make distclean" there first
 
 ## ---------------- ##
 ## Cache variables. ##
@@ -1237,8 +607,8 @@ ac_cv_c_compiler_gnu=yes
 ac_cv_cxx_compiler_gnu=yes
 ac_cv_env_CCC_set=
 ac_cv_env_CCC_value=
-ac_cv_env_CC_set=set
-ac_cv_env_CC_value=g++
+ac_cv_env_CC_set=
+ac_cv_env_CC_value=
 ac_cv_env_CFLAGS_set=
 ac_cv_env_CFLAGS_value=
 ac_cv_env_CPPFLAGS_set=
@@ -1279,13 +649,13 @@ ac_cv_objext=o
 ac_cv_path_EGREP='/usr/bin/grep -E'
 ac_cv_path_FGREP='/usr/bin/grep -F'
 ac_cv_path_GREP=/usr/bin/grep
-ac_cv_path_SED=/usr/bin/sed
+ac_cv_path_SED=/opt/local/bin/gsed
 ac_cv_path_install='/usr/bin/install -c'
 ac_cv_prog_AWK=awk
-ac_cv_prog_CPP='g++ -E'
+ac_cv_prog_CPP='gcc -E'
 ac_cv_prog_CXXCPP='g++ -E'
 ac_cv_prog_ac_ct_AR=ar
-ac_cv_prog_ac_ct_CC=g++
+ac_cv_prog_ac_ct_CC=gcc
 ac_cv_prog_ac_ct_CXX=g++
 ac_cv_prog_ac_ct_DSYMUTIL=dsymutil
 ac_cv_prog_ac_ct_LIPO=lipo
@@ -1293,7 +663,7 @@ ac_cv_prog_ac_ct_NMEDIT=nmedit
 ac_cv_prog_ac_ct_OTOOL=otool
 ac_cv_prog_ac_ct_RANLIB=ranlib
 ac_cv_prog_ac_ct_STRIP=strip
-ac_cv_prog_cc_c89=no
+ac_cv_prog_cc_c89=
 ac_cv_prog_cc_g=yes
 ac_cv_prog_cxx_g=yes
 ac_cv_prog_make_make_set=yes
@@ -1311,7 +681,7 @@ lt_cv_nm_interface='BSD nm'
 lt_cv_objdir=.libs
 lt_cv_path_LD=/Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.8.xctoolchain/usr/bin/ld
 lt_cv_path_LDCXX=/Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.8.xctoolchain/usr/bin/ld
-lt_cv_path_NM=/usr/bin/nm
+lt_cv_path_NM=/opt/local/bin/nm
 lt_cv_path_mainfest_tool=no
 lt_cv_prog_compiler_c_o=yes
 lt_cv_prog_compiler_c_o_CXX=yes
@@ -1353,10 +723,10 @@ AUTOCONF=''
 AUTOHEADER=''
 AUTOMAKE=''
 AWK='awk'
-CC='g++'
+CC='gcc'
 CCDEPMODE=''
 CFLAGS='-g -O2'
-CPP='g++ -E'
+CPP='gcc -E'
 CPPFLAGS=' -I/opt/local/include'
 CXX='g++'
 CXXCPP='g++ -E'
@@ -1393,7 +763,7 @@ LD='/Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.8.xctoolchain/us
 LDFLAGS='-L/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/resources/mac/libs -L/opt/local/lib'
 LIBLEPT_HEADERSDIR=''
 LIBOBJS=''
-LIBS='-lz -llepta -ljpeg -lpng -ltiff'
+LIBS='-llepta'
 LIBTOOL='$(SHELL) $(top_builddir)/libtool'
 LIPO='lipo'
 LN_S='ln -s'
@@ -1406,7 +776,7 @@ MANIFEST_TOOL=':'
 MINGW_FALSE=''
 MINGW_TRUE='#'
 MKDIR_P='./src/config/install-sh -c -d'
-NM='/usr/bin/nm'
+NM='/opt/local/bin/nm'
 NMEDIT='nmedit'
 NO_TESSDATA_PREFIX_FALSE=''
 NO_TESSDATA_PREFIX_TRUE='#'
@@ -1425,7 +795,7 @@ PACKAGE_VERSION='3.02.02'
 PACKAGE_YEAR='2012'
 PATH_SEPARATOR=':'
 RANLIB='ranlib'
-SED='/usr/bin/sed'
+SED='/opt/local/bin/gsed'
 SET_MAKE=''
 SHELL='/bin/sh'
 STRIP='strip'
@@ -1437,7 +807,7 @@ VERSION=''
 VISIBILITY_FALSE=''
 VISIBILITY_TRUE='#'
 ac_ct_AR='ar'
-ac_ct_CC='g++'
+ac_ct_CC='gcc'
 ac_ct_CXX='g++'
 ac_ct_DUMPBIN=''
 am__EXEEXT_FALSE=''
@@ -1453,14 +823,14 @@ am__nodep='_no'
 am__quote=''
 am__tar=''
 am__untar=''
-bindir='/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/tesseract/bin'
+bindir='/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/tesseract/tesseract/bin'
 build='x86_64-apple-darwin13.1.0'
 build_alias=''
 build_cpu='x86_64'
 build_os='darwin13.1.0'
 build_vendor='apple'
 datadir='${datarootdir}'
-datarootdir='/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/tesseract/share'
+datarootdir='/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/tesseract/tesseract/share'
 docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
 dvidir='${docdir}'
 exec_prefix='NONE'
@@ -1470,10 +840,10 @@ host_cpu='x86_64'
 host_os='darwin13.1.0'
 host_vendor='apple'
 htmldir='${docdir}'
-includedir='/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/tesseract/include/tesseract'
+includedir='/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/tesseract/tesseract/include/tesseract'
 infodir='${datarootdir}/info'
 install_sh='${SHELL} /Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/tesseract/src/config/install-sh'
-libdir='/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/tesseract/libs'
+libdir='/Users/dimuthuupeksha/Documents/Academic/Tesseract-API/src/main/native/src/tesseract/tesseract/libs'
 libexecdir='${exec_prefix}/libexec'
 localedir='${datarootdir}/locale'
 localstatedir='${prefix}/var'
