@@ -10,3 +10,5 @@ src/main/native/src/leptonica/src/src/.deps/*
 Tesseract-JNI-Wrapper.iml
 .project
 src/main/resources/backup_libs
+.settings
+.classpath
