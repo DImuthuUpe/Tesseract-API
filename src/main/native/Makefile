@@ -45,7 +45,7 @@ UNAME := $(shell uname)
 ifeq ($(UNAME),Linux)
 LIB_PREFIX = lib
 LIB_EXTN = .so
-CPPFLAGS += -I$(JAVA_HOME)/include/linux -I ./includes/tesseract -I ./includes/leptonica
+CPPFLAGS += -I$(JAVA_HOME)/include/linux -I ./src/tesseract/src/tesseract/include/tesseract -I ./src/leptonica/include/leptonica
 LD_LIBS += -L ../resources/libs -L /opt/local/lib -llepta -ltesseracta -lz -lpng -ljpeg -ltiff -lgif -lwebp
 CC = g++
 else
@@ -57,7 +57,7 @@ else
 ifeq ($(UNAME),Darwin)
 LIB_PREFIX = lib
 LIB_EXTN = .dylib
-CPPFLAGS += -I$(JAVA_HOME)/include/darwin -I ./includes/tesseract -I ./includes/leptonica
+CPPFLAGS += -I$(JAVA_HOME)/include/darwin -I ./src/tesseract/src/tesseract/include/tesseract -I ./src/leptonica/include/leptonica
 LD_LIBS += -L ../resources/libs -L /opt/local/lib -llepta -ltesseracta -lz -lpng -ljpeg -ltiff -lgif -lwebp
 CC = g++ 
 else

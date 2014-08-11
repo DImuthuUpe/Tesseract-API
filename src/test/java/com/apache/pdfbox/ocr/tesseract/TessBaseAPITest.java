@@ -35,7 +35,7 @@ public class TessBaseAPITest{
 	public void testTIF(){
 		TessBaseAPI api = new TessBaseAPI();
 		boolean init =api.init("src/main/resources/data", "eng");
-		api.setImagePath("src/main/resources/samples/image4.TIF");
+		api.setImagePath("src/test/resources/samples/image4.TIF");
 		//api.getUTF8Text();
 		//api.end();
 		System.out.println(api.getUTF8Text());
@@ -46,7 +46,7 @@ public class TessBaseAPITest{
 	@Test
 	public void testBufferedImage(){
 		try {
-			PDDocument document = PDDocument.load("src/main/resources/samples/pdf1.pdf");
+			PDDocument document = PDDocument.load("src/test/resources/samples/pdf1.pdf");
 			PDFRenderer renderer = new PDFRenderer(document);
 			BufferedImage image = renderer.renderImage(0, 3);
 			
@@ -66,7 +66,7 @@ public class TessBaseAPITest{
 	@Test
 	public void testByteStram(){
 		try {
-			PDDocument document = PDDocument.load("src/main/resources/samples/pdf1.pdf");
+			PDDocument document = PDDocument.load("src/test/resources/samples/pdf2.pdf");
 			PDFRenderer renderer = new PDFRenderer(document);
 			BufferedImage image = renderer.renderImage(0, 3);
 			int width = image.getWidth();
@@ -91,7 +91,7 @@ public class TessBaseAPITest{
 	@Test
 	public void testIterator() {
 		try {
-			PDDocument document = PDDocument.load("src/main/resources/samples/pdf1.pdf");
+			PDDocument document = PDDocument.load("src/test/resources/samples/pdf3.pdf");
 			PDFRenderer renderer = new PDFRenderer(document);
 			BufferedImage image = renderer.renderImage(0, 3);
 			TessBaseAPI api = new TessBaseAPI();
