@@ -8,7 +8,7 @@ Building
 Dependencies: `automake`, `gcc`
 
 ```shell
-cd Tesseract-APIv2
+cd Tesseract-API
 mvn clean install
 ```
 
