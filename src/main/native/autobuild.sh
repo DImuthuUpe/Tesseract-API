@@ -13,6 +13,8 @@ then
   exit
 fi
 
+mkdir $BUILD
+
 echo "building leptonica"
 cd leptonica-1.71
 ./configure --prefix=$BUILD --disable-shared --enable-shared=no --disable-programs --without-zlib --without-libpng --without-jpeg --without-giflib --without-libtiff --without-libwebp --without-libopenjpeg
