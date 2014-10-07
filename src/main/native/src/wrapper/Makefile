@@ -94,6 +94,7 @@ $(TARGET): $(C_OBJFILES) $(LDLIBS)
 
 # lcopy the output to the JNI directory
 $(TARGET_COPY): $(TARGET)
+	@mkdir -p `dirname $@`
 	cp $(TARGET) $(TARGET_COPY)
 
 # a rule to build the .h file with javah
