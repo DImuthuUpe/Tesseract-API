@@ -46,7 +46,7 @@ ifeq ($(UNAME),Linux)
 LIB_PREFIX = lib
 LIB_EXTN = .so
 CPPFLAGS += -I$(JAVA_HOME)/include/linux -I ./src/tesseract/src/tesseract/include/tesseract -I ./src/leptonica/include/leptonica
-LD_LIBS += -L ../resources/libs -L /opt/local/lib -llepta -ltesseracta -lz -lpng -ljpeg -ltiff -lgif -lwebp
+LD_LIBS += -L ../resources/libs -L /opt/local/lib -llepta -ltesseracta -lz -lpng -ljpeg -ltiff
 CC = g++
 else
 ifeq ($(findstring CYGWIN,$(UNAME)),CYGWIN)
@@ -58,7 +58,7 @@ ifeq ($(UNAME),Darwin)
 LIB_PREFIX = lib
 LIB_EXTN = .dylib
 CPPFLAGS += -I$(JAVA_HOME)/include/darwin -I ./src/tesseract/src/tesseract/include/tesseract -I ./src/leptonica/include/leptonica
-LD_LIBS += -L ../resources/libs -L /opt/local/lib -llepta -ltesseracta -lz -lpng -ljpeg -ltiff -lgif -lwebp
+LD_LIBS += -L ../resources/libs -L /opt/local/lib -llepta -ltesseracta -lz -lpng -ljpeg -ltiff
 CC = g++ 
 else
 f := $(error Platform $(UNAME) not supported)
