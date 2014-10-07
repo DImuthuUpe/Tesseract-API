@@ -98,5 +98,13 @@
 		</dependency>
 	</dependencies>
 
+    <repositories>
+        <repository>
+            <id>wapmx repo</id>
+            <name>wapmx repo</name>
+            <url>http://opensource.mxtelecom.com/maven/repo</url>
+        </repository>
+    </repositories>
+
 
 </project>
