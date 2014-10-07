@@ -1,3 +1,0 @@
-image.lo: image.cpp image.h
-
-image.h:

@@ -18,93 +18,89 @@
 !-->
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.apache.pdfbox.ocr</groupId>
-	<artifactId>Tesseract-JNI-Wrapper</artifactId>
-	<name>Tesseract Jni Wrapper</name>
-	<version>1.0.0</version>
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.apache.pdfbox.ocr</groupId>
+  <artifactId>Tesseract-JNI-Wrapper</artifactId>
+  <name>Tesseract JNI Wrapper</name>
+  <version>1.0.0</version>
 
-	<scm>
-		<connection>scm:svn:svn+ssh://svn.mxtelecom.com/svn/maven2/tags/simple-native-example-1.0.2</connection>
-	</scm>
+  <scm>
+    <connection>scm:svn:svn+ssh://svn.mxtelecom.com/svn/maven2/tags/simple-native-example-1.0.2</connection>
+  </scm>
 
-	<build>
-		<plugins>
-			<plugin>
-				<artifactId>maven-antrun-plugin</artifactId>
-				<executions>
-					<execution>
-						<!-- this execution happens just after compiling the java classes, 
-							and builds the native code. We use an antrun for this, rather than an exec, 
-							as it finds make on the system path. -->
-						<id>build-native</id>
-						<phase>process-classes</phase>
-						<goals>
-							<goal>run</goal>
-						</goals>
-						<configuration>
-							<tasks>
-                                <exec executable="src/main/native/autobuild.sh" failonerror="true">
-                                </exec>
-								<exec dir="src/main/native" executable="make" failonerror="true">
-								</exec>
-							</tasks>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <executions>
+          <execution>
+            <!-- this execution happens just after compiling the java classes, 
+              and builds the native code. We use an antrun for this, rather than an exec, 
+              as it finds make on the system path. -->
+            <id>build-native</id>
+            <phase>process-classes</phase>
+            <goals>
+              <goal>run</goal>
+            </goals>
+            <configuration>
+              <tasks>
+                <exec executable="src/main/native/autobuild.sh" failonerror="true"></exec>
+                <exec dir="src/main/native/src/wrapper" executable="make" failonerror="true"></exec>
+              </tasks>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <!--plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <configuration>
+            <argLine>-Xmx1024m</argLine>
+          <forkMode>always</forkMode>
+        </configuration>
+      </plugin-->
+    </plugins>
+  </build>
 
+  <dependencies>
+    <dependency>
+      <groupId>com.wapmx.native</groupId>
+      <artifactId>mx-native-loader</artifactId>
+      <version>1.2</version>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.6</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>commons-logging</groupId>
+      <artifactId>commons-logging</artifactId>
+      <version>1.1.3</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.pdfbox</groupId>
+      <artifactId>pdfbox</artifactId>
+      <version>2.0.0-SNAPSHOT</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.pdfbox</groupId>
+      <artifactId>fontbox</artifactId>
+      <version>2.0.0-SNAPSHOT</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
 
-
-			<!--plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<configuration>
-				    <argLine>-Xmx1024m</argLine>
-					<forkMode>always</forkMode>
-				</configuration>
-			</plugin-->
-
-
-
-		</plugins>
-	</build>
-	<dependencies>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.6</version>
-		</dependency>
-		<dependency>
-			<groupId>com.wapmx.native</groupId>
-			<artifactId>mx-native-loader</artifactId>
-			<version>1.2</version>
-		</dependency>
-		<dependency>
-			<groupId>commons-logging</groupId>
-			<artifactId>commons-logging</artifactId>
-			<version>1.1.3</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.pdfbox</groupId>
-			<artifactId>pdfbox</artifactId>
-			<version>2.0.0-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.pdfbox</groupId>
-			<artifactId>fontbox</artifactId>
-			<version>2.0.0-SNAPSHOT</version>
-		</dependency>
-	</dependencies>
-
-    <repositories>
-        <repository>
-            <id>wapmx repo</id>
-            <name>wapmx repo</name>
-            <url>http://opensource.mxtelecom.com/maven/repo</url>
-        </repository>
-    </repositories>
-
+  <repositories>
+      <repository>
+          <id>wapmx repo</id>
+          <name>wapmx repo</name>
+          <url>http://opensource.mxtelecom.com/maven/repo</url>
+      </repository>
+  </repositories>
 
 </project>
