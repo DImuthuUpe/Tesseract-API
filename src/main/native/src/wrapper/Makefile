@@ -45,8 +45,8 @@ UNAME := $(shell uname)
 ifeq ($(UNAME),Linux)
 LIB_PREFIX = lib
 LIB_EXTN = .so
-CPPFLAGS += -I$(JAVA_HOME)/include/linux -I../build/include
-LD_LIBS += -L../build/lib -llept -ltesseract
+CPPFLAGS += -fPIC -I../build/include -I$(JAVA_HOME)/include/linux
+LD_LIBS += -L../build/lib -Wl,-Bstatic -Wl,-whole-archive -llept -ltesseract -Wl,-no-whole-archive -Wl,-$
 CC = g++
 else
 ifeq ($(findstring CYGWIN,$(UNAME)),CYGWIN)
