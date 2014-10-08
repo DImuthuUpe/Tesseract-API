@@ -4,6 +4,8 @@ echo "Running autoclean"
 current_dir=$(dirname $0)
 cd "$current_dir"
 
+cd src
+
 cd leptonica-1.71
 make clean
 cd ..
