@@ -50,6 +50,7 @@ public class TessBaseAPI {
       }
       NativeUtil.loadLibraryResource("/META-INF/lib/tessbaseapi-" + name + "-" + arch + extension);
     } catch (IOException e) {
+      e.printStackTrace();
       throw new RuntimeException(e);
     }
     // JNI init

@@ -58,6 +58,11 @@
         </executions>
       </plugin>
     </plugins>
+    <testResources>
+    <testResource>
+      <directory>${project.basedir}/src/main/resources</directory>
+    </testResource>
+   </testResources>
   </build>
 
   <dependencies>
