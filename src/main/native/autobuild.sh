@@ -16,6 +16,7 @@ fi
 
 echo "building leptonica"
 cd leptonica-1.71
+mkdir -p m4 # workaround for deprecated autotools functionality on Travis builds
 ./configure --prefix=$BUILD --with-pic --disable-programs --without-zlib --without-libpng --without-jpeg --without-giflib --without-libtiff --without-libwebp --without-libopenjpeg
 make install
 cd ..
