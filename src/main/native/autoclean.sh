@@ -1,9 +1,15 @@
 #!/bin/bash
 
-echo "Running autoclean........."
+echo "Running autoclean"
 current_dir=$(dirname $0)
 cd "$current_dir"
-cd src/leptonica/src/src/
+
+cd leptonica-1.71
 make clean
-cd ../../../tesseract/src/
+cd ..
+
+cd tesseract-3.03
 make clean
+cd ..
+
+rm -r build
