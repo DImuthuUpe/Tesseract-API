@@ -11,7 +11,7 @@ BUILD=$PWD/build
 # Leptonica refuses to play nice with --enable-shared=no on Linux, trying to statically
 # link libstdc++, so instead we link with -whole-archive in the wrapper Makefile
 echo "Builing on `uname`"
-if [[ `uname`== 'Linux' ]]; then
+if [[ `uname` == 'Linux' ]]; then
    LEPTONICA_FLAGS='--with-pic'
    TESSERACT_FLAGS='--with-pic'
 else
