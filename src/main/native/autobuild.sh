@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 set -e
 
 current_dir=$(dirname $0)
@@ -10,7 +10,8 @@ BUILD=$PWD/build
 
 # Leptonica refuses to play nice with --enable-shared=no on Linux, trying to statically
 # link libstdc++, so instead we link with -whole-archive in the wrapper Makefile
-if [[ "$(uname)" == 'Linux' ]]; then
+echo "Builing on `uname`"
+if [[ `uname`== 'Linux' ]]; then
    LEPTONICA_FLAGS='--with-pic'
    TESSERACT_FLAGS='--with-pic'
 else
