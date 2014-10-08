@@ -5,13 +5,14 @@ current_dir=$(dirname $0)
 echo "Running autobuild"
 cd "$current_dir"
 
+cd src
+BUILD=$PWD/build
+
 if [ -e $BUILD ]
 then
   echo "Skipping C++ build as the build directory already exists"
   exit
 fi
-
-mkdir $BUILD
 
 echo "building leptonica"
 cd leptonica-1.71
