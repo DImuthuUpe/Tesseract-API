@@ -35,7 +35,5 @@ src/main/native/src/tesseract-3.03/config_auto.h
 src/main/native/src/tesseract-3.03/libtool
 src/main/native/src/tesseract-3.03/stamp-h1
 src/main/native/src/tesseract-3.03/tesseract.pc
-src/main/native/src/tesseract-3.03/Makefile
-src/main/native/src/tesseract-3.03/*/Makefile
-src/main/native/src/tesseract-3.03/*/*/Makefile
+src/main/native/src/tesseract-3.03/**/Makefile
 src/main/native/src/tesseract-3.03/api/tesseract
