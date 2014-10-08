@@ -46,7 +46,7 @@ ifeq ($(UNAME),Linux)
 LIB_PREFIX = lib
 LIB_EXTN = .so
 CPPFLAGS += -fPIC -I../build/include -I$(JAVA_HOME)/include/linux
-LD_LIBS += -L../build/lib -Wl,-Bstatic -Wl,-whole-archive -llept -ltesseract -Wl,-no-whole-archive -Wl,-$
+LD_LIBS += -L../build/lib -Wl,-Bstatic -Wl,-whole-archive -llept -ltesseract -Wl,-no-whole-archive -Wl,-Bdynamic
 CC = g++
 else
 ifeq ($(findstring CYGWIN,$(UNAME)),CYGWIN)

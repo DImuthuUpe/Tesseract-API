@@ -25,7 +25,7 @@ echo "building tesseract"
 cd tesseract-3.03
 export CPPFLAGS="-I$BUILD/include"
 export LIBLEPT_HEADERSDIR="$BUILD/include"
-./configure --prefix=$BUILD --with-extra-libraries=$BUILD/lib --with-pic --disable-graphics 
+./configure --prefix=$BUILD --with-pic --with-extra-libraries=$BUILD/lib --disable-graphics
 make install
 cd ..
 
