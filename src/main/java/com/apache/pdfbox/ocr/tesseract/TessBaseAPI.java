@@ -37,6 +37,9 @@ public class TessBaseAPI {
       // load the JNI library for the current platform
 			String name = System.getProperty("os.name").replace(" ", "").toLowerCase();
 			String arch = System.getProperty("os.arch");
+			if (arch.equals("amd64")) {
+				arch = "x86_64";
+			}
       String extension;
       if (name.equals("macosx")) {
         extension = ".dylib";
