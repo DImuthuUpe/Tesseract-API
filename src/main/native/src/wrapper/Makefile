@@ -15,10 +15,11 @@ C_GENSOURCE_DIR := .
 TARGET_DIR	:= .
 C_BUILD_DIR    = $(TARGET_DIR)
 JAVA_BUILD_DIR = ../../../../../target/classes
+JAVA_RESOURCE_DIR = ../../../resources
 
-# the name of the file we build
-TARGET		   = $(LIB_PREFIX)$(LIBNAME)$(LIB_EXTN)
-TARGET_COPY	 = $(JAVA_BUILD_DIR)/META-INF/lib/$(TARGET)
+# get our OS/architure
+UNAME:= $(shell uname)
+LIB_ARCH:= $(shell uname -m)
 
 # find the jdk. if this doesn't work for you, define JAVA_HOME in your
 # environment or on the make command line
@@ -40,34 +41,37 @@ LDFLAGS += -g
 endif
 
 # os-dependent bits
-UNAME := $(shell uname)
-
 ifeq ($(UNAME),Linux)
-LIB_PREFIX = lib
 LIB_EXTN = .so
 CPPFLAGS += -fPIC -I../build/include -I$(JAVA_HOME)/include/linux
 LD_LIBS += -L../build/lib -Wl,-Bstatic -Wl,-whole-archive -llept -ltesseract -Wl,-no-whole-archive -Wl,-Bdynamic
 CC = g++
 STRIP = strip --strip-unneeded
+LIB_PLATFORM = linux
 else
 ifeq ($(findstring CYGWIN,$(UNAME)),CYGWIN)
-LIB_PREFIX =
 LIB_EXTN = .dll
 CPPFLAGS += -I$(JAVA_HOME)/include/win32
 STRIP = echo
+LIB_PLATFORM = win
 else
 ifeq ($(UNAME),Darwin)
-LIB_PREFIX = lib
 LIB_EXTN = .dylib
 CPPFLAGS += -I$(JAVA_HOME)/include/darwin -I../build/include
 LD_LIBS += -L../build/lib -llept -ltesseract
 CC = g++ 
 STRIP = strip -S
+LIB_PLATFORM = macosx
 else
 f := $(error Platform $(UNAME) not supported)
 endif
 endif
 endif
+
+# the name of the file we build
+LIB_FILENAME     = $(LIBNAME)-$(LIB_PLATFORM)-$(LIB_ARCH)$(LIB_EXTN)
+TARGET           = $(LIB_FILENAME)
+TARGET_COPY      = $(JAVA_RESOURCE_DIR)/META-INF/lib/$(LIB_FILENAME)
 
 # classpath for javah
 ifdef CLASSPATH

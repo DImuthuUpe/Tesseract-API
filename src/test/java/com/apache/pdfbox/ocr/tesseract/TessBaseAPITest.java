@@ -42,7 +42,7 @@ public class TessBaseAPITest{
 		api.end();
 		assertEquals(true, init);
 	}
-	
+
 	@Test
 	public void testBufferedImage(){
 		try {

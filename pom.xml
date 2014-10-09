@@ -25,10 +25,6 @@
   <name>Tesseract JNI Wrapper</name>
   <version>1.0.0</version>
 
-  <scm>
-    <connection>scm:svn:svn+ssh://svn.mxtelecom.com/svn/maven2/tags/simple-native-example-1.0.2</connection>
-  </scm>
-
   <build>
     <plugins>
       <plugin>
@@ -41,6 +37,7 @@
       </plugin>
       <plugin>
         <artifactId>maven-antrun-plugin</artifactId>
+        <version>1.7</version>
         <executions>
           <execution>
             <!-- this execution happens just after compiling the java classes, 
@@ -52,31 +49,18 @@
               <goal>run</goal>
             </goals>
             <configuration>
-              <tasks>
+              <target unless="skipNative">
                 <exec executable="src/main/native/autobuild.sh" failonerror="true"></exec>
                 <exec dir="src/main/native/src/wrapper" executable="make" failonerror="true"></exec>
-              </tasks>
+              </target>
             </configuration>
           </execution>
         </executions>
       </plugin>
-      <!--plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <configuration>
-            <argLine>-Xmx1024m</argLine>
-          <forkMode>always</forkMode>
-        </configuration>
-      </plugin-->
     </plugins>
   </build>
 
   <dependencies>
-    <dependency>
-      <groupId>com.wapmx.native</groupId>
-      <artifactId>mx-native-loader</artifactId>
-      <version>1.2</version>
-    </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -102,13 +86,5 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-
-  <repositories>
-      <repository>
-          <id>wapmx repo</id>
-          <name>wapmx repo</name>
-          <url>http://opensource.mxtelecom.com/maven/repo</url>
-      </repository>
-  </repositories>
 
 </project>
