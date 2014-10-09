@@ -45,14 +45,16 @@ UNAME := $(shell uname)
 ifeq ($(UNAME),Linux)
 LIB_PREFIX = lib
 LIB_EXTN = .so
-CPPFLAGS += -I$(JAVA_HOME)/include/linux -I../build/include
-LD_LIBS += -L../build/lib -llept -ltesseract
+CPPFLAGS += -fPIC -I../build/include -I$(JAVA_HOME)/include/linux
+LD_LIBS += -L../build/lib -Wl,-Bstatic -Wl,-whole-archive -llept -ltesseract -Wl,-no-whole-archive -Wl,-Bdynamic
 CC = g++
+STRIP = strip --strip-unneeded
 else
 ifeq ($(findstring CYGWIN,$(UNAME)),CYGWIN)
 LIB_PREFIX =
 LIB_EXTN = .dll
 CPPFLAGS += -I$(JAVA_HOME)/include/win32
+STRIP = echo
 else
 ifeq ($(UNAME),Darwin)
 LIB_PREFIX = lib
@@ -60,6 +62,7 @@ LIB_EXTN = .dylib
 CPPFLAGS += -I$(JAVA_HOME)/include/darwin -I../build/include
 LD_LIBS += -L../build/lib -llept -ltesseract
 CC = g++ 
+STRIP = strip -S
 else
 f := $(error Platform $(UNAME) not supported)
 endif
@@ -88,15 +91,17 @@ $(C_BUILD_DIR)/%.o: %.cpp
 	$(COMPILE.c) $(OUTPUT_OPTION) $<
 
 # link the C objects into a shared library
+# and strip unneeded symbols to reduce file size
 $(TARGET): $(C_OBJFILES) $(LDLIBS)
 	@mkdir -p `dirname $@`
 	$(LINK.so) $(OUTPUT_OPTION) $^
+	$(STRIP) $(TARGET)
 
-# lcopy the output to the JNI directory
+# copy the output to the JNI directory
 $(TARGET_COPY): $(TARGET)
 	@mkdir -p `dirname $@`
 	cp $(TARGET) $(TARGET_COPY)
-
+	
 # a rule to build the .h file with javah
 $(C_GENSOURCE_DIR)/com_apache_pdfbox_ocr_tesseract_TessBaseAPI.h: $(JAVA_BUILD_DIR)/com/apache/pdfbox/ocr/tesseract/TessBaseAPI.class
 	rm -f $@

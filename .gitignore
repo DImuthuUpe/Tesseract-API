@@ -12,3 +12,28 @@ Tesseract-JNI-Wrapper.iml
 src/main/resources/backup_libs
 .settings
 .classpath
+.deps
+.libs
+
+# leptonica
+autom4te.cache
+src/main/native/src/leptonica-1.71/src/Makefile
+src/main/native/src/leptonica-1.71/src/xtractprotos
+src/main/native/src/leptonica-1.71/prog/Makefile
+src/main/native/src/leptonica-1.71/config.log
+src/main/native/src/leptonica-1.71/config.status
+src/main/native/src/leptonica-1.71/config_auto.h
+src/main/native/src/leptonica-1.71/lept.pc
+src/main/native/src/leptonica-1.71/libtool
+src/main/native/src/leptonica-1.71/Makefile
+src/main/native/src/leptonica-1.71/stamp-h1
+
+# tesseract
+src/main/native/src/tesseract-3.03/config.log
+src/main/native/src/tesseract-3.03/config.status
+src/main/native/src/tesseract-3.03/config_auto.h
+src/main/native/src/tesseract-3.03/libtool
+src/main/native/src/tesseract-3.03/stamp-h1
+src/main/native/src/tesseract-3.03/tesseract.pc
+src/main/native/src/tesseract-3.03/**/Makefile
+src/main/native/src/tesseract-3.03/api/tesseract
