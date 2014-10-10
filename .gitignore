@@ -23,6 +23,7 @@ src/main/native/src/leptonica-1.71/prog/Makefile
 src/main/native/src/leptonica-1.71/config.log
 src/main/native/src/leptonica-1.71/config.status
 src/main/native/src/leptonica-1.71/config_auto.h
+src/main/native/src/leptonica-1.71/config/config.h.in]
 src/main/native/src/leptonica-1.71/lept.pc
 src/main/native/src/leptonica-1.71/libtool
 src/main/native/src/leptonica-1.71/Makefile
@@ -35,5 +36,15 @@ src/main/native/src/tesseract-3.03/config_auto.h
 src/main/native/src/tesseract-3.03/libtool
 src/main/native/src/tesseract-3.03/stamp-h1
 src/main/native/src/tesseract-3.03/tesseract.pc
-src/main/native/src/tesseract-3.03/**/Makefile
+src/main/native/src/tesseract-3.03/Makefile
+src/main/native/src/tesseract-3.03/*/Makefile
+src/main/native/src/tesseract-3.03/*/*/Makefile
+src/main/native/src/tesseract-3.03/*/*/*/Makefile
+src/main/native/src/tesseract-3.03/*/*/*/*/Makefile
+src/main/native/src/tesseract-3.03/*/*/*/*/*/Makefile
 src/main/native/src/tesseract-3.03/api/tesseract
+
+# wrapper
+src/main/native/src/wrapper/*.dylib
+src/main/native/src/wrapper/*.so
+src/main/native/src/wrapper/*.dll

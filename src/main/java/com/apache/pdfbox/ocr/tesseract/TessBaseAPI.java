@@ -20,25 +20,41 @@ package com.apache.pdfbox.ocr.tesseract;
 import java.awt.Color;
 import java.awt.image.BufferedImage;
 
-import com.wapmx.nativeutils.jniloader.NativeLoader;
+import java.io.IOException;
 
 public class TessBaseAPI {
 	public static final String DEFAULT_DATA_PATH= "src/main/resources/data";
 	public static final String DEFAULT_LANG = "eng";
-    public static final int REL_WORD = 1;
-    public static final int REL_SYMBOL =0;
+	public static final int REL_WORD = 1;
+	public static final int REL_SYMBOL =0;
 	
 	private long mNativeData;
 	private static TessBaseAPI api = null;
-    private int seperationMode=1;
+	private int seperationMode = 1;
+
 	static {
 		try {
-			NativeLoader.loadLibrary("tessbaseapi");
-			nativeClassInit();
-		} catch (Throwable e) {
-			e.printStackTrace();
-			System.exit(1);
-		}
+      // load the JNI library for the current platform
+			String name = System.getProperty("os.name").replace(" ", "").toLowerCase();
+			String arch = System.getProperty("os.arch");
+			if (arch.equals("amd64")) {
+				arch = "x86_64";
+			}
+      String extension;
+      if (name.equals("macosx")) {
+        extension = ".dylib";
+      } else if (name.equals("macosx")) {
+        extension = ".dll";
+      } else {
+        extension = ".so";
+      }
+      NativeUtil.loadLibraryResource("/META-INF/lib/tessbaseapi-" + name + "-" + arch + extension);
+    } catch (IOException e) {
+      e.printStackTrace();
+      throw new RuntimeException(e);
+    }
+    // JNI init
+    nativeClassInit();
 	}
 
 	// Singleton design pattern applied
