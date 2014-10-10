@@ -23,7 +23,6 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 
 public class TessBaseAPI {
-	public static final String DEFAULT_DATA_PATH= "src/main/resources/data";
 	public static final String DEFAULT_LANG = "eng";
 	public static final int REL_WORD = 1;
 	public static final int REL_SYMBOL =0;
@@ -73,10 +72,21 @@ public class TessBaseAPI {
 		nativeConstruct();
 	}
 
-	public boolean init(String dataPath, String lang) {
+	public boolean init(String dataPath, String lang) { //For feeding manual training files to tesseract.
 		boolean init = nativeInit(dataPath, lang);
 		return init;
 	}
+
+    public boolean init(String lang){ //Uses default training files given inside the jar
+        try{
+            String dataPath = DataLoader.getDataPath(lang);
+            boolean init = nativeInit(dataPath,lang);
+            return init;
+        }catch(IOException ex){
+            ex.printStackTrace();
+            throw new RuntimeException(ex);
+        }
+    }
 
 	public void setImagePath(String path) {
 		nativeSetImagePath(path);

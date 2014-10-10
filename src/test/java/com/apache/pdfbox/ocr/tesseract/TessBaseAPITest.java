@@ -34,7 +34,7 @@ public class TessBaseAPITest{
 	@Ignore
 	public void testTIF(){
 		TessBaseAPI api = new TessBaseAPI();
-		boolean init =api.init("src/main/resources/data", "eng");
+		boolean init =api.init("eng");
 		api.setImagePath("src/test/resources/samples/image4.TIF");
 		//api.getUTF8Text();
 		//api.end();
@@ -51,7 +51,7 @@ public class TessBaseAPITest{
 			BufferedImage image = renderer.renderImage(0, 3);
 			
 			TessBaseAPI api = new TessBaseAPI();
-			boolean init = api.init("src/main/resources/data", "eng");
+			boolean init = api.init("eng");
 			api.setBufferedImage(image);
 			String text = api.getUTF8Text();
 			System.out.println(text);
@@ -76,7 +76,7 @@ public class TessBaseAPITest{
 			
 			TessBaseAPI api = new TessBaseAPI();
 			byte data[] = api.getByteStream(image);
-			boolean init = api.init("src/main/resources/data", "eng");
+			boolean init = api.init("eng");
 			api.setImage(data, width, height, bpp, bpl);
 			String text = api.getUTF8Text();
 			System.out.println(text);
@@ -95,7 +95,7 @@ public class TessBaseAPITest{
 			PDFRenderer renderer = new PDFRenderer(document);
 			BufferedImage image = renderer.renderImage(0, 3);
 			TessBaseAPI api = new TessBaseAPI();
-			boolean init = api.init("src/main/resources/data", "eng");
+			boolean init = api.init("eng");
 			api.setBufferedImage(image);
 			api.getResultIterator();
 			if (api.isResultIteratorAvailable()) {
